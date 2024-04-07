@@ -1,0 +1,63 @@
+name: CI
+on:
+  pull_request:
+    branches:
+      - main
+      - backport/*.*
+    paths:
+      - config/**
+      - spack.yaml
+jobs:
+  validate-json:
+    name: Validate JSON
+    uses: access-nri/actions/.github/workflows/validate-json.yml@main
+    with:
+      src: "config"
+
+  check-json:
+    name: Check JSON Fields
+    needs:
+      - validate-json
+    runs-on: ubuntu-latest
+    outputs:
+      spack-packages-version: ${{ steps.versions.outputs.packages }}
+      spack-config-version:  ${{ steps.versions.outputs.config }}
+    steps:
+      - uses: actions/checkout@v4
+
+      # The next steps checkout the spack-{packages,config} repos to confirm that the versions in
+      # versions.json exist in the repositories.
+      - name: Setup
+        id: versions
+        run: |
+          echo "packages=$(jq --compact-output --raw-output '."spack-packages"' ./config/versions.json)" >> $GITHUB_OUTPUT
+          echo "config=$(jq --compact-output --raw-output '."spack-config"' ./config/versions.json)" >> $GITHUB_OUTPUT
+
+      - name: Spack Packages
+        id: spack-packages
+        continue-on-error: true
+        uses: actions/checkout@v4
+        with:
+          repository: access-nri/spack-packages
+          ref: ${{ steps.versions.outputs.packages }}
+          path: packages
+
+      - name: Spack Config
+        id: spack-config
+        continue-on-error: true
+        uses: actions/checkout@v4
+        with:
+          repository: access-nri/spack-config
+          ref: ${{ steps.versions.outputs.config }}
+          path: config
+
+      - name: Failure Notifier
+        if: contains(steps.*.outcome, 'failure')
+        run: |
+          if [[ "${{ steps.spack-packages.outcome }}" == "failure" ]]; then
+            echo "::error::spack-packages at the specified ref (${{ steps.versions.outputs.packages }}) doesn't exist."
+          fi
+          if [[ "${{ steps.spack-config.outcome }}" == "failure" ]]; then
+            echo "::error::spack-config at the specified ref (${{ steps.versions.outputs.config }}) doesn't exist."
+          fi
+          exit 1
