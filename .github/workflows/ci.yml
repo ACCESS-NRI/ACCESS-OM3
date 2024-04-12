@@ -134,17 +134,19 @@ jobs:
     needs:
       - version-tag  # implies all the spack.yaml-related checks have passed, has appropriate version for the prerelease build
       - check-config  # implies all the json-related checks have passed
+    runs-on: ubuntu-latest
     permissions:
       pull-requests: write
-    uses: access-nri/actions/.github/actions/pr-comment@main
-    with:
-      comment: |
-        This `${{ github.repository }}` model will be deployed with the following versions:
-        * `${{ needs.version-tag.outputs.release }}` as a Release (when merged).
-        * `${{ needs.version-tag.outputs.prerelease }}` as a Prerelease (during this PR). This can be accessed on `Gadi` via `spack` at `/g/data/vk83/prerelease/apps/spack/0.20/spack` once deployed.
+    steps:
+      - uses: access-nri/actions/.github/actions/pr-comment@main
+        with:
+         comment: |
+            This `${{ github.repository }}` model will be deployed with the following versions:
+            * `${{ needs.version-tag.outputs.release }}` as a Release (when merged).
+            * `${{ needs.version-tag.outputs.prerelease }}` as a Prerelease (during this PR). This can be accessed on `Gadi` via `spack` at `/g/data/vk83/prerelease/apps/spack/0.20/spack` once deployed.
 
-        It will be deployed using:
-        * `access-nri/spack-packages` version [`${{ needs.check-config.outputs.spack-packages-version }}`](https://github.com/ACCESS-NRI/spack-packages/releases/tag/${{ needs.check-config.outputs.spack-packages-version }})
-        * `access-nri/spack-config` version [`${{ needs.check-config.outputs.spack-config-version }}`](https://github.com/ACCESS-NRI/spack-config/releases/tag/${{ needs.check-config.outputs.spack-config-version }})
+            It will be deployed using:
+            * `access-nri/spack-packages` version [`${{ needs.check-config.outputs.spack-packages-version }}`](https://github.com/ACCESS-NRI/spack-packages/releases/tag/${{ needs.check-config.outputs.spack-packages-version }})
+            * `access-nri/spack-config` version [`${{ needs.check-config.outputs.spack-config-version }}`](https://github.com/ACCESS-NRI/spack-config/releases/tag/${{ needs.check-config.outputs.spack-config-version }})
 
-        If this is not what was expected, commit changes to `config/versions.json`.
+            If this is not what was expected, commit changes to `config/versions.json`.
