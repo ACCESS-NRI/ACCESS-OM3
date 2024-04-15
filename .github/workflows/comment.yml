@@ -7,7 +7,6 @@ on:
 env:
   RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
   SPACK_YAML_MODEL_YQ: .spack.specs[0]
-  # FIXME: Check that this model projection will be correct
   SPACK_YAML_MODEL_PROJECTION_YQ: .spack.modules.default.tcl.projections.access-om3-virtual
 jobs:
   bump-version:
