@@ -52,7 +52,7 @@ spack:
         - '@4.1.5'
 
     all:
-      compiler: [intel@19.0.5.281]
+      compiler: [intel@2021.10.0]
 
   # - matrix:
   #   - [$mpis]
