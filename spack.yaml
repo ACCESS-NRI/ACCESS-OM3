@@ -69,7 +69,32 @@ spack:
     unify: true
   modules:
     default:
+      enable:
+        - tcl
       roots:
-        tcl: $spack/../modules/access-om3/0.x.0
+        tcl: $spack/../release/modules
+        lmod: $spack/../release/lmod
       tcl:
-        naming_scheme: '{name}/{version}'
+        hash_length: 0
+        include:
+          - access-om3-virtual
+          - access-om3
+        exclude_implicits: true
+        all:
+          autoload: direct
+          conflict:
+            - '{name}'
+          environment:
+            set:
+              'SPACK_{name}_ROOT': '{prefix}'
+        projections:
+          all: '{name}/{version}'
+          access-om3-virtual: '{name}/2024.04.0'
+          access-om3: '{name}/v0.2.0'
+
+  # modules:
+  #   default:
+  #     roots:
+  #       tcl: $spack/../modules/access-om3/0.x.0
+  #     tcl:
+  #       naming_scheme: '{name}/{version}'
