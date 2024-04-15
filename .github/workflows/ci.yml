@@ -72,9 +72,33 @@ jobs:
             * `!bump major` for feature releases
             * `!bump minor` for bugfixes
 
-      - name: More Checks
-        # FIXME: More spack.yaml checks specific to access-om3
-        run: echo "::warning::Stub for more access-om3 specific checks"
+      - name: Projection Version Matches
+        # this step checks that the versions of the packages themselves match with the
+        #  names of the modules. For example, access-om3@git.2023.12.12 matches with the
+        #  modulefile access-om3/2023.12.12 (specifically, the version strings match)
+        run: |
+          FAILED='false'
+          DEPS=$(yq ".spack.modules.default.tcl.include | join(\" \")" spack.yaml)
+
+          # for each of the modules
+          for DEP in $DEPS; do
+            DEP_VER=''
+            if [[ "$DEP" == "access-om3-virtual" ]]; then
+              DEP_VER=$(yq '.spack.specs[0] | split("@git.") | .[1]' spack.yaml)
+            else
+              DEP_VER=$(yq ".spack.packages.\"$DEP\".require[0] | split(\"@git.\") | .[1]" spack.yaml)
+            fi
+
+            MODULE_VER=$(yq ".spack.modules.default.tcl.projections.\"$DEP\" | split(\"/\") | .[1]" spack.yaml)
+
+            if [[ "$DEP_VER" != "$MODULE_VER" ]]; then
+              echo "::error::Version of dependency and projection do not match ($DEP_VER != $MODULE_VER)"
+              FAILED='true'
+            fi
+          done
+          if [[ "$FAILED" == "true" ]]; then
+            exit 1
+          fi
 
   version-tag:
     name: Get Version and Tag Prerelease
