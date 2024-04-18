@@ -4,43 +4,41 @@
 # configuration settings.
 spack:
   specs:
-  - access-om3-virtual@git.2024.04.0
+    - access-om3@git.2024.04.0
   packages:
-    access-om3:
+    access-om3-nuopc:
       require:
-        - '@git.v0.2.0'
+        - '@git.0.2.0'
         - '+install_libraries'
     esmf:
       require:
-        - '@8.5.0'
-        - '+debug'
+        - '@8.4.2'
+        - +debug
     parallelio:
       require:
-        - '@2.6.2'
-        - build_type=RelWithDebInfo fflags='-qno-opt-dynamic-align -convert big_endian -assume byterecl -ftz -traceback -assume realloc_lhs -fp-model source' cflags='-qno-opt-dynamic-align -fp-model precise -std=gnu99'
+        - '@2.5.10'
+        - "build_type=RelWithDebInfo fflags='-qno-opt-dynamic-align -convert big_endian -assume byterecl -ftz -traceback -assume realloc_lhs -fp-model source -O2 -debug minimal' cflags='-qno-opt-dynamic-align -fp-model precise -std=gnu99 -O2 -debug minimal'"
     netcdf-c:
       require:
         - '@4.9.2'
-        - 'build_system=cmake build_type=RelWithDebInfo'
+        - build_system=cmake build_type=RelWithDebInfo
     netcdf-fortran:
       require:
-        - '@4.6.1'
+        - '@4.6.0'
     fms:
       require:
-        - '@2023.02'
-        - precision=64 +large_file +deprecated_io ~gfs_phys ~openmp ~quad_precision build_type=RelWithDebInfo
+        - '@git.2021.03.01'
+        - "precision=64 +large_file ~gfs_phys ~openmp ~quad_precision build_type=RelWithDebInfo fflags='-qno-opt-dynamic-align -convert big_endian -assume byterecl -ftz -traceback -assume realloc_lhs -fp-model source -O2 -debug minimal' cflags='-qno-opt-dynamic-align -fp-model precise -std=gnu99 -O2 -debug minimal'"
     openmpi:
       require:
-        - '@4.1.5'
-    fortranxml:
-      require:
-        - '@4.1.2'
-    # Defaulting all packages to the given compiler
+        - '@4.1.4'
     all:
-      compiler: [intel@2021.10.0]
+      compiler: [intel@2021.6.0]
   view: true
   concretizer:
     unify: true
+    targets:
+      granularity: generic
   modules:
     default:
       enable:
@@ -51,7 +49,7 @@ spack:
       tcl:
         hash_length: 0
         include:
-          - access-om3-virtual
+          - access-om3
         exclude_implicits: true
         all:
           autoload: direct
@@ -62,4 +60,4 @@ spack:
               'SPACK_{name}_ROOT': '{prefix}'
         projections:
           all: '{name}/{version}'
-          access-om3-virtual: 'access-om3/2024.04.0'
+          access-om3: '{name}/2024.04.0'
