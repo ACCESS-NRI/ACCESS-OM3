@@ -9,12 +9,11 @@ spack:
     access-om3-nuopc:
       require: '@git.0.3.0'
       variants: +install_libraries
-
     esmf:
       require: '@8.5.0'
       variants: +debug
     parallelio:
-      require: @2.6.2
+      require: '@2.6.2'
       variants: build_type=RelWithDebInfo fflags='-qno-opt-dynamic-align -convert big_endian -assume byterecl -ftz -traceback -assume realloc_lhs -fp-model source' cflags='-qno-opt-dynamic-align -fp-model precise -std=gnu99'
     netcdf-c:
       require: '@4.9.2'
