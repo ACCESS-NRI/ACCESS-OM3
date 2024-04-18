@@ -83,7 +83,7 @@ jobs:
           # for each of the modules
           for DEP in $DEPS; do
             DEP_VER=''
-            if [[ "$DEP" == "access-om3-virtual" ]]; then
+            if [[ "$DEP" == "access-om3" ]]; then
               DEP_VER=$(yq '.spack.specs[0] | split("@git.") | .[1]' spack.yaml)
             else
               DEP_VER=$(yq ".spack.packages.\"$DEP\".require[0] | split(\"@git.\") | .[1]" spack.yaml)

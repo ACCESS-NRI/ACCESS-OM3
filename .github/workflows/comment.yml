@@ -7,7 +7,7 @@ on:
 env:
   RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
   SPACK_YAML_MODEL_YQ: .spack.specs[0]
-  SPACK_YAML_MODEL_PROJECTION_YQ: .spack.modules.default.tcl.projections.access-om3-virtual
+  SPACK_YAML_MODEL_PROJECTION_YQ: .spack.modules.default.tcl.projections.access-om3
 jobs:
   bump-version:
     name: Bump spack.yaml
@@ -31,7 +31,7 @@ jobs:
         #   version: The version that will be bumped (could be latest tag instead of original-version)
         #   bump: The bump type (major, minor or current as specified in the bump-version action)
         run: |
-          # Get the version of access-om3-virtual from the spack.yaml in the PR the comment was written in
+          # Get the version of access-om3 from the spack.yaml in the PR the comment was written in
           gh pr checkout ${{ github.event.issue.number }}
           original_version=$(yq e '${{ env.SPACK_YAML_MODEL_YQ }} | split("@git.") | .[1]' spack.yaml)
           echo "original-version=${original_version}" >> $GITHUB_OUTPUT
@@ -79,10 +79,10 @@ jobs:
           git config user.name ${{ vars.GH_ACTIONS_BOT_GIT_USER_NAME }}
           git config user.email ${{ vars.GH_ACTIONS_BOT_GIT_USER_EMAIL }}
 
-          yq -i '${{ env.SPACK_YAML_MODEL_YQ }} = "access-om3-virtual@git.${{ steps.bump.outputs.after }}"' spack.yaml
+          yq -i '${{ env.SPACK_YAML_MODEL_YQ }} = "access-om3@git.${{ steps.bump.outputs.after }}"' spack.yaml
           yq -i '${{ env.SPACK_YAML_MODEL_PROJECTION_YQ }} = "{name}/${{ steps.bump.outputs.after }}"' spack.yaml
           git add spack.yaml
-          git commit -m "spack.yaml: Updated access-om3-virtual package version from ${{ steps.setup.outputs.original-version }} to ${{ steps.bump.outputs.after }}"
+          git commit -m "spack.yaml: Updated access-om3 package version from ${{ steps.setup.outputs.original-version }} to ${{ steps.bump.outputs.after }}"
           git push
 
       - name: Success Notifier
