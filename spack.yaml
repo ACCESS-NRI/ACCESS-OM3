@@ -7,38 +7,33 @@ spack:
     - access-om3@git.2024.04.0
   packages:
     access-om3-nuopc:
-      require:
-        - '@git.0.2.0'
-        - '+install_libraries'
+      require: '@git.0.3.0'
+      variants: +install_libraries
+
     esmf:
-      require:
-        - '@8.4.2'
-        - +debug
+      require: '@8.5.0'
+      variants: +debug
     parallelio:
-      require:
-        - '@2.5.10'
-        - "build_type=RelWithDebInfo fflags='-qno-opt-dynamic-align -convert big_endian -assume byterecl -ftz -traceback -assume realloc_lhs -fp-model source -O2 -debug minimal' cflags='-qno-opt-dynamic-align -fp-model precise -std=gnu99 -O2 -debug minimal'"
+      require: @2.6.2
+      variants: build_type=RelWithDebInfo fflags='-qno-opt-dynamic-align -convert big_endian -assume byterecl -ftz -traceback -assume realloc_lhs -fp-model source' cflags='-qno-opt-dynamic-align -fp-model precise -std=gnu99'
     netcdf-c:
-      require:
-        - '@4.9.2'
-        - build_system=cmake build_type=RelWithDebInfo
+      require: '@4.9.2'
+      variants: build_system=cmake build_type=RelWithDebInfo
     netcdf-fortran:
-      require:
-        - '@4.6.0'
+      require: '@4.6.1'
     fms:
-      require:
-        - '@git.2021.03.01'
-        - "precision=64 +large_file ~gfs_phys ~openmp ~quad_precision build_type=RelWithDebInfo fflags='-qno-opt-dynamic-align -convert big_endian -assume byterecl -ftz -traceback -assume realloc_lhs -fp-model source -O2 -debug minimal' cflags='-qno-opt-dynamic-align -fp-model precise -std=gnu99 -O2 -debug minimal'"
+      require: '@2023.02'
+      variants: precision=64 +large_file +deprecated_io ~gfs_phys ~openmp ~quad_precision build_type=RelWithDebInfo
     openmpi:
-      require:
-        - '@4.1.4'
+      require: '@4.1.5'
+    fortranxml:
+      require: '@4.1.2'
+
     all:
-      compiler: [intel@2021.6.0]
+      compilers: [intel@2021.6.0]
   view: true
   concretizer:
     unify: true
-    targets:
-      granularity: generic
   modules:
     default:
       enable:
