@@ -24,7 +24,7 @@ jobs:
     if: github.event_name == 'pull_request' && github.event.action != 'closed'
     uses: access-nri/build-cd/.github/workflows/ci.yml@main
     with:
-      model: access-om3
+      model: ${{ vars.NAME }}
     permissions:
       pull-requests: write
       contents: write
@@ -37,7 +37,7 @@ jobs:
     if: github.event_name == 'issue_comment'
     uses: access-nri/build-cd/.github/workflows/ci-comment.yml@main
     with:
-      model: access-om3
+      model: ${{ vars.NAME }}
     permissions:
       pull-requests: write
       contents: write
@@ -50,5 +50,5 @@ jobs:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     uses: access-nri/build-cd/.github/workflows/ci-closed.yml@main
     with:
-      model: access-om3
+      model: ${{ vars.NAME }}
     secrets: inherit  # inherit GitHub Deployment environment secrets
