@@ -12,7 +12,7 @@ jobs:
     name: CD
     uses: access-nri/build-cd/.github/workflows/cd.yml@main
     with:
-      model: access-om2
+      model: access-om3
     permissions:
       contents: write
     secrets: inherit
