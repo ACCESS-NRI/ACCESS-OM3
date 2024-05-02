@@ -9,16 +9,13 @@ spack:
     access-om3-nuopc:
       require:
         - '@git.0.3.0'
-        - +install_libraries
 
     esmf:
       require:
         - '@8.5.0'
-        - +debug
     parallelio:
       require:
         - '@2.6.2'
-        - build_type=RelWithDebInfo fflags='-qno-opt-dynamic-align -convert big_endian -assume byterecl -ftz -traceback -assume realloc_lhs -fp-model source' cflags='-qno-opt-dynamic-align -fp-model precise -std=gnu99'
     netcdf-c:
       require:
         - '@4.9.2'
@@ -29,7 +26,6 @@ spack:
     fms:
       require:
         - '@2023.02'
-        - precision=64 +large_file +deprecated_io ~gfs_phys ~openmp ~quad_precision build_type=RelWithDebInfo
     openmpi:
       require:
         - '@4.1.5'
