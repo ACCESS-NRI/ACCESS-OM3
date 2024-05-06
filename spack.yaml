@@ -49,7 +49,7 @@ spack:
         hash_length: 0
         include:
           - access-om3
-        exclude_implicits: true
+        hide_implicits: true
         all:
           autoload: direct
           conflict:
