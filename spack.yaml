@@ -13,6 +13,7 @@ spack:
     esmf:
       require:
         - '@8.5.0'
+        - '-fp-model=precise'
     parallelio:
       require:
         - '@2.6.2'
@@ -34,8 +35,9 @@ spack:
         - '@4.1.2'
 
     all:
-      compiler: [intel@2021.6.0]
-      target: [x86_64]
+      require:
+        - '%intel@2021.6.0'
+        - target=x86_64
   view: true
   concretizer:
     unify: true
@@ -50,7 +52,7 @@ spack:
         hash_length: 0
         include:
           - access-om3
-        hide_implicits: true
+        exclude_implicits: true
         all:
           autoload: direct
           conflict:
