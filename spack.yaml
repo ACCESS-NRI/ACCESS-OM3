@@ -13,7 +13,7 @@ spack:
     esmf:
       require:
         - '@8.5.0'
-        - '-fp-model=precise'
+        # - '-fp-model=precise'
     parallelio:
       require:
         - '@2.6.2'
