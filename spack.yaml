@@ -6,10 +6,12 @@ spack:
   specs:
     - access-om3@git.2024.04.0
   packages:
+    # Main Dependencies
     access-om3-nuopc:
       require:
         - '@git.0.3.0'
 
+    # Other Dependencies
     esmf:
       require:
         - '@8.5.0'
