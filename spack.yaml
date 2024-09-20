@@ -15,7 +15,6 @@ spack:
     esmf:
       require:
         - '@8.5.0'
-        # - '-fp-model=precise'
     parallelio:
       require:
         - '@2.6.2'
@@ -54,6 +53,7 @@ spack:
         hash_length: 0
         include:
           - access-om3
+          - access-om3-nuopc
         exclude_implicits: true
         all:
           autoload: direct
