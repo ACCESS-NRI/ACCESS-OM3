@@ -4,7 +4,7 @@
 # configuration settings.
 spack:
   specs:
-    - access-om3@git.2024.09.0
+    - access-om3@git.main
   packages:
     # Main Dependencies
     access-om3-nuopc:
