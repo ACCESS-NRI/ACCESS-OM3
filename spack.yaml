@@ -65,4 +65,4 @@ spack:
         projections:
           all: '{name}/{version}'
           access-om3: '{name}/main'
-          access-om3-nuopc: '{name}/0.3.1'
+          access-om3-nuopc: '{name}/main'
