@@ -4,12 +4,12 @@
 # configuration settings.
 spack:
   specs:
-    - access-om3@git.2024.09.0
+    - access-om3@git.2024.10.0
   packages:
     # Main Dependencies
     access-om3-nuopc:
       require:
-        - '@git.0.3.1'
+        - '@git.main'
 
     # Other Dependencies
     esmf:
@@ -64,5 +64,5 @@ spack:
               'SPACK_{name}_ROOT': '{prefix}'
         projections:
           all: '{name}/{version}'
-          access-om3: '{name}/2024.09.0'
-          access-om3-nuopc: '{name}/0.3.1'
+          access-om3: '{name}/2024.10.0'
+          access-om3-nuopc: '{name}/main'
