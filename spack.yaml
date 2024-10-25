@@ -9,7 +9,7 @@ spack:
     # Main Dependencies
     access-om3-nuopc:
       require:
-        - '@git.1f36419'
+        - '@git.1f36419a1f4ba2d0fd5136e4eb43d3b4a52a162c'
 
     # Other Dependencies
     esmf:
