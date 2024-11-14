@@ -49,5 +49,5 @@ spack:
           - access-om3
           - access-om3-nuopc
         projections:
-          access-om3: '{name}/2024.09.0-{hash:7}'
+          access-om3: '{name}/2024.09.0'
           access-om3-nuopc: '{name}/0.3.1-{hash:7}'
