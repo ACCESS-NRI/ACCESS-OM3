@@ -6,7 +6,7 @@
 # https://github.com/ACCESS-NRI/model-deployment-template/blob/main/spack.yaml
 spack:
   specs:
-    - access-om3@git.2024.09.0
+    - access-om3@git.2024.09.1
   packages:
     # Main Dependencies
     access-om3-nuopc:
