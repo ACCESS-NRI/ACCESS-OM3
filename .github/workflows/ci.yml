@@ -21,13 +21,17 @@ jobs:
     name: CI
     # This job is responsible for checks and prerelease deployments
     # that happen when a PR is modified or opened
-    if: github.event_name == 'pull_request' && github.event.action != 'closed'
-    uses: access-nri/build-cd/.github/workflows/ci.yml@main
+    if: >-
+      (github.event_name == 'pull_request' && github.event.action != 'closed') ||
+      (github.event_name == 'issue_comment' && startsWith(github.event.comment.body, '!redeploy'))
+    uses: access-nri/build-cd/.github/workflows/ci.yml@v2
     with:
       model: ${{ vars.NAME }}
+      pr: ${{ github.event_name == 'pull_request' && github.event.pull_request.number || github.event.issue.number }}
     permissions:
       pull-requests: write
       contents: write
+      statuses: write
     secrets: inherit  # inherit GitHub Deployment Environment secrets
 
   pr-comment:
@@ -35,7 +39,7 @@ jobs:
     # This job is responsible for handling Command Comments like
     # `!bump` during an open PR
     if: github.event_name == 'issue_comment'
-    uses: access-nri/build-cd/.github/workflows/ci-comment.yml@main
+    uses: access-nri/build-cd/.github/workflows/ci-comment.yml@v2
     with:
       model: ${{ vars.NAME }}
     permissions:
@@ -48,7 +52,7 @@ jobs:
     # This job is responsible for cleaning up the Prereleases after a
     # PR is closed
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
-    uses: access-nri/build-cd/.github/workflows/ci-closed.yml@main
+    uses: access-nri/build-cd/.github/workflows/ci-closed.yml@v2
     with:
       model: ${{ vars.NAME }}
     secrets: inherit  # inherit GitHub Deployment environment secrets
