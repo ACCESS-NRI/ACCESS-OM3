@@ -12,7 +12,7 @@ spack:
     access-om3-nuopc:
       require:
         - '@git.cbull_mom6_updates'
-
+ 
     # Other Dependencies
     esmf:
       require:
