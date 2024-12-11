@@ -12,7 +12,8 @@ spack:
     access-om3-nuopc:
       require:
         - '@git.0.3.1'
-        - configurations="MOM6, ~MOM6-CICE6, ~CICE6-WW3, ~MOM6-CICE6-WW3"
+        - configurations=MOM6
+        - ~configurations=MOM6-CICE6,CICE6-WW3,MOM6-CICE6-WW3
     # Other Dependencies
     esmf:
       require:
