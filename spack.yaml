@@ -26,7 +26,7 @@ spack:
         - '@4.6.1'
     fms:
       require:
-        - '@git.18cb810fbb313609c2d769015c03d3f968fb3ecf'
+        - '@git.master'
     openmpi:
       require:
         - '@4.1.7'
