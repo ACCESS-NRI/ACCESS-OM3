@@ -10,7 +10,7 @@ spack:
   packages:
     access-om3-nuopc:
       require:
-        - '@git.e47ee7c69dc1b087a0bd573f6a39174b01824c62'
+        - '@git.209-new-build'
     esmf:
       require:
         - '@git.v8.7.0'
@@ -49,4 +49,4 @@ spack:
           - access-om3-nuopc
         projections:
           access-om3: '{name}/2024.12.0'
-          access-om3-nuopc: '{name}/e47ee7c69dc1b087a0bd573f6a39174b01824c62-{hash:7}'
+          access-om3-nuopc: '{name}/209-new-build-{hash:7}'
