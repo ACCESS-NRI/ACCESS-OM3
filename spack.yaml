@@ -10,7 +10,7 @@ spack:
   packages:
     access-om3-nuopc:
       require:
-        - '@git.66afc47db6ef3bbd01905516788252c3efcd65e6'
+        - '@git.e47ee7c69dc1b087a0bd573f6a39174b01824c62'
     esmf:
       require:
         - '@8.6.0'
@@ -26,7 +26,7 @@ spack:
         - '@4.6.1'
     fms:
       require:
-        - '@2023.02'
+        - '@git.18cb810fbb313609c2d769015c03d3f968fb3ecf'
     openmpi:
       require:
         - '@4.1.7'
