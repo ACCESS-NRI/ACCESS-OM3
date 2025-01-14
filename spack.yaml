@@ -19,7 +19,7 @@ spack:
         - 'configurations=CICE6'
     access-cice:
       require:
-      - '@git.5-port_cmake_build io_type=PIO'
+        - '@git.5-port_cmake_build io_type=PIO'
     # access-mom6:
     #   require:
     #   - '@git.5-port_cmake_build io_type=PIO'
@@ -28,7 +28,7 @@ spack:
     #   - '@git.5-port_cmake_build io_type=PIO'
     access3-share:
       require:
-      - '@git.share_prototype'
+        - '@git.share_prototype'
     esmf:
       require:
         - '@git.v8.7.0'
@@ -50,8 +50,8 @@ spack:
         - '@4.1.7'
     all:
       require:
-      - '%intel@2021.10.0'
-      - target=x86_64
+        - '%intel@2021.10.0'
+        - target=x86_64
   view: true
   concretizer:
     unify: true
