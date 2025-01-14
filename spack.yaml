@@ -19,7 +19,8 @@ spack:
         - 'configurations=CICE6'
     access-cice:
       require:
-        - '@git.5-port_cmake_build io_type=PIO'
+        - '@git.5-port_cmake_build'
+        - 'io_type=PIO'
     # access-mom6:
     #   require:
     #   - '@git.5-port_cmake_build io_type=PIO'
