@@ -31,23 +31,23 @@ spack:
       - '@git.share_prototype'
     esmf:
       require:
-      - '@git.v8.7.0'
+        - '@git.v8.7.0'
     fms:
       require:
         - '@git.2024.03'
     parallelio:
       require:
-      - '@2.6.2'
+        - '@2.6.2'
     netcdf-c:
       require:
-      - '@4.9.2'
-      - build_system=cmake build_type=RelWithDebInfo
+        - '@4.9.2'
+        - build_system=cmake build_type=RelWithDebInfo
     netcdf-fortran:
       require:
-      - '@4.6.1'
+        - '@4.6.1'
     openmpi:
       require:
-      - '@4.1.7'
+        - '@4.1.7'
     all:
       require:
       - '%intel@2021.10.0'
