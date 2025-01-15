@@ -39,7 +39,7 @@ spack:
 
     all:
       require:
-        - '%intel@2021.10.0'
+        - '%oneapi@2024.0.2'
         - 'target=x86_64'
   view: true
   concretizer:
