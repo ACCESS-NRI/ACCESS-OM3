@@ -21,9 +21,11 @@ spack:
       require:
         - '@git.5-port_cmake_build'
         - 'io_type=PIO'
-    # access-mom6:
-    #   require:
-    #   - '@git.5-port_cmake_build io_type=PIO'
+    access-mom6:
+       require:
+       - '@git.cmake_build'
+    #access-generic-tracers:
+    #...
     # access-ww3:
     #   require:
     #   - '@git.5-port_cmake_build io_type=PIO'
