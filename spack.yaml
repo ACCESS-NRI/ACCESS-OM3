@@ -7,9 +7,6 @@
 spack:
   specs:
     - access-om3@git.2024.09.0
-    env:
-      set:
-        ESMF_OPTLEVEL: 2
   packages:
     # Main Dependencies
     access-om3-nuopc:
@@ -20,6 +17,10 @@ spack:
     esmf:
       require:
         - '@8.5.0'
+      package_attributes:
+        env:
+          set:
+            ESMF_OPTLEVEL: 2
     parallelio:
       require:
         - '@2.6.2'
