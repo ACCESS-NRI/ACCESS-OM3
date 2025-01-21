@@ -16,10 +16,7 @@ spack:
     esmf:
       require:
         - '@8.5.0'
-      package_attributes:
-        env:
-          set:
-            ESMF_OPTLEVEL: 2
+        - fflags='-traceback'
     parallelio:
       require:
         - '@2.6.2'
