@@ -13,6 +13,7 @@ spack:
       require:
         - '@git.0.4.0'
         - +mom_symmetric
+        - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
 
     # Other Dependencies
     esmf:
