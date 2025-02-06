@@ -6,48 +6,7 @@
 # https://github.com/ACCESS-NRI/model-deployment-template/blob/main/spack.yaml
 spack:
   specs:
-    - access-om3@git.2025.01.0
-  packages:
-    # Main Dependencies
-    access-om3-nuopc:
-      require:
-        - '@git.0.4.0'
-        - +mom_symmetric
-        - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
-
-    # Other Dependencies
-    esmf:
-      require:
-        - '@git.v8.7.0'
-    parallelio:
-      require:
-        - '@2.6.2'
-    netcdf-c:
-      require:
-        - '@4.9.2'
-        - build_system=cmake build_type=RelWithDebInfo
-    netcdf-fortran:
-      require:
-        - '@4.6.1'
-    fms:
-      require:
-        - '@git.2024.03'
-    openmpi:
-      require:
-        - '@4.1.7'
-    fortranxml:
-      require:
-        - '@4.1.2'
-
-    # Tools
-    fre-nctools:
-      require:
-        - '@2024.05'
-
-    all:
-      require:
-        - '%intel@2021.10.0'
-        - 'target=x86_64'
+    - fre-nctools@2024.03 %intel@2021.2.0 target=x86_64
   view: true
   concretizer:
     unify: true
@@ -55,10 +14,6 @@ spack:
     default:
       tcl:
         include:
-          - access-om3
-          - access-om3-nuopc
           - fre-nctools
         projections:
-          access-om3: '{name}/2025.01.0'
-          access-om3-nuopc: '{name}/0.4.0-{hash:7}'
           fre-nctools: '{name}/2024.05'
