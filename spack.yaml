@@ -7,7 +7,6 @@
 spack:
   specs:
     - access-om3@git.2025.01.0
-    - fre-nctools@2024.05
   packages:
     # Main Dependencies
     access-om3-nuopc:
@@ -39,6 +38,11 @@ spack:
     fortranxml:
       require:
         - '@4.1.2'
+
+    # Tools
+    fre-nctools:
+      require:
+        - '@2024.05'
 
     all:
       require:
