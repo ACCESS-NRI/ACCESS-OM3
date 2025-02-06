@@ -6,7 +6,7 @@
 # https://github.com/ACCESS-NRI/model-deployment-template/blob/main/spack.yaml
 spack:
   specs:
-    - fre-nctools@2024.03 %intel@2021.2.0 target=x86_64
+    - fre-nctools@git.2024.03 %intel@2021.2.0 target=x86_64
   view: true
   concretizer:
     unify: true
