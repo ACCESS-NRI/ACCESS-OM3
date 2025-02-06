@@ -16,4 +16,4 @@ spack:
         include:
           - fre-nctools
         projections:
-          fre-nctools: '{name}/git.2024.05'
+          fre-nctools: '{name}/2024.05'
