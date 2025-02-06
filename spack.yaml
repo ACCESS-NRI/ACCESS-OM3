@@ -8,6 +8,9 @@ spack:
   specs:
     - fre-nctools@git.2024.05
   packages:
+    fre-nctools:
+      require:
+        - '@2024.05'
     all:
       require:
         - '%intel@2021.10.0'
