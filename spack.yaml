@@ -11,7 +11,7 @@ spack:
     # Main Dependencies
     access-om3-nuopc:
       require:
-        - '@git.96f91599f746b4866bbd3f05ee6eb192ba70d391'
+        - '@git.31eefa9a40f7fd9fd5fd030cbdf009d4eb66a5e9'
 
     # Other Dependencies
     esmf:
@@ -52,4 +52,4 @@ spack:
           - access-om3-nuopc
         projections:
           access-om3: '{name}/2025.01.0'
-          access-om3-nuopc: '{name}/96f91599f746b4866bbd3f05ee6eb192ba70d391-{hash:7}'
+          access-om3-nuopc: '{name}/31eefa9a40f7fd9fd5fd030cbdf009d4eb66a5e9-{hash:7}'
