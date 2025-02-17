@@ -11,12 +11,12 @@ spack:
     # Main Dependencies
     access-om3-nuopc:
       require:
-        - '@git.00e8d3486d62e0065ba46d8627ef15020f36f737'
+        - '@git.96f91599f746b4866bbd3f05ee6eb192ba70d391'
 
     # Other Dependencies
     esmf:
       require:
-        - '@git.v8.7.0'
+        - '@8.6.0'
     parallelio:
       require:
         - '@2.6.2'
@@ -52,4 +52,4 @@ spack:
           - access-om3-nuopc
         projections:
           access-om3: '{name}/2025.01.0'
-          access-om3-nuopc: '{name}/00e8d3486d62e0065ba46d8627ef15020f36f737-{hash:7}'
+          access-om3-nuopc: '{name}/96f91599f746b4866bbd3f05ee6eb192ba70d391-{hash:7}'
