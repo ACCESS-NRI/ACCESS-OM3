@@ -11,9 +11,10 @@ spack:
     # Main Dependencies
     access-om3-nuopc:
       require:
-        - '@git.0.4.0'
+        - '@git.0.3.1'
         - +mom_symmetric
-        - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
+        - +install_libraries
+        - configurations=MOM6-CICE6
 
     # Other Dependencies
     esmf:
