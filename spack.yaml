@@ -38,7 +38,7 @@ spack:
         - '@4.1.2'
     gcc-runtime:
       require:
-        - '@14.1.0'
+        - '@14'
         - '%gcc@14.1.0'
 
     all:
