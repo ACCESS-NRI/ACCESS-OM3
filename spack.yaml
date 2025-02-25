@@ -12,11 +12,13 @@ spack:
     access-om3-nuopc:
       require:
         - '@git.0.4.0'
+        - +mom_symmetric
+        - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
 
     # Other Dependencies
     esmf:
       require:
-        - '@8.5.0'
+        - '@git.v8.7.0'
     parallelio:
       require:
         - '@2.6.2'
@@ -29,10 +31,10 @@ spack:
         - '@4.6.1'
     fms:
       require:
-        - '@2023.02'
+        - '@git.2024.03'
     openmpi:
       require:
-        - '@4.1.5'
+        - '@4.1.7'
     fortranxml:
       require:
         - '@4.1.2'
@@ -54,5 +56,5 @@ spack:
           - access-om3
           - access-om3-nuopc
         projections:
-          access-om3: '{name}/2024.09.0'
-          access-om3-nuopc: '{name}/0.3.1-{hash:7}'
+          access-om3: '{name}/2025.01.0'
+          access-om3-nuopc: '{name}/0.4.0-{hash:7}'
