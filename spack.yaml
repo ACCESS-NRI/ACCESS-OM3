@@ -6,12 +6,12 @@
 # https://github.com/ACCESS-NRI/model-deployment-template/blob/main/spack.yaml
 spack:
   specs:
-    - access-om3@git.2024.09.0
+    - access-om3@git.2025.01.1
   packages:
     # Main Dependencies
     access-om3-nuopc:
       require:
-        - '@git.0.3.1'
+        - '@git.0.4.0'
 
     # Other Dependencies
     esmf:
@@ -38,12 +38,11 @@ spack:
         - '@4.1.2'
     gcc-runtime:
       require:
-        - '@14.1.0'
         - '%gcc@14.1.0'
 
     all:
       require:
-        - '%oneapi@2024.0.2'
+        - '%oneapi@2025.01.1'
         - 'target=x86_64'
   view: true
   concretizer:
