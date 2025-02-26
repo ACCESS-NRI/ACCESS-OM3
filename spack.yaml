@@ -11,9 +11,10 @@ spack:
     # Main Dependencies
     access-om3-nuopc:
       require:
-        - '@git.0.4.0'
+        - '@git.f4784136f017d4d51915439666420dd61ff04854'
         - +mom_symmetric
-        - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
+        - configurations=MOM6-CICE6
+        - +install_libraries
 
     # Other Dependencies
     esmf:
@@ -54,4 +55,4 @@ spack:
           - access-om3-nuopc
         projections:
           access-om3: '{name}/2025.01.0'
-          access-om3-nuopc: '{name}/0.4.0-{hash:7}'
+          access-om3-nuopc: '{name}/f4784136f017d4d51915439666420dd61ff04854-{hash:7}'
