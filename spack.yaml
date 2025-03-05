@@ -7,21 +7,23 @@
 spack:
   specs:
     - access-om3@git.2025.01.0
+    - esmf@git.v8.7.0 /h6bfufr
+    - parallelio@2.6.2 /he26v6g
   packages:
     # Main Dependencies
     access-om3-nuopc:
       require:
-        - '@git.0.4.0'
+        - '@git.d1e82a0d7d22eb2055cbf324700714995c161621' #cmeps 1.0.25
         - +mom_symmetric
         - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
 
     # Other Dependencies
-    esmf:
-      require:
-        - '@git.v8.7.0'
-    parallelio:
-      require:
-        - '@2.6.2'
+    # esmf:
+    #   require:
+    #     - '@git.v8.7.0'
+    # parallelio:
+    #   require:
+    #     - '@2.6.2'
     netcdf-c:
       require:
         - '@4.9.2'
@@ -54,4 +56,4 @@ spack:
           - access-om3-nuopc
         projections:
           access-om3: '{name}/2025.01.0'
-          access-om3-nuopc: '{name}/0.4.0-{hash:7}'
+          access-om3-nuopc: '{name}/d1e82a0d7d22eb2055cbf324700714995c161621-{hash:7}'
