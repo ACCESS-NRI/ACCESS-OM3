@@ -11,7 +11,7 @@ spack:
     # Main Dependencies
     access-om3-nuopc:
       require:
-        - '@git.288_cdeps54'
+        - '@git.8467d0b6095035ee65f9c1b87114cf8322ceae7f'
         - +mom_symmetric
         - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
 
