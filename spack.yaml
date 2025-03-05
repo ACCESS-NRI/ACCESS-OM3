@@ -55,4 +55,4 @@ spack:
           - access-om3-nuopc
         projections:
           access-om3: '{name}/2025.01.0'
-          access-om3-nuopc: '{name}/288_cdeps54-{hash:7}'
+          access-om3-nuopc: '{name}/288-8467d0b6095035ee65f9c1b87114cf8322ceae7f-{hash:7}'
