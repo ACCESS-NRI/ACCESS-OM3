@@ -7,7 +7,6 @@
 spack:
   specs:
     - access-om3@git.2025.01.1
-    - 'esmf@git.v8.7.0 /5nokmwcehdcakitdetoh6cn47ddttk76'
   packages:
     # Main Dependencies
     access-om3-nuopc:
@@ -17,9 +16,9 @@ spack:
         - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
 
     # Other Dependencies
-    # esmf:
-    #   require:
-    #     - '@git.v8.7.0'
+    esmf:
+      require:
+        - '@git.v8.7.0'
     parallelio:
       require:
         - '@2.6.2'
