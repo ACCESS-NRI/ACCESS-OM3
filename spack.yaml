@@ -8,14 +8,13 @@ spack:
   specs:
     - access-om3@git.2025.01.1
     - 'esmf@git.v8.7.0 /5nokmwcehdcakitdetoh6cn47ddttk76'
-    - 'access-om3-nuopc@git.0.4.0 configurations=MOM6-CICE6'
   packages:
     # Main Dependencies
-    # access-om3-nuopc:
-    #   require:
-    #     - '@git.0.4.0'
-    #     # - +mom_symmetric
-    #     - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
+    access-om3-nuopc:
+      require:
+        - '@git.0.4.0'
+        # - +mom_symmetric
+        - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
 
     # Other Dependencies
     # esmf:
