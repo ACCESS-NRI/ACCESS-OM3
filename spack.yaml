@@ -7,7 +7,7 @@
 spack:
   specs:
     - access-om3@git.2025.01.0
-    - 'esmf@git.v8.7.0 /h6bfufr'
+    - 'esmf@git.v8.7.0 /y52qt4c'
   packages:
     # Main Dependencies
     access-om3-nuopc:
