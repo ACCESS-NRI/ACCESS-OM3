@@ -54,11 +54,13 @@ spack:
           - access-om3-nuopc
           - parallelio
           - fortranxml
+          - fms
           - esmf
         projections:
           access-om3: '{name}/2025.01.0'
           access-om3-nuopc: '{name}/e62ff65aa2e04b7d8572644d967050771ea1ce2f-{hash:7}'
           parallelio: '{name}/2.6.2-{hash:7}'
           fortranxml: '{name}/4.1.2-{hash:7}'
+          fms: '{name}/2024.03-{hash:7}'
           esmf: '{name}/v8.7.0-{hash:7}'
 
