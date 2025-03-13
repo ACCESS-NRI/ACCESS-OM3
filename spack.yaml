@@ -11,10 +11,7 @@
 spack:
   # add package specs to the `specs` list
   specs:
-  access-mom6:
-       require:
-       - '@git.cmake_build'
-       - '~access3~mom_symmetric'
+    -access-mom6@git.cmake_build~access3~mom_symmetric
   packages:
     esmf:
       require:
