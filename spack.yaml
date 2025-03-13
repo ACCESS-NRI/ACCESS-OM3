@@ -16,7 +16,7 @@ spack:
     access3-exe:
       require:
         - '@git.share_prototype'
-        - 'configurations=MOM6-CICE6'
+        - 'configurations=MOM6-CICE6-WW3'
     access-cice:
       require:
         - '@git.5-port_cmake_build'
@@ -24,11 +24,9 @@ spack:
     access-mom6:
        require:
        - '@git.cmake_build'
-    #access-generic-tracers:
-    #...
-    # access-ww3:
-    #   require:
-    #   - '@git.5-port_cmake_build io_type=PIO'
+    access-ww3:
+      require:
+      - '@git.1-cmake_build'
     access3-share:
       require:
         - '@git.share_prototype'
@@ -51,10 +49,13 @@ spack:
     openmpi:
       require:
         - '@4.1.7'
+    gcc-runtime:
+      require:
+        - '%gcc'
     all:
       require:
-        - '%intel@2021.10.0'
-        - target=x86_64
+        - '%oneapi@2025.0.4'
+        - target=x86_64_v4
   view: true
   concretizer:
     unify: true
