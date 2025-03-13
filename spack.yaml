@@ -11,34 +11,17 @@
 spack:
   # add package specs to the `specs` list
   specs:
-  - access-om3@git.2025.x.0
-  packages:
-    access3-exe:
-      require:
-        - '@git.share_prototype'
-        - 'configurations=MOM6-CICE6-WW3'
-    access-cice:
-      require:
-        - '@git.5-port_cmake_build'
-        - 'io_type=PIO'
-    access-mom6:
+  access-mom6:
        require:
        - '@git.cmake_build'
-    access-ww3:
-      require:
-      - '@git.1-cmake_build'
-    access3-share:
-      require:
-        - '@git.share_prototype'
+       - '~access3~mom_symmetric'
+  packages:
     esmf:
       require:
         - '@git.v8.7.0'
     fms:
       require:
         - '@git.2024.03'
-    parallelio:
-      require:
-        - '@2.6.2'
     netcdf-c:
       require:
         - '@4.9.2'
@@ -63,8 +46,6 @@ spack:
     default:
       tcl:
         include:
-          - access-om3
-          - access3-exe
+          - access-mom6
         projections:
-          access-om3: '{name}/2025.x.0'
-          access3-exe: '{name}/share_prototype-{hash:7}'
+          access-mom6: '{name}/cmake_build-{hash:7}'
