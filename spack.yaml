@@ -13,19 +13,6 @@ spack:
   specs:
     - 'access-mom6@git.cmake_build~access3~mom_symmetric'
   packages:
-    esmf:
-      require:
-        - '@git.v8.7.0'
-    fms:
-      require:
-        - '@git.2024.03'
-    netcdf-c:
-      require:
-        - '@4.9.2'
-        - build_system=cmake build_type=RelWithDebInfo
-    netcdf-fortran:
-      require:
-        - '@4.6.1'
     openmpi:
       require:
         - '@4.1.7'
@@ -39,10 +26,10 @@ spack:
   view: true
   concretizer:
     unify: true
-  modules:
-    default:
-      tcl:
-        include:
-          - access-mom6
-        projections:
-          access-mom6: '{name}/cmake_build-{hash:7}'
+  # modules:
+  #   default:
+  #     tcl:
+  #       include:
+  #         - access-mom6
+  #       projections:
+  #         access-mom6: '{name}/cmake_build-{hash:7}'
