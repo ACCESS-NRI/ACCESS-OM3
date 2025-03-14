@@ -26,10 +26,10 @@ spack:
   view: true
   concretizer:
     unify: true
-  # modules:
-  #   default:
-  #     tcl:
-  #       include:
-  #         - access-mom6
-  #       projections:
-  #         access-mom6: '{name}/cmake_build-{hash:7}'
+  modules:
+    default:
+      tcl:
+        include:
+          - access-mom6
+        projections:
+          access-mom6: '{name}/cmake_build-{hash:7}'
