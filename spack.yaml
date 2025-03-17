@@ -11,7 +11,7 @@
 spack:
   # add package specs to the `specs` list
   specs:
-    - 'access-mom6@git.cmake_build~access3~mom_symmetric'
+    - 'access-ww3@git.1-cmake_build~access3'
   packages:
     openmpi:
       require:
@@ -30,6 +30,6 @@ spack:
     default:
       tcl:
         include:
-          - access-mom6
+          - access-ww3
         projections:
-          access-mom6: '{name}/cmake_build-{hash:7}'
+          access-ww3: '{name}/cmake_build-{hash:7}'
