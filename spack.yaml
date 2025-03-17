@@ -30,6 +30,6 @@ spack:
     default:
       tcl:
         include:
-          - access-cice6
+          - access-cice
         projections:
-          access-cice6: '{name}/5-port_cmake_build-{hash:7}'
+          access-cice: '{name}/5-port_cmake_build-{hash:7}'
