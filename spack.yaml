@@ -32,4 +32,4 @@ spack:
         include:
           - access-ww3
         projections:
-          access-ww3: '{name}/cmake_build-{hash:7}'
+          access-ww3: '{name}/1-cmake_build-{hash:7}'
