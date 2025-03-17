@@ -18,7 +18,7 @@ spack:
     # Other Dependencies
     esmf:
       require:
-        - '@git.v8.7.0'
+        - '@git.v8.5.0'
     parallelio:
       require:
         - '@2.6.2'
@@ -31,7 +31,7 @@ spack:
         - '@4.6.1'
     fms:
       require:
-        - '@git.2024.03'
+        - '@git.2023.02'
     openmpi:
       require:
         - '@4.1.5'
