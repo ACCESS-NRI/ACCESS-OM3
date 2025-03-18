@@ -16,14 +16,14 @@ spack:
     access3-exe:
       require:
         - '@git.share_prototype'
-        - 'configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3'
+        - 'configurations=MOM6-CICE6'
     access-cice:
       require:
         - '@git.5-port_cmake_build'
-        - 'io_type=PIO'
+        - 'io_type=PIO +openmp'
     access-mom6:
        require:
-       - '@git.cmake_build'
+       - '@git.cmake_build +openmp'
     access-ww3:
       require:
       - '@git.1-cmake_build'
