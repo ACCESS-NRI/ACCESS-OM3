@@ -48,9 +48,6 @@ spack:
     snappy:
       require:
         - build_type=RelWithDebInfo
-    cmake:
-      require:
-        - build_type=RelWithDebInfo
     hdf5:
       require:
         - build_type=RelWithDebInfo
