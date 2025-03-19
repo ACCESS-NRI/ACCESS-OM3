@@ -39,6 +39,24 @@ spack:
     fortranxml:
       require:
         - '@4.1.2'
+    cmake:
+      require:
+        - build_type=RelWithDebInfo
+    c-blosc:
+      require:
+        - build_type=RelWithDebInfo
+    snappy:
+      require:
+        - build_type=RelWithDebInfo
+    cmake:
+      require:
+        - build_type=RelWithDebInfo
+    hdf5:
+      require:
+        - build_type=RelWithDebInfo
+    libaec:
+      require:
+        - build_type=RelWithDebInfo
     gcc-runtime:
       require:
         - '%gcc'
