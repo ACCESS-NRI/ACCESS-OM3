@@ -29,7 +29,7 @@ spack:
       - '@git.1-cmake_build'
     access3-share:
       require:
-        - '@git.share_prototype'
+        - '@git.db7726a75de14a02acb3ee09efe6b3adf8db5c5e'
     esmf:
       require:
         - '@git.v8.7.0'
