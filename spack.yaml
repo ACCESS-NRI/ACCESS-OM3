@@ -11,7 +11,7 @@ spack:
     # Main Dependencies
     access-om3-nuopc:
       require:
-        - '@git.0.4.0'
+        - '@git.7da391c698288f1daa23cfe30da652663ba3b9a1' # On test-no-mom-patches
         - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
 
     # Other Dependencies
@@ -53,4 +53,4 @@ spack:
           - access-om3-nuopc
         projections:
           access-om3: '{name}/2025.01.1'
-          access-om3-nuopc: '{name}/0.4.0-{hash:7}'
+          access-om3-nuopc: '{name}/7da391c698288f1daa23cfe30da652663ba3b9a1-{hash:7}'
