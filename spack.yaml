@@ -19,7 +19,7 @@ spack:
     esmf:
       require:
         - '@git.v8.7.0'
-        - cxxflags='fp-model precise'
+        - cxxflags='-fp-model precise'
     parallelio:
       require:
         - '@2.6.2'
