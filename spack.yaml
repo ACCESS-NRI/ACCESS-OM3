@@ -19,7 +19,7 @@ spack:
         - 'configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3'
     access-cice:
       require:
-        - '@git.5-port_cmake_build'
+        - '@git.421a90ccc47b7861afa48f5384f642715c5560e1'
         - 'io_type=PIO'
     access-mom6:
        require:
