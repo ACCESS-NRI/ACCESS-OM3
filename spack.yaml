@@ -24,6 +24,7 @@ spack:
     access-mom6:
        require:
        - '@git.cmake_build'
+       - '+asymmetric_mem'
     access-ww3:
       require:
       - '@git.1-cmake_build'
