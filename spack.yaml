@@ -23,7 +23,7 @@ spack:
         - 'io_type=PIO +openmp'
     access-mom6:
        require:
-       - '@git.cmake_build +openmp'
+       - '@git.cmake_build +openmp+asymmetric_mem+access3'
     access-ww3:
       require:
       - '@git.1-cmake_build'
