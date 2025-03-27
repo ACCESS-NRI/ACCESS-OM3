@@ -23,11 +23,11 @@ spack:
         - 'io_type=PIO'
     access-mom6:
        require:
-       - '@git.cmake_build'
+       - '@git.ddd3902d851ccb50fc3e62f27398b48b5294085d'
        - '+asymmetric_mem'
     access-ww3:
       require:
-      - '@git.1-cmake_build'
+      - '@git.97655811bb003567c0f87b8aecb0489e85a5d446'
     access3-share:
       require:
         - '@git.db7726a75de14a02acb3ee09efe6b3adf8db5c5e'
