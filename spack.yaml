@@ -6,12 +6,12 @@
 # https://github.com/ACCESS-NRI/model-deployment-template/blob/main/spack.yaml
 spack:
   specs:
-    - access-om3@git.2025.01.1
+    - access-om3@git.2025.01.2
   packages:
     # Main Dependencies
     access-om3-nuopc:
       require:
-        - '@git.0.4.0'
+        - '@git.0.4.1'
         - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
 
     # Other Dependencies
@@ -52,5 +52,5 @@ spack:
           - access-om3
           - access-om3-nuopc
         projections:
-          access-om3: '{name}/2025.01.1'
-          access-om3-nuopc: '{name}/0.4.0-{hash:7}'
+          access-om3: '{name}/2025.01.2'
+          access-om3-nuopc: '{name}/0.4.1-{hash:7}'
