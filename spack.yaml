@@ -32,4 +32,4 @@ spack:
         include:
           - access-mom6
         projections:
-          access-mom6: '{name}/cmake_build-{hash:7}'
+          access-mom6: '{name}/ddd3902d851ccb50fc3e62f27398b48b5294085d-{hash:7}'
