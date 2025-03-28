@@ -15,22 +15,22 @@ spack:
   packages:
     access3-exe:
       require:
-        - '@git.share_prototype'
+        - '@git.2025.03.0'
         - 'configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3'
     access-cice:
       require:
-        - '@git.421a90ccc47b7861afa48f5384f642715c5560e1'
+        - '@git.2025.01.1'
         - 'io_type=PIO'
     access-mom6:
-       require:
-       - '@git.cmake_build'
-       - '+asymmetric_mem'
+      require:
+        - '@git.cmake_build'
+        - '+asymmetric_mem'
     access-ww3:
       require:
-      - '@git.97655811bb003567c0f87b8aecb0489e85a5d446'
+        - '@git.2025.03.0'
     access3-share:
       require:
-        - '@git.db7726a75de14a02acb3ee09efe6b3adf8db5c5e'
+        - '@git.2025.03.0'
     esmf:
       require:
         - '@git.v8.7.0'
@@ -55,7 +55,7 @@ spack:
         - '%gcc'
     all:
       require:
-        - '%oneapi@2025.0.4'
+        - %oneapi@2025.0.4
         - target=x86_64_v4
   view: true
   concretizer:
