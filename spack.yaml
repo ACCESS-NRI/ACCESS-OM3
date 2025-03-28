@@ -16,11 +16,11 @@ spack:
     access3-exe:
       require:
         - '@git.2025.03.0'
-        - 'configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3'
+        - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
     access-cice:
       require:
         - '@git.2025.01.1'
-        - 'io_type=PIO'
+        - io_type=PIO
     access-mom6:
       require:
         - '@git.cmake_build'
@@ -55,7 +55,7 @@ spack:
         - '%gcc'
     all:
       require:
-        - %oneapi@2025.0.4
+        - '%oneapi@2025.0.4'
         - target=x86_64_v4
   view: true
   concretizer:
