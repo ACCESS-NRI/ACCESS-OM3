@@ -65,7 +65,7 @@ spack:
       tcl:
         include:
           - access-om3
-          - access3-exe
+          - access3
         projections:
           access-om3: '{name}/2025.x.0'
           access3: '{name}/share_prototype-{hash:7}'
