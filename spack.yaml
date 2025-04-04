@@ -11,7 +11,7 @@
 spack:
   # add package specs to the `specs` list
   specs:
-    - 'access-ww3@git.97655811bb003567c0f87b8aecb0489e85a5d446'
+    - 'access-ww3@git.2025.03.0'
   packages:
     openmpi:
       require:
@@ -32,4 +32,4 @@ spack:
         include:
           - access-ww3
         projections:
-          access-ww3: '{name}/97655811bb003567c0f87b8aecb0489e85a5d446-{hash:7}'
+          access-ww3: '{name}/2025.03.0-{hash:7}'
