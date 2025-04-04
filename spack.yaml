@@ -11,7 +11,7 @@
 spack:
   # add package specs to the `specs` list
   specs:
-    - 'access-cice@git.5-port_cmake_build~access3'
+    - 'access-cice@git.2025.01.1'
   packages:
     openmpi:
       require:
@@ -32,4 +32,4 @@ spack:
         include:
           - access-cice
         projections:
-          access-cice: '{name}/5-port_cmake_build-{hash:7}'
+          access-cice: '{name}/2025.01.1-{hash:7}'
