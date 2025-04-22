@@ -64,17 +64,17 @@ spack:
   concretizer:
     unify: true
   modules:
-    # prefix_inspections:
-    #   bin:
-    #    - PATH
-    #   lib:
-    #    - LIBRARY_PATH
-    #    - LD_LIBRARY_PATH
-    #   lib64:
-    #    - LIBRARY_PATH
-    #    - LD_LIBRARY_PATH
-    #   include:
-      #  - FPATH
+    prefix_inspections:
+      bin:
+       - PATH
+      lib:
+       - LIBRARY_PATH
+       - LD_LIBRARY_PATH
+      lib64:
+       - LIBRARY_PATH
+       - LD_LIBRARY_PATH
+      include:
+       - FPATH
 
     default:
       tcl:
