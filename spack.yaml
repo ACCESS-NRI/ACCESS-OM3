@@ -12,6 +12,7 @@ spack:
   # add package specs to the `specs` list
   specs:
   - access-om3@git.2025.x.0
+  - 'esmf@git.v8.7.0 /lv5t7j4'
   packages:
     access3:
       require:
@@ -28,12 +29,12 @@ spack:
     access3-share:
       require:
         - '@git.92e488e51189a7b3c376744e5d8d69ffce2847f2'
-    esmf:
-      require:
-        - '@git.v8.7.0'
+    # esmf:
+    #   require:
+    #     - '@git.v8.7.0'
     gcom:
       require:
-       - '@8.0'
+        - '@8.0'
     fms:
       require:
         - '@git.2024.03'
@@ -82,6 +83,7 @@ spack:
           - access-om3
           - access-mom6
           - access-cice
+          - access3-share
           - access3
           - esmf
           - fms
@@ -103,5 +105,6 @@ spack:
           esmf: '{name}/v8.7.0-{hash:7}'
           netcdf-c: '{name}/4.9.2-{hash:7}'
           netcdf-fortran: '{name}/4.6.1-{hash:7}'
+          gcom: '{name}/8.0-{hash:7}'
       
 
