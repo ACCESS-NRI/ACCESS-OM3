@@ -106,5 +106,4 @@ spack:
           netcdf-c: '{name}/4.9.2-{hash:7}'
           netcdf-fortran: '{name}/4.6.1-{hash:7}'
           gcom: '{name}/8.0-{hash:7}'
-      
 
