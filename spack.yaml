@@ -18,6 +18,7 @@ spack:
       require:
         - '@git.92e488e51189a7b3c376744e5d8d69ffce2847f2'
         - configurations=MOM6-CICE6
+        - '+cm3'
     access-cice:
       require:
         - '@git.d4e7ca14826cc2ca652f13e135cc5f41e9fd3d03'
