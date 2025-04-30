@@ -13,7 +13,7 @@ spack:
       require:
         - '@git.0.4.1'
         - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
-
+        - build_type=debug
     # Other Dependencies
     esmf:
       require:
