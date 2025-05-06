@@ -40,15 +40,15 @@ Below are some real-world examples of how to modify the `spack.yaml` file.
 
 In this example, we are using the `ACCESS-OM2` deployment repository's `spack.yaml` from [this commit](https://github.com/ACCESS-NRI/ACCESS-OM2/blob/47bc7bf979c1dfa12a24272cb739117abc50d7ca/spack.yaml). We are also modifying one of ACCESS-OM2's model components, namely [ACCESS-NRI/MOM5](https://github.com/ACCESS-NRI/MOM5). This model component is available in our [`ACCESS-NRI/spack-packages`](https://github.com/ACCESS-NRI/spack-packages) as the package `mom5`.
 
-1. Clone and make modifications to the model component `ACCESS-NRI/MOM5`, In this case, the modifications we want to include are on the branch [`development`](https://github.com/ACCESS-NRI/MOM5/tree/development). Tags can also be used.
+1. Clone and make modifications to the model component `ACCESS-NRI/MOM5`, In this case, the modifications we want to include are on the branch [`development`](https://github.com/ACCESS-NRI/MOM5/tree/development), specifically the `3e42512eb5c528494527906297078bb91741a14a` commit. Tagged commits can also be used.
 2. Create a branch in the model deployment repository `ACCESS-NRI/ACCESS-OM2` - such as `update_mom5_dev_build`.
 3. Make modifications to the `spack.yaml` file - an example diff is below:
-   * Firstly, bump the version of the [overall deployment](https://github.com/ACCESS-NRI/ACCESS-OM2/blob/47bc7bf979c1dfa12a24272cb739117abc50d7ca/spack.yaml#L8). This version encompasses all changes done in a `spack.yaml`, in the form `CALVER_YEAR.CALVER_MONTH.MINOR`. Note that if the PR is created as a Draft, there is no need to bump the overall model version as it is assumed to be a test build:
+   * Firstly, bump the version of the [overall deployment](https://github.com/ACCESS-NRI/ACCESS-OM2/blob/47bc7bf979c1dfa12a24272cb739117abc50d7ca/spack.yaml#L8). This version encompasses all changes done in a `spack.yaml`, in the form `CALVER_YEAR.CALVER_MONTH.00MINOR`. Note that if the PR is created as a Draft, there is no need to bump the overall model version as it is assumed to be a test build:
       * Since this is a minor change, just bump the minor version. Hence, it is updated to `@git.2024.03.1`.
       * When that version is bumped, the [associated module projection](https://github.com/ACCESS-NRI/ACCESS-OM2/blob/47bc7bf979c1dfa12a24272cb739117abc50d7ca/spack.yaml#L51) also needs to be updated to `{name}/2024.03.1` as well.
-   * Secondly, update the version of the `mom5` package that was updated earlier, to the `development` branch set in the model component repository:
-      * Update the version of the [`mom5` package](https://github.com/ACCESS-NRI/ACCESS-OM2/blob/47bc7bf979c1dfa12a24272cb739117abc50d7ca/spack.yaml#L15) to `@git.development`.
-      * Also update the [associated module projection](https://github.com/ACCESS-NRI/ACCESS-OM2/blob/47bc7bf979c1dfa12a24272cb739117abc50d7ca/spack.yaml#L53) to `{name}/VERSION-{hash:7}` - in this case, `{name}/development-{hash:7}`. The `{hash:7}` is used so the module doesn't conflict with other versions.
+   * Secondly, update the version of the `mom5` package that was updated earlier, to the `3e42512eb5c528494527906297078bb91741a14a` commit in the model component repository:
+      * Update the version of the [`mom5` package](https://github.com/ACCESS-NRI/ACCESS-OM2/blob/47bc7bf979c1dfa12a24272cb739117abc50d7ca/spack.yaml#L15) to `@git.3e42512eb5c528494527906297078bb91741a14a`. If it was instead a tag, it would be something like `@git.TAG` (for example, `@git.dev_2025.05.12`).
+      * Also update the [associated module projection](https://github.com/ACCESS-NRI/ACCESS-OM2/blob/47bc7bf979c1dfa12a24272cb739117abc50d7ca/spack.yaml#L53) to `{name}/VERSION-{hash:7}` - in this case, `{name}/3e42512eb5c528494527906297078bb91741a14a-{hash:7}`. The `{hash:7}` is used so the module doesn't conflict with other versions.
    * The end result should be something like this (note this is a [unified diff](https://linuxhandbook.com/diff-command/#example-3-diff-in-“unified”-context-withu) showing the original and changes that were required):
 
       ```diff
@@ -62,7 +62,7 @@ In this example, we are using the `ACCESS-OM2` deployment repository's `spack.ya
             mom5:
                require:
       -         - '@git.2023.11.09'
-      +         - '@git.development'
+      +         - '@git.3e42512eb5c528494527906297078bb91741a14a'
             # ...
          # ...
          modules:
@@ -74,13 +74,13 @@ In this example, we are using the `ACCESS-OM2` deployment repository's `spack.ya
       +               access-om2: '{name}/2024.03.1'
                      # ...
       -               mom5: '{name}/2023.11.09-{hash:7}'
-      +               mom5: '{name}/development-{hash:7}'
+      +               mom5: '{name}/3e42512eb5c528494527906297078bb91741a14a-{hash:7}'
                      # ...
       ```
 
-4. Now that the modifications are complete, commit the changes and open a Pull Request in `ACCESS-NRI/ACCESS-OM2` into `main`, even if it's just a dev build.
+4. Now that the modifications are complete, commit and push the changes and open a Pull Request in `ACCESS-NRI/ACCESS-OM2` into `main`, even if it's just a dev build.
 5. The CI/CD kicks off, and [a comment](https://github.com/ACCESS-NRI/ACCESS-OM2/pull/86#issuecomment-2477781588) is added by `github-actions[bot]` saying that the build is deploying, and once the deployment is 'Active', the module specified in the comment is available on the HPC and is `module use/load`able. Excellent!
-6. If there are any other changes required in that PR, simply commit changes to the `spack.yaml` to do a rebuild. For example, if one does more changes to the `MOM5` `development` branch that need to be incorporated, add in a comment to the `spack.yaml` noting the changes, and commit it.
+6. If there are any other changes required in that PR, simply commit changes to the `spack.yaml` to do a rebuild. For example, if one does more changes to the `MOM5` `development` branch that need to be incorporated, update the commit or tag from that branch in the `spack.yaml`, and then commit and push it.
 
 **NOTE:** If required, when making modifications, verify that the versions of `spack` and `spack-packages` in [`config/versions.json`](https://github.com/ACCESS-NRI/ACCESS-OM2/blob/47bc7bf979c1dfa12a24272cb739117abc50d7ca/config/versions.json) are as required by use-case.
 
@@ -130,18 +130,14 @@ If the `CURRENT_YEAR.CURRENT_MONTH` portion is already taken, it is bumped to th
 
 Convenience function that deploys the current `HEAD` of the PR branch again.
 
-This is most useful for models that are using `@git.BRANCH` references for versions of model dependencies.
+This is most useful for recovering from transient errors during the build pipeline. For example, if the HPC is down or degraded, and the workflow fails.
 
-> [!IMPORTANT]
-> It is up to the user to make sure that modifications have actually been pushed to the branch(es) referenced in the `spack.yaml` before doing a `!redeploy` - it will not check for this, and will simply redeploy the same changes if no changes are made
-
-For example, say you have done the modifications from the [above `mom5` example](#example-modification-workflow-of-access-om2s-mom5-package), and it has deployed.
-
-If you make further modifications to the `mom5` packages `development` branch (meaning it has a new `HEAD`), you would need the CI in the model deployment repository to run again to pick up the new `HEAD` of the `mom5` `development` branch.
-
-To redeploy the model with all the current changes in the `mom5` repository, comment `!redeploy`. This forces the CI/CD job to re-run and the redeployment will exist as a separate environment and module to the original deployment.
+This forces the CI/CD job to re-run with the same `spack.yaml` and the redeployment will exist as a separate environment and module to the original (if it succeeded).
 
 This is a convenience function. Without this you would need to create a new commit to the pull request to force the CI/CD to run.
+
+> [!NOTE]
+> This Comment Command used to be able to redeploy changes made that were made to a dependency packages `@git.BRANCH` version, even if there were no other changes to the `spack.yaml`. Since `@git.BRANCH` references aren't currently working as expected, this should be avoided for the time being.
 
 ### Backporting Bugfixes
 
