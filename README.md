@@ -26,7 +26,7 @@ ACCESS-NRI is using [spack](https://spack.io), a build from source package manag
 
 Spack automatically builds all the components and their dependencies, producing model component executables. Spack already contains support for compiling thousands of common software packages. Spack packages for the components are defined in the [spack packages repository](https://github.com/ACCESS-NRI/spack_packages/).
 
-ACCESS-OM3 is built and deployed automatically to `gadi` on NCI (see below). However it is possible to use spack to compile the model using the `spack.yaml` environment file in this repository. To do so follow the [instructions on for configuring spack on `gadi`]([https://forum.access-hive.org.au/t/how-to-build-access-om2-on-gadi/1545](https://access-hive.org.au/getting_started/spack/)).
+ACCESS-OM3 is built and deployed automatically to `gadi` on NCI (see below). However it is possible to use spack to compile the model using the `spack.yaml` environment file in this repository. To do so follow the [instructions on for configuring spack on `gadi`](https://access-hive.org.au/getting_started/spack/).
 
 Then clone this repository and run the following commands on `gadi`:
 
@@ -48,14 +48,14 @@ The deployment process also creates a GitHub release with the same tag. All rele
 - a `spack.lock` file, which is a complete build provenance document, listing all the components that were built and their dependencies, versions, compiler version, build flags and build architecture. It is also installable via spack similarly to the `spack.yaml`. 
 - the environment `spack.yaml` file used for deployment
 
-Additionally the deployment creates environment modulefiles, the [standard method for deploying software on `gadi`](https://opus.nci.org.au/display/Help/Environment+Modules). To view available ACCESS-rAM3 versions:
+Additionally the deployment creates environment modulefiles, the [standard method for deploying software on `gadi`](https://opus.nci.org.au/display/Help/Environment+Modules). To view available ACCESS-OM3 versions:
 
 ```bash
 module use /g/data/vk83/modules
 module avail access-om3
 ```
 
-For users of ACCESS-OM3 model configurations released by ACCESS-NRI the exact location of the model executables is not required. Model configurations will be updated with new model components when necessary.
+For users of ACCESS-OM3 model configurations released by ACCESS-NRI, knowledge of the exact location of the model executables is not required. Model configurations will be updated with new model components when necessary.
 
 For information on contributing your own fixes to the ACCESS-OM3 `spack.yaml`, see the [CONTRIBUTING.md](./CONTRIBUTING.md) file.
 
