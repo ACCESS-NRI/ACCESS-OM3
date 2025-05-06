@@ -6,7 +6,7 @@
 # https://github.com/ACCESS-NRI/model-deployment-template/blob/main/spack.yaml
 spack:
   specs:
-    - access-om3@git.2025.01.2
+    - access-om3@git.2025.01.3
   packages:
     # Main Dependencies
     access-om3-nuopc:
@@ -37,11 +37,14 @@ spack:
     fortranxml:
       require:
         - '@4.1.2'
+    gcc-runtime:
+      require:
+        - '%gcc'
 
     all:
       require:
-        - '%intel@2021.10.0'
-        - 'target=x86_64'
+        - '%oneapi@2025.0.4'
+        - 'target=x86_64_v4'
   view: true
   concretizer:
     unify: true
@@ -52,5 +55,5 @@ spack:
           - access-om3
           - access-om3-nuopc
         projections:
-          access-om3: '{name}/2025.01.2'
+          access-om3: '{name}/2025.01.3'
           access-om3-nuopc: '{name}/0.4.1-{hash:7}'
