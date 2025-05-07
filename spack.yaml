@@ -6,13 +6,27 @@
 # https://github.com/ACCESS-NRI/model-deployment-template/blob/main/spack.yaml
 spack:
   specs:
-    - access-om3@git.2025.01.2
+    - access-om3@git.2025.05.000
   packages:
     # Main Dependencies
-    access-om3-nuopc:
+    access3:
       require:
-        - '@git.0.4.1'
-        - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
+        - '@git.2025.03.0'
+        - configurations=MOM6-CICE6,MOM6-CICE6-WW3
+    access-cice:
+      require:
+        - '@git.CICE6.6.0-1'
+        - io_type=PIO
+    access-mom6:
+      require:
+        - '@git.2025.02.000'
+        - '+asymmetric_mem'
+    access-ww3:
+      require:
+        - '@git.2025.03.0'
+    access3-share:
+      require:
+        - '@git.2025.03.0'
 
     # Other Dependencies
     esmf:
@@ -37,11 +51,14 @@ spack:
     fortranxml:
       require:
         - '@4.1.2'
+    gcc-runtime:
+      require:
+        - '%gcc'
 
     all:
       require:
-        - '%intel@2021.10.0'
-        - 'target=x86_64'
+        - '%oneapi@2025.0.4'
+        - 'target=x86_64_v4'
   view: true
   concretizer:
     unify: true
@@ -50,7 +67,7 @@ spack:
       tcl:
         include:
           - access-om3
-          - access-om3-nuopc
+          - access3
         projections:
-          access-om3: '{name}/2025.01.2'
-          access-om3-nuopc: '{name}/0.4.1-{hash:7}'
+          access-om3: '{name}/2025.05.000'
+          access3: '{name}/2025.03.0-{hash:7}'
