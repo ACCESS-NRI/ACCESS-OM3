@@ -17,14 +17,23 @@ spack:
       require:
         - '@git.2025.03.0'
         - configurations=MOM6-CICE6
+        - 'fflags="-march=sapphirerapids -axcascadelake,CORE-AVX2"'
+        - 'cflags="-march=sapphirerapids -axcascadelake,CORE-AVX2"'
+        - 'cxxflags="-march=sapphirerapids -axcascadelake,CORE-AVX2"'
     access-cice:
       require:
         - '@git.2025.01.1'
         - io_type=PIO
+        - 'fflags="-march=sapphirerapids -axcascadelake,CORE-AVX2"'
+        - 'cflags="-march=sapphirerapids -axcascadelake,CORE-AVX2"'
+        - 'cxxflags="-march=sapphirerapids -axcascadelake,CORE-AVX2"'
     access-mom6:
       require:
         - '@git.cmake_build'
         - '+asymmetric_mem'
+        - 'fflags="-march=sapphirerapids -axcascadelake,CORE-AVX2"'
+        - 'cflags="-march=sapphirerapids -axcascadelake,CORE-AVX2"'
+        - 'cxxflags="-march=sapphirerapids -axcascadelake,CORE-AVX2"'
     access-ww3:
       require:
         - '@git.2025.03.0'
