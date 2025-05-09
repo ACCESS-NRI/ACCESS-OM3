@@ -29,7 +29,7 @@ spack:
         - 'cxxflags="-march=sapphirerapids -axcascadelake,CORE-AVX2"'
     access-mom6:
       require:
-        - '@git.cmake_build'
+        - '@git.2025.02.000'
         - '+asymmetric_mem'
         - 'fflags="-march=sapphirerapids -axcascadelake,CORE-AVX2"'
         - 'cflags="-march=sapphirerapids -axcascadelake,CORE-AVX2"'
