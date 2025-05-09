@@ -17,23 +17,23 @@ spack:
       require:
         - '@git.2025.03.0'
         - configurations=MOM6-CICE6
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -qopt-zmm-usage=high"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -qopt-zmm-usage=high"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -qopt-zmm-usage=high"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -qopt-zmm-usage=high -unroll"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -qopt-zmm-usage=high -unroll"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -qopt-zmm-usage=high -unroll"'
     access-cice:
       require:
         - '@git.2025.01.1'
         - io_type=PIO
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -qopt-zmm-usage=high"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -qopt-zmm-usage=high"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -qopt-zmm-usage=high"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -qopt-zmm-usage=high -unroll"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -qopt-zmm-usage=high -unroll"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -qopt-zmm-usage=high -unroll"'
     access-mom6:
       require:
         - '@git.2025.02.000'
         - '+asymmetric_mem'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -qopt-zmm-usage=high"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -qopt-zmm-usage=high"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -qopt-zmm-usage=high"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -qopt-zmm-usage=high -unroll"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -qopt-zmm-usage=high -unroll"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -qopt-zmm-usage=high -unroll"'
     access-ww3:
       require:
         - '@git.2025.03.0'
