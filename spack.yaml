@@ -12,18 +12,13 @@ spack:
     access3:
       require:
         - '@git.2025.03.0'
-        - configurations=MOM6-CICE6,MOM6-CICE6-WW3
-    access-cice:
-      require:
-        - '@git.CICE6.6.0-1'
-        - io_type=PIO
+        - configurations=MOM6
     access-mom6:
       require:
         - '@git.2025.02.000'
-        - '+asymmetric_mem'
-    access-ww3:
-      require:
-        - '@git.2025.03.0'
+        - '~asymmetric_mem'
+        - build_type=Debug
+        - fflags="-g"
     access3-share:
       require:
         - '@git.2025.03.0'
