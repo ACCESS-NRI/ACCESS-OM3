@@ -59,6 +59,8 @@ spack:
       require:
         - '%oneapi@2025.0.4'
         - 'target=x86_64_v4'
+        - 'fflags="-assume nan_compares -assume ieee_compares"'
+        # - 'fflags="-fprotect-parens -assume nan_compares -assume ieee_compares -traceback -check all -init=snan -init=array -init=huge"'
   view: true
   concretizer:
     unify: true
