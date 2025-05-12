@@ -13,13 +13,16 @@ spack:
       require:
         - '@git.2025.03.0'
         - configurations=MOM6
+        - build_type=Debug
     access-mom6:
       require:
         - '@git.2025.02.000'
         - '~asymmetric_mem'
+        - build_type=Debug
     access3-share:
       require:
         - '@git.2025.03.0'
+        - build_type=Debug
 
     # Other Dependencies
     esmf:
@@ -31,7 +34,7 @@ spack:
     netcdf-c:
       require:
         - '@4.9.2'
-        - build_system=cmake
+        - build_system=cmake build_type=Debug
     netcdf-fortran:
       require:
         - '@4.6.1'
@@ -52,7 +55,6 @@ spack:
       require:
         - '%oneapi@2025.0.4'
         - 'target=x86_64_v4'
-        - 'build_type=Debug'
   view: true
   concretizer:
     unify: true
