@@ -37,3 +37,10 @@ spack:
           - netcdf-fortran
           - fms
           - fortranxml
+        projections:
+          esmf: '{name}'
+          parallelio: '{name}'
+          netcdf-c: '{name}'
+          netcdf-fortran: '{name}'
+          fms: '{name}'
+          fortranxml: '{name}'
