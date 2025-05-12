@@ -6,51 +6,16 @@
 # https://github.com/ACCESS-NRI/model-deployment-template/blob/main/spack.yaml
 spack:
   specs:
-    - access-om3@git.2025.05.000
+    esmf@git.v8.7.0
+    parallelio@2.6.2
+    netcdf-c@4.9.2 build_system=cmake build_type=RelWithDebInfo
+    netcdf-fortran@4.6.1
+    fms@git.2024.03
+    fortranxml@4.1.2
   packages:
-    # Main Dependencies
-    access3:
-      require:
-        - '@git.2025.03.0'
-        - configurations=MOM6-CICE6,MOM6-CICE6-WW3
-    access-cice:
-      require:
-        - '@git.CICE6.6.0-1'
-        - io_type=PIO
-    access-mom6:
-      require:
-        - '@git.2025.02.000'
-        - '+asymmetric_mem'
-    access-ww3:
-      require:
-        - '@git.2025.03.0'
-    access3-share:
-      require:
-        - '@git.2025.03.0'
-
-    # Other Dependencies
-    esmf:
-      require:
-        - '@git.v8.7.0'
-    parallelio:
-      require:
-        - '@2.6.2'
-    netcdf-c:
-      require:
-        - '@4.9.2'
-        - build_system=cmake build_type=RelWithDebInfo
-    netcdf-fortran:
-      require:
-        - '@4.6.1'
-    fms:
-      require:
-        - '@git.2024.03'
     openmpi:
       require:
         - '@4.1.7'
-    fortranxml:
-      require:
-        - '@4.1.2'
     gcc-runtime:
       require:
         - '%gcc'
@@ -66,8 +31,9 @@ spack:
     default:
       tcl:
         include:
-          - access-om3
-          - access3
-        projections:
-          access-om3: '{name}/2025.05.000'
-          access3: '{name}/2025.03.0-{hash:7}'
+          - esmf
+          - parallelio
+          - netcdf-c
+          - netcdf-fortran
+          - fms
+          - fortranxml
