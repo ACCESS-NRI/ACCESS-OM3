@@ -12,7 +12,7 @@ spack:
     access3:
       require:
         - '@git.2025.03.0'
-        - configurations=MOM6
+        - configurations=MOM6-CICE6
         - build_type=Debug
     access-mom6:
       require:
