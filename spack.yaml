@@ -6,9 +6,11 @@
 # https://github.com/ACCESS-NRI/model-deployment-template/blob/main/spack.yaml
 spack:
   specs:
-    - access-om3-nuopc@git.0.4.1 configurations=MOM6 build_type=Debug
+    - access-om3
   packages:
-
+    access-om3-nuopc:
+      require:
+        - @git.0.4.1 configurations=MOM6 build_type=Debug
     # Other Dependencies
     esmf:
       require:
@@ -47,6 +49,8 @@ spack:
     default:
       tcl:
         include:
+          - access-om3
           - access-om3-nuopc
         projections:
+          access-om3: '{name}/0.4.1-{hash:7}'
           access-om3-nuopc: '{name}/0.4.1-{hash:7}'
