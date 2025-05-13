@@ -33,7 +33,6 @@ spack:
       require:
         - '@git.2025.03.0'
         - 'fflags="-assume nan_compares -assume ieee_compares"'
-        - 'cflags="-assume nan_compares -assume ieee_compares"'
     # Other Dependencies
     esmf:
       require:
