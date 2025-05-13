@@ -38,11 +38,14 @@ spack:
     fortranxml:
       require:
         - '@4.1.2'
+    gcc:
+      require:
+        - '%gccruntime'
 
     all:
       require:
-        - '%intel@2021.10.0'
-        - 'target=x86_64'
+        - '%oneapi@2025.04.0'
+        - 'target=x86_64_v4'
   view: true
   concretizer:
     unify: true
