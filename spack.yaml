@@ -13,8 +13,7 @@ spack:
       require:
         - '@git.2025.03.0'
         - configurations=MOM6
-        - build_type=Debug
-        - 'fflags="-nocheck uninit"'
+        - fflags="-O0 -g -check bounds -check pointers -fpe0 -check noarg_temp_created"
     access-mom6:
       require:
         - '@git.2025.02.000'
