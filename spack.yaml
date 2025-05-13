@@ -19,7 +19,7 @@ spack:
         - '@git.2025.02.000'
         - '~asymmetric_mem'
         - build_type=Debug
-   access-cice:
+    access-cice:
       require:
         - '@git.CICE6.6.0-1'
         - io_type=PIO
