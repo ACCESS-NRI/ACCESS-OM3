@@ -6,7 +6,7 @@
 # https://github.com/ACCESS-NRI/model-deployment-template/blob/main/spack.yaml
 spack:
   specs:
-     - access-om3@git.main
+     - access-om3@git.xx
   packages:
     access-om3-nuopc:
       require:
@@ -53,5 +53,5 @@ spack:
           - access-om3
           - access-om3-nuopc
         projections:
-          access-om3: '{name}/main-{hash:7}'
+          access-om3: '{name}/xx-{hash:7}'
           access-om3-nuopc: '{name}/0.4.1-{hash:7}'
