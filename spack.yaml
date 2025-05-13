@@ -32,9 +32,9 @@ spack:
     fortranxml:
       require:
         - '@4.1.2'
-    gcc:
+    gcc-runtime:
       require:
-        - '%gccruntime'
+        - '%gcc'
 
     all:
       require:
