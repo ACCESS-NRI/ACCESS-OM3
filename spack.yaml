@@ -13,21 +13,27 @@ spack:
       require:
         - '@git.2025.03.0'
         - configurations=MOM6-CICE6,MOM6-CICE6-WW3
+        - 'fflags="-assume nan_compares -assume ieee_compares"'
+        # - 'fflags="-fprotect-parens -assume nan_compares -assume ieee_compares -traceback -check all -init=snan -init=array -init=huge"'
     access-cice:
       require:
         - '@git.CICE6.6.0-1'
         - io_type=PIO
+        - 'fflags="-assume nan_compares -assume ieee_compares"'
     access-mom6:
       require:
         - '@git.2025.02.000'
         - '+asymmetric_mem'
+        - 'fflags="-assume nan_compares -assume ieee_compares"'
     access-ww3:
       require:
         - '@git.2025.03.0'
+        - 'fflags="-assume nan_compares -assume ieee_compares"'
     access3-share:
       require:
         - '@git.2025.03.0'
-
+        - 'fflags="-assume nan_compares -assume ieee_compares"'
+        - 'cflags="-assume nan_compares -assume ieee_compares"'
     # Other Dependencies
     esmf:
       require:
@@ -58,9 +64,7 @@ spack:
     all:
       require:
         - '%oneapi@2025.0.4'
-        - 'target=x86_64_v4'
-        - 'fflags="-assume nan_compares -assume ieee_compares"'
-        # - 'fflags="-fprotect-parens -assume nan_compares -assume ieee_compares -traceback -check all -init=snan -init=array -init=huge"'
+        - 'target=x86_64_v4'       
   view: true
   concretizer:
     unify: true
