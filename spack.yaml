@@ -11,7 +11,7 @@ spack:
     access-om3-nuopc:
       require:
         - '@git.0.4.1'
-        - configurations=MOM6 build_type=Debug
+        - configurations:=MOM6 build_type=Debug
     # Other Dependencies
     esmf:
       require:
