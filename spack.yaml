@@ -28,7 +28,6 @@ spack:
     esmf:
       require:
         - '@git.v8.7.0'
-        - +debug
     parallelio:
       require:
         - '@2.6.2'
@@ -55,7 +54,7 @@ spack:
 
     all:
       require:
-        - '%oneapi@2025.0.4'
+        - '%intel@2021.10.0'
         - 'target=x86_64_v4'
   view: true
   concretizer:
