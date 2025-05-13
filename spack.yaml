@@ -10,7 +10,7 @@ spack:
     - parallelio@2.6.2
     - netcdf-c@4.9.2 build_system=cmake build_type=RelWithDebInfo
     - netcdf-fortran@4.6.1
-    - fms@git.2024.03 precision=64 +large_file ~gfs_phys ~quad_precision
+    - fms@git.2024.03 precision=64 +large_file ~gfs_phys ~quad_precision ~openmp
     - fortranxml@4.1.2
   packages:
     openmpi:
