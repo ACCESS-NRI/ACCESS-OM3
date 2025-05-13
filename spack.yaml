@@ -6,15 +6,9 @@
 # https://github.com/ACCESS-NRI/model-deployment-template/blob/main/spack.yaml
 spack:
   specs:
-    - access-om3@git.2025.01.2
+    access-om3-nuopc@git.0.4.1 configurations=MOM6 build_type=Debug
   packages:
-    # Main Dependencies
-    access-om3-nuopc:
-      require:
-        - '@git.0.4.1'
-        - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
-        - build_type=Debug
-        - fflags='-Wall'
+
     # Other Dependencies
     esmf:
       require:
