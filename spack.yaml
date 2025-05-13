@@ -28,6 +28,7 @@ spack:
     esmf:
       require:
         - '@git.v8.7.0'
+        - +debug
     parallelio:
       require:
         - '@2.6.2'
@@ -35,7 +36,7 @@ spack:
     netcdf-c:
       require:
         - '@4.9.2'
-        - ~shared build_system=cmake build_type=RelWithDebInfo cflags=-fpic
+        - build_system=cmake build_type=RelWithDebInfo
     netcdf-fortran:
       require:
         - '@4.6.1'
