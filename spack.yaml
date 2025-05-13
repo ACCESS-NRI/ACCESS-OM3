@@ -31,6 +31,7 @@ spack:
     parallelio:
       require:
         - '@2.6.2'
+        - build_type=RelWithDebInfo
     netcdf-c:
       require:
         - '@4.9.2'
