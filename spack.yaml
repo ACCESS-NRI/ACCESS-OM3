@@ -35,7 +35,7 @@ spack:
     netcdf-c:
       require:
         - '@4.9.2'
-        - ~shared build_system=cmake build_type=RelWithDebInfo cflags=fpic
+        - ~shared build_system=cmake build_type=RelWithDebInfo cflags=-fpic
     netcdf-fortran:
       require:
         - '@4.6.1'
