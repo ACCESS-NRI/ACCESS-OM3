@@ -17,23 +17,23 @@ spack:
       require:
         - '@git.2025.03.0'
         - configurations=MOM6-CICE6
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -qopt-zmm-usage=high -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -qopt-zmm-usage=high -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -qopt-zmm-usage=high -unroll"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-cice:
       require:
         - '@git.2025.01.1'
         - io_type=PIO
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -qopt-zmm-usage=high -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -qopt-zmm-usage=high -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -qopt-zmm-usage=high -unroll"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-mom6:
       require:
         - '@git.2025.02.000'
         - '+asymmetric_mem'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -qopt-zmm-usage=high -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -qopt-zmm-usage=high -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -qopt-zmm-usage=high -unroll"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-ww3:
       require:
         - '@git.2025.03.0'
@@ -43,9 +43,9 @@ spack:
     esmf:
       require:
         - '@git.v8.7.0'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -qopt-zmm-usage=high -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -qopt-zmm-usage=high -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -qopt-zmm-usage=high -unroll"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     fms:
       require:
         - '@git.2024.03'
