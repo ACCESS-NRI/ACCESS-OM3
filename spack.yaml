@@ -14,6 +14,7 @@ spack:
         - '@git.7da391c698288f1daa23cfe30da652663ba3b9a1' # On test-no-mom-patches
         - +mom_symmetric
         - 'fflags="-assume nominus0"'
+        - 'cflags="-assume nominus0"'
         - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
 
     # Other Dependencies
@@ -34,6 +35,7 @@ spack:
       require:
         - '@git.2024.03'
         - 'fflags="-assume nominus0"'
+        - 'cflags="-assume nominus0"'
     openmpi:
       require:
         - '@4.1.7'
