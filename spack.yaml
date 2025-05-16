@@ -11,7 +11,7 @@ spack:
     # Main Dependencies
     access3:
       require:
-        - '@git.2025.03.0'
+        - '@git.09ba8176876cbc0cbb15c4b51c18316024c61b3c'
         - configurations=MOM6
         - 'build_type=Debug'
     access-cice:
@@ -20,7 +20,7 @@ spack:
         - io_type=PIO
     access-mom6:
       require:
-        - '@git.2025.02.000'
+        - '@git.c6128949a36c9962eed306169cae88e93319d7b9'
         - '+asymmetric_mem'
         - 'build_type=Debug'
     access-ww3:
@@ -28,7 +28,7 @@ spack:
         - '@git.2025.03.0'
     access3-share:
       require:
-        - '@git.2025.03.0'
+        - '@git.09ba8176876cbc0cbb15c4b51c18316024c61b3c'
         - 'build_type=Debug'
 
     # Other Dependencies
@@ -60,7 +60,7 @@ spack:
 
     all:
       require:
-        - '%intel@2021.10.0'
+        - '%oneapi@2025.0.4'
         - 'target=x86_64_v4'
   view: true
   concretizer:
