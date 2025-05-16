@@ -19,7 +19,7 @@ spack:
         - io_type=PIO
     access-mom6:
       require:
-        - '@git.3ddfc5e8b705ac14865fa09acabd7df63ae4b6e6'  # On cmake-external-gtracers
+        - '@git.2025.02.001'
         - '+asymmetric_mem'
     access-ww3:
       require:
@@ -29,7 +29,7 @@ spack:
         - '@git.2025.03.0'
     access-generic-tracers:
       require:
-      - '@git.dev-2025.05.000'
+      - '@git.dev-2025.05.001'
     access-mocsy:
       require:
       - '@git.2017.12.0'
