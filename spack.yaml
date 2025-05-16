@@ -11,11 +11,11 @@ spack:
     # Main Dependencies
     access3:
       require:
-        - '@git.2025.03.0'
+        - '@git.09ba8176876cbc0cbb15c4b51c18316024c61b3c'
         - configurations=MOM6
-        - fflags="-check nouninit"
+        # - fflags="-check nouninit"
         - build_type=Debug
-        - fflags="-l:libm.so"
+        # - fflags="-l:libm.so"
     access-mom6:
       require:
         - '@git.2025.02.000'
