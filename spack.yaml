@@ -22,7 +22,7 @@ spack:
     access3-share:
       require:
         - '@git.09ba8176876cbc0cbb15c4b51c18316024c61b3c'
-        # - build_type=Debug
+        - build_type=Debug
 
     # Other Dependencies
     esmf:
