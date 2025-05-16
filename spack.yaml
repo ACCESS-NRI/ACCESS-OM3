@@ -13,18 +13,16 @@ spack:
       require:
         - '@git.09ba8176876cbc0cbb15c4b51c18316024c61b3c'
         - configurations=MOM6
-        # - fflags="-check nouninit"
         - build_type=Debug
-        # - fflags="-l:libm.so"
     access-mom6:
       require:
         - '@git.2025.02.000'
         - '~asymmetric_mem'
-        - build_type=Debug
+        # - build_type=Debug
     access3-share:
       require:
-        - '@git.2025.03.0'
-        - build_type=Debug
+        - '@git.09ba8176876cbc0cbb15c4b51c18316024c61b3c'
+        # - build_type=Debug
 
     # Other Dependencies
     esmf:
