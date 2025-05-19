@@ -11,33 +11,33 @@ spack:
     # Main Dependencies
     access3:
       require:
-        - '@git.2025.03.0'
+        - '@git.2025.03.0=develop'
         - configurations=MOM6-CICE6,MOM6-CICE6-WW3
     access-cice:
       require:
-        - '@git.CICE6.6.0-1'
+        - '@git.CICE6.6.0-1=develop'
         - io_type=PIO
     access-mom6:
       require:
-        - '@git.2025.02.001'
+        - '@git.2025.02.001=develop'
         - '+asymmetric_mem'
     access-ww3:
       require:
-        - '@git.2025.03.0'
+        - '@git.2025.03.0=develop'
     access3-share:
       require:
-        - '@git.2025.03.0'
+        - '@git.2025.03.0=develop'
     access-generic-tracers:
       require:
-      - '@git.dev-2025.05.001'
+      - '@git.dev-2025.05.001=development'
     access-mocsy:
       require:
-      - '@git.2017.12.0'
+      - '@git.2017.12.0=mom5'
 
     # Other Dependencies
     esmf:
       require:
-        - '@git.v8.7.0'
+        - '@git.v8.7.0=8.7.0'
     parallelio:
       require:
         - '@2.6.2'
