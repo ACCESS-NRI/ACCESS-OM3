@@ -15,7 +15,7 @@ spack:
         - configurations=MOM6-CICE6,MOM6-CICE6-WW3
     access-cice:
       require:
-        - '@git.CICE6.6.0-2=develop'
+        - '@git.CICE6.6.0-3=develop'
         - io_type=PIO
     access-mom6:
       require:
