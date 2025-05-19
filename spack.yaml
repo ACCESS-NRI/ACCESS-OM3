@@ -26,7 +26,7 @@ spack:
         - '@git.2025.03.0=develop'
     access3-share:
       require:
-        - '@git.2025.03.0=develop'
+        - '@git.2025.03.1=develop'
     access-generic-tracers:
       require:
       - '@git.dev-2025.05.001=development'
