@@ -17,38 +17,38 @@ spack:
       require:
         - '@git.2025.03.0'
         - configurations=MOM6-CICE6
-        - 'fflags="-march=cascadelake -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=cascadelake -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=cascadelake -mtune=sapphirerapids -unroll"'
+        - 'fflags="-g3 -march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cflags="-g3 -march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-g3 -march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-cice:
       require:
         - '@git.2025.01.1'
         - io_type=PIO
-        - 'fflags="-march=cascadelake -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=cascadelake -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=cascadelake -mtune=sapphirerapids -unroll"'
+        - 'fflags="-g3 -march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cflags="-g3 -march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-g3 -march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-mom6:
       require:
         - '@git.2025.02.000'
         - '+asymmetric_mem'
-        - 'fflags="-march=cascadelake -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=cascadelake -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=cascadelake -mtune=sapphirerapids -unroll"'
+        - 'fflags="-g3 -march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cflags="-g3 -march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-g3 -march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-ww3:
       require:
         - '@git.2025.03.0'
     access3-share:
       require:
         - '@git.2025.03.0'
-        - 'fflags="-march=cascadelake -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=cascadelake -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=cascadelake -mtune=sapphirerapids -unroll"'
+        - 'fflags="-g3 -march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cflags="-g3 -march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-g3 -march=sapphirerapids -mtune=sapphirerapids -unroll"'
     esmf:
       require:
         - '@git.v8.7.0'
-        - 'fflags="-march=cascadelake -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=cascadelake -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=cascadelake -mtune=sapphirerapids -unroll"'
+        - 'fflags="-g3 -march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cflags="-g3 -march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-g3 -march=sapphirerapids -mtune=sapphirerapids -unroll"'
     fms:
       require:
         - '@git.2024.03'
