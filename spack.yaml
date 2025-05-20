@@ -20,7 +20,7 @@ spack:
     access-mom6:
       require:
         - '@git.2025.02.000'
-        - '+asymmetric_mem'
+        - '+asymmetric_mem+openmp'
     access-ww3:
       require:
         - '@git.2025.03.0'
