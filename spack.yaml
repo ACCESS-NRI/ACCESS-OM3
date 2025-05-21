@@ -11,22 +11,25 @@ spack:
     # Main Dependencies
     access3:
       require:
-        - '@git.2025.03.0'
-        - configurations=MOM6-CICE6,MOM6-CICE6-WW3
+        - '@git.09ba8176876cbc0cbb15c4b51c18316024c61b3c'
+        - configurations=MOM6
+        - 'build_type=Debug'
     access-cice:
       require:
         - '@git.CICE6.6.0-1'
         - io_type=PIO
     access-mom6:
       require:
-        - '@git.2025.02.000'
+        - '@git.c6128949a36c9962eed306169cae88e93319d7b9'
         - '+asymmetric_mem'
+        - 'build_type=Debug'
     access-ww3:
       require:
         - '@git.2025.03.0'
     access3-share:
       require:
-        - '@git.2025.03.0'
+        - '@git.09ba8176876cbc0cbb15c4b51c18316024c61b3c'
+        - 'build_type=Debug'
 
     # Other Dependencies
     esmf:
