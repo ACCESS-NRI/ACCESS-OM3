@@ -64,16 +64,32 @@ spack:
     parallelio:
       require:
         - '@2.6.2'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
+        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto -fuse-ld=lld"'
     netcdf-c:
       require:
         - '@4.9.2'
         - build_system=cmake build_type=RelWithDebInfo
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
+        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto -fuse-ld=lld"'
     netcdf-fortran:
       require:
         - '@4.6.1'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
+        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto -fuse-ld=lld"'
     openmpi:
       require:
         - '@4.1.7'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
+        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto -fuse-ld=lld"'
     gcc-runtime:
       require:
         - '%gcc'
