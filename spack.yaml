@@ -57,6 +57,10 @@ spack:
     fms:
       require:
         - '@git.2024.03'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
+        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto -fuse-ld=lld"'
     parallelio:
       require:
         - '@2.6.2'
