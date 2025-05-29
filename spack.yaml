@@ -17,79 +17,54 @@ spack:
       require:
         - '@git.2025.03.0'
         - configurations=MOM6-CICE6
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
-        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto -fuse-ld=lld"'
+        - 'fflags="-march=cascadelake -mtune=sapphirerapids -unroll"'
+        - 'cflags="-march=cascadelake -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-march=cascadelake -mtune=sapphirerapids -unroll"'
     access-cice:
       require:
         - '@git.2025.01.1'
         - io_type=PIO
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
-        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto -fuse-ld=lld"'
+        - 'fflags="-march=cascadelake -mtune=sapphirerapids -unroll"'
+        - 'cflags="-march=cascadelake -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-march=cascadelake -mtune=sapphirerapids -unroll"'
     access-mom6:
       require:
         - '@git.2025.02.000'
         - '+asymmetric_mem'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
-        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto -fuse-ld=lld"'
+        - 'fflags="-march=cascadelake -mtune=sapphirerapids -unroll"'
+        - 'cflags="-march=cascadelake -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-march=cascadelake -mtune=sapphirerapids -unroll"'
     access-ww3:
       require:
         - '@git.2025.03.0'
     access3-share:
       require:
         - '@git.2025.03.0'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
-        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto -fuse-ld=lld"'
+        - 'fflags="-march=cascadelake -mtune=sapphirerapids -unroll"'
+        - 'cflags="-march=cascadelake -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-march=cascadelake -mtune=sapphirerapids -unroll"'
     esmf:
       require:
         - '@git.v8.7.0'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
-        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto -fuse-ld=lld"'
+        - 'fflags="-march=cascadelake -mtune=sapphirerapids -unroll"'
+        - 'cflags="-march=cascadelake -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-march=cascadelake -mtune=sapphirerapids -unroll"'
     fms:
       require:
         - '@git.2024.03'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
-        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto -fuse-ld=lld"'
     parallelio:
       require:
         - '@2.6.2'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
-        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto -fuse-ld=lld"'
     netcdf-c:
       require:
         - '@4.9.2'
         - build_system=cmake build_type=RelWithDebInfo
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
-        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto -fuse-ld=lld"'
     netcdf-fortran:
       require:
         - '@4.6.1'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
-        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto -fuse-ld=lld"'
     openmpi:
       require:
         - '@4.1.7'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto"'
-        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -flto -fuse-ld=lld"'
     gcc-runtime:
       require:
         - '%gcc'
