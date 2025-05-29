@@ -25,7 +25,7 @@ spack:
         - io_type=PIO
     access-mom6:
       require:
-        - '@git.cmake_build'
+        - '@git.2025.02.000'
         - '+asymmetric_mem'
     access3-share:
       require:
