@@ -12,11 +12,11 @@ spack:
   # add package specs to the `specs` list
   specs:
   - access-om3@git.2025.x.0
-  # - 'esmf@git.v8.7.0 /lv5t7j4'
+  - 'esmf@git.v8.7.0 /opjynv3'
   packages:
     access3:
       require:
-        - '@git.4286068fd22c5d8d6844bca496a0f732a10273ae'
+        - '@git.0e2d6cc237c14bba7477e77bc9d132031f92f7f4'
         - configurations=MOM6-CICE6
         - '+cm3'
     access-cice:
@@ -29,10 +29,10 @@ spack:
         - '+asymmetric_mem'
     access3-share:
       require:
-        - '@git.4286068fd22c5d8d6844bca496a0f732a10273ae'
-    esmf:
-      require:
-        - '@git.v8.7.0'
+        - '@git.0e2d6cc237c14bba7477e77bc9d132031f92f7f4'
+    # esmf:
+    #   require:
+    #     - '@git.v8.7.0'
     gcom:
       require:
         - '@8.0'
@@ -99,7 +99,7 @@ spack:
           access-om3: '{name}/2025.x.0'
           access-cice: '{name}/d4e7ca14826cc2ca652f13e135cc5f41e9fd3d03-{hash:7}'
           access-mom6: '{name}/cmake_build-{hash:7}'
-          access3-share: '{name}/4286068fd22c5d8d6844bca496a0f732a10273ae-{hash:7}'
+          access3-share: '{name}/0e2d6cc237c14bba7477e77bc9d132031f92f7f4-{hash:7}'
           parallelio: '{name}/2.6.2-{hash:7}'
           fortranxml: '{name}/4.1.2-{hash:7}'
           fms: '{name}/2024.03-{hash:7}'
