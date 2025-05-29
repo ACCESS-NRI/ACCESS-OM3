@@ -6,32 +6,38 @@
 # https://github.com/ACCESS-NRI/model-deployment-template/blob/main/spack.yaml
 spack:
   specs:
-    - access-om3@git.2025.05.000
+    - access-om3@git.2025.05.001
   packages:
     # Main Dependencies
     access3:
       require:
-        - '@git.2025.03.0'
+        - '@2025.03.1'
         - configurations=MOM6-CICE6,MOM6-CICE6-WW3
     access-cice:
       require:
-        - '@git.CICE6.6.0-1'
+        - '@CICE6.6.0-3'
         - io_type=PIO
     access-mom6:
       require:
-        - '@git.2025.02.000'
+        - '@2025.02.001'
         - '+asymmetric_mem'
     access-ww3:
       require:
-        - '@git.2025.03.0'
+        - '@2025.03.0'
     access3-share:
       require:
-        - '@git.2025.03.0'
+        - '@2025.03.1'
+    access-generic-tracers:
+      require:
+        - '@git.dev-2025.05.001=development'
+    access-mocsy:
+      require:
+        - '@git.2017.12.0=gtracers'
 
     # Other Dependencies
     esmf:
       require:
-        - '@git.v8.7.0'
+        - '@git.v8.7.0=8.7.0'
     parallelio:
       require:
         - '@2.6.2'
@@ -44,7 +50,7 @@ spack:
         - '@4.6.1'
     fms:
       require:
-        - '@git.2024.03'
+        - '@git.2025.02=2025.02'
     openmpi:
       require:
         - '@4.1.7'
@@ -69,5 +75,5 @@ spack:
           - access-om3
           - access3
         projections:
-          access-om3: '{name}/2025.05.000'
-          access3: '{name}/2025.03.0-{hash:7}'
+          access-om3: '{name}/2025.05.001'
+          access3: '{name}/2025.03.1-{hash:7}'
