@@ -17,41 +17,44 @@ spack:
       require:
         - '@git.2025.03.0'
         - configurations=MOM6-CICE6
-        - 'fflags="-g3 -march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-g3 -march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-g3 -march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -assume nobyterecl"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-cice:
       require:
         - '@git.2025.01.1'
         - io_type=PIO
-        - 'fflags="-g3 -march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-g3 -march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-g3 -march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -assume nobyterecl"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-mom6:
       require:
         - '@git.2025.02.000'
         - '+asymmetric_mem'
-        - 'fflags="-g3 -march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-g3 -march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-g3 -march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -assume nobyterecl"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-ww3:
       require:
         - '@git.2025.03.0'
     access3-share:
       require:
         - '@git.2025.03.0'
-        - 'fflags="-g3 -march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-g3 -march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-g3 -march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -assume nobyterecl"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     esmf:
       require:
         - '@git.v8.7.0'
-        - 'fflags="-g3 -march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-g3 -march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-g3 -march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -assume nobyterecl"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     fms:
       require:
         - '@git.2024.03'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -assume nobyterecl"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     parallelio:
       require:
         - '@2.6.2'
