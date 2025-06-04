@@ -6,32 +6,59 @@
 # https://github.com/ACCESS-NRI/model-deployment-template/blob/main/spack.yaml
 spack:
   specs:
-    - access-om3@git.2025.05.000
+    - access-om3@git.2025.05.001
   packages:
     # Main Dependencies
     access3:
       require:
-        - '@git.2025.03.0'
+        - '@2025.03.1'
         - configurations=MOM6-CICE6,MOM6-CICE6-WW3
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-cice:
       require:
-        - '@git.CICE6.6.0-1'
+        - '@CICE6.6.0-3'
         - io_type=PIO
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-mom6:
       require:
-        - '@git.2025.02.000'
+        - '@2025.02.001'
         - '+asymmetric_mem'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-ww3:
       require:
-        - '@git.2025.03.0'
+        - '@2025.03.0'
     access3-share:
       require:
-        - '@git.2025.03.0'
+        - '@2025.03.1'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+    access-generic-tracers:
+      require:
+        - '@git.dev-2025.05.001=development'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+    access-mocsy:
+      require:
+        - '@git.2017.12.0=gtracers'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
 
     # Other Dependencies
     esmf:
       require:
-        - '@git.v8.7.0'
+        - '@git.v8.7.0=8.7.0'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     parallelio:
       require:
         - '@2.6.2'
@@ -44,7 +71,7 @@ spack:
         - '@4.6.1'
     fms:
       require:
-        - '@git.2024.03'
+        - '@git.2025.02=2025.02'
     openmpi:
       require:
         - '@4.1.7'
@@ -69,5 +96,5 @@ spack:
           - access-om3
           - access3
         projections:
-          access-om3: '{name}/2025.05.000'
-          access3: '{name}/2025.03.0-{hash:7}'
+          access-om3: '{name}/2025.05.001'
+          access3: '{name}/2025.03.1-{hash:7}'
