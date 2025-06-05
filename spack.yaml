@@ -35,7 +35,7 @@ spack:
         - '@2025.03.0'
     access3-share:
       require:
-        - '@2025.03.1'
+        - '@git.cc1c6da3f2fe476878e3a3b7cdfde8bf1486d048=2025.03.1'
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
