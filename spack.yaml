@@ -55,9 +55,9 @@ spack:
     esmf:
       require:
         - '@git.v8.7.0=8.7.0'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fno-signed-zeros"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fno-signed-zeros"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fno-signed-zeros"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     parallelio:
       require:
         - '@2.6.2'
