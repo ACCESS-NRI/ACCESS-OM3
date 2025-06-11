@@ -14,21 +14,21 @@ spack:
         - '@2025.03.1'
         - configurations=MOM6-CICE6,MOM6-CICE6-WW3
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -assume nominus0 -assume nostd_minus0_rounding"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -assume nominus0 -assume nostd_minus0_rounding"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -assume nominus0 -assume nostd_minus0_rounding"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-cice:
       require:
         - '@CICE6.6.0-3'
         - io_type=PIO
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -assume nominus0 -assume nostd_minus0_rounding"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -assume nominus0 -assume nostd_minus0_rounding"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -assume nominus0 -assume nostd_minus0_rounding"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-mom6:
       require:
         - '@2025.02.001'
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -assume nominus0 -assume nostd_minus0_rounding"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -assume nominus0 -assume nostd_minus0_rounding"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -assume nominus0 -assume nostd_minus0_rounding"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-ww3:
       require:
         - '@2025.03.0'
@@ -36,28 +36,28 @@ spack:
       require:
         - '@2025.03.1'
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -assume nominus0 -assume nostd_minus0_rounding"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -assume nominus0 -assume nostd_minus0_rounding"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -assume nominus0 -assume nostd_minus0_rounding"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-generic-tracers:
       require:
         - '@git.dev-2025.05.001=development'
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -assume nominus0 -assume nostd_minus0_rounding"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -assume nominus0 -assume nostd_minus0_rounding"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -assume nominus0 -assume nostd_minus0_rounding"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-mocsy:
       require:
         - '@git.2017.12.0=gtracers'
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -assume nominus0 -assume nostd_minus0_rounding"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -assume nominus0 -assume nostd_minus0_rounding"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -assume nominus0 -assume nostd_minus0_rounding"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
 
     # Other Dependencies
     esmf:
       require:
         - '@git.v8.7.0=8.7.0'
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -assume nominus0 -assume nostd_minus0_rounding"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -assume nominus0 -assume nostd_minus0_rounding"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -assume nominus0 -assume nostd_minus0_rounding"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     parallelio:
       require:
         - '@2.6.2'
