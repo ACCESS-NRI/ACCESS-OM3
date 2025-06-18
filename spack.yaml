@@ -16,7 +16,6 @@ spack:
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - +mom_symmetric
     access-cice:
       require:
         - '@CICE6.6.0-3'
@@ -27,7 +26,6 @@ spack:
     access-mom6:
       require:
         - '@2025.02.001'
-        - '+asymmetric_mem'
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
