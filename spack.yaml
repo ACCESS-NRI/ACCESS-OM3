@@ -12,13 +12,13 @@ spack:
     access3:
       require:
         - '@2025.03.1'
-        - configurations=MOM6-CICE6,MOM6-CICE6-WW3
+        - configurations=MOM6-CICE6
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-cice:
       require:
-        - '@CICE6.6.0-3'
+        - '@git.15fd42b22b642b513277bddace857867934680ac=CICE6.6.0-3'
         - io_type=PIO
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
