@@ -29,6 +29,7 @@ spack:
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - '%oneapi@2025.1.1'
     access-ww3:
       require:
         - '@2025.03.0'
@@ -71,7 +72,6 @@ spack:
     fms:
       require:
         - '@git.2025.02=2025.02'
-        - '%oneapi@2025.0.4'
     openmpi:
       require:
         - '@4.1.7'
@@ -84,7 +84,7 @@ spack:
 
     all:
       require:
-        - '%oneapi@2025.1.1'
+        - '%oneapi@2025.0.4'
         - 'target=x86_64_v4'
   view: true
   concretizer:
