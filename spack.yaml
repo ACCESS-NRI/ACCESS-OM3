@@ -71,6 +71,7 @@ spack:
     fms:
       require:
         - '@git.2025.02=2025.02'
+        - '%oneapi@2025.0.4'
     openmpi:
       require:
         - '@4.1.7'
