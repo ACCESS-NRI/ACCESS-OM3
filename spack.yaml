@@ -21,50 +21,50 @@ spack:
       require:
         - '@CICE6.6.0-3'
         - io_type=PIO
-        - 'fflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto"'
-        - 'cflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto"'
-        - 'cxxflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto"'
-        - 'ldflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'fflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3'
+        - 'cflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3"'
+        - 'cxxflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3"'
+        - 'ldflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3"'
     access-mom6:
       require:
         - '@2025.02.001'
-        - 'fflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto"'
-        - 'cflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto"'
-        - 'cxxflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto"'
-        - 'ldflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'fflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3"'
+        - 'cflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3"'
+        - 'cxxflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3"'
+        - 'ldflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3"'
     access-ww3:
       require:
         - '@2025.03.0'
     access3-share:
       require:
         - '@2025.03.1'
-        - 'fflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto"'
-        - 'cflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto"'
-        - 'cxxflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto"'
-        - 'ldflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'fflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3"'
+        - 'cflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3"'
+        - 'cxxflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3"'
+        - 'ldflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3"'
     access-generic-tracers:
       require:
         - '@git.dev-2025.05.001=development'
-        - 'fflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto"'
-        - 'cflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto"'
-        - 'cxxflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto"'
-        - 'ldflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'fflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3"'
+        - 'cflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3"'
+        - 'cxxflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3"'
+        - 'ldflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3"'
     access-mocsy:
       require:
         - '@git.2017.12.0=gtracers'
-        - 'fflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto"'
-        - 'cflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto"'
-        - 'cxxflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto"'
-        - 'ldflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'fflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3"'
+        - 'cflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3"'
+        - 'cxxflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3"'
+        - 'ldflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3"'
 
     # Other Dependencies
     esmf:
       require:
         - '@git.v8.7.0=8.7.0'
-        - 'fflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto"'
-        - 'cflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto"'
-        - 'cxxflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto"'
-        - 'ldflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'fflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3"'
+        - 'cflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3"'
+        - 'cxxflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3"'
+        - 'ldflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3"'
     parallelio:
       require:
         - '@2.6.2'
