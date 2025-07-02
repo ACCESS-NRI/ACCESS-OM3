@@ -16,6 +16,7 @@ spack:
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - '%oneapi@2025.0.4'
     access-cice:
       require:
         - '@CICE6.6.0-3'
@@ -23,6 +24,7 @@ spack:
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - '%oneapi@2025.0.4'
     access-mom6:
       require:
         - '@git.f20b0e150b0273b128ebd0e63ee3238755aa0986=2025.02.001'
@@ -33,12 +35,14 @@ spack:
     access-ww3:
       require:
         - '@2025.03.0'
+        - '%oneapi@2025.0.4'
     access3-share:
       require:
         - '@2025.03.1'
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - '%oneapi@2025.0.4'
     access-generic-tracers:
       require:
         - '@git.dev-2025.05.001=development'
@@ -61,32 +65,38 @@ spack:
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - '%oneapi@2025.0.4'
     parallelio:
       require:
         - '@2.6.2'
+        - '%oneapi@2025.0.4'
     netcdf-c:
       require:
         - '@4.9.2'
         - build_system=cmake build_type=RelWithDebInfo
+        - '%oneapi@2025.0.4'
     netcdf-fortran:
       require:
         - '@4.6.1'
+        - '%oneapi@2025.0.4'
     fms:
       require:
         - '@git.2025.02=2025.02'
+        - '%oneapi@2025.0.4'
     openmpi:
       require:
         - '@4.1.7'
+        - '%oneapi@2025.0.4'
     fortranxml:
       require:
         - '@4.1.2'
+        - '%oneapi@2025.0.4'
     gcc-runtime:
       require:
         - '%gcc'
 
     all:
       require:
-        - '%oneapi@2025.0.4'
         - 'target=x86_64_v4'
   view: true
   concretizer:
