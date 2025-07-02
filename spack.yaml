@@ -13,7 +13,7 @@ spack:
       require:
         - '@2025.03.1'
         - configurations=MOM6-CICE6,MOM6-CICE6-WW3
-        - 'fflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -ipo -"'
+        - 'fflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -ipo"'
         - 'cflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -ipo"'
         - 'cxxflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -ipo"'
         - 'ldflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -ipo"'
