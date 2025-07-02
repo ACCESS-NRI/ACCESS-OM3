@@ -21,10 +21,10 @@ spack:
       require:
         - '@CICE6.6.0-3'
         - io_type=PIO
-        - 'fflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto"'
-        - 'cflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto"'
-        - 'cxxflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto"'
-        - 'ldflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
+        - 'fflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3"'
+        - 'cflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3"'
+        - 'cxxflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3"'
+        - 'ldflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3"'
     access-mom6:
       require:
         - '@2025.02.001'
