@@ -6,9 +6,8 @@
 # https://github.com/ACCESS-NRI/model-deployment-template/blob/main/spack.yaml
 spack:
   specs:
-    - access-om3
     - esmf@git.v8.7.0
-    - parallelio@2.6.2
+    - parallelio@2.6.2+pnetcdf
     - netcdf-c@4.9.2 build_system=cmake build_type=RelWithDebInfo
     - netcdf-fortran@4.6.1
     - fms@git.2024.03 precision=64 +large_file ~gfs_phys ~quad_precision ~openmp
