@@ -27,7 +27,7 @@ spack:
         - '%oneapi@2025.0.4'
     access-mom6:
       require:
-        - '@git.07b59848401c38e30eda920f8a7f4fb4aa229b82=2025.02.001'
+        - '@git.a0f364934d76fbf3972ce6a00c960d33ef3e1981=2025.02.001'
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
