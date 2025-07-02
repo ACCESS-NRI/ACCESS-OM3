@@ -19,7 +19,9 @@ spack:
     gcc-runtime:
       require:
         - '%gcc'
-
+    libiconv:
+      require:
+        - '%gcc'
     all:
       require:
         - '%oneapi@2025.0.4'
