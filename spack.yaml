@@ -13,10 +13,10 @@ spack:
       require:
         - '@2025.03.1'
         - configurations=MOM6-CICE6,MOM6-CICE6-WW3
-        - 'fflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto"'
-        - 'cflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto"'
-        - 'cxxflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto"'
-        - 'ldflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'fflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3"'
+        - 'cflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3"'
+        - 'cxxflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3"'
+        - 'ldflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3"'
     access-cice:
       require:
         - '@CICE6.6.0-3'
@@ -28,10 +28,10 @@ spack:
     access-mom6:
       require:
         - '@2025.02.001'
-        - 'fflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3"'
-        - 'cflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3"'
-        - 'cxxflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3"'
-        - 'ldflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3"'
+        - 'fflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'cflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'cxxflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'ldflags="-march=cascadelake -mtune=sapphirerapids -unroll -O3 -flto"'
     access-ww3:
       require:
         - '@2025.03.0'
