@@ -6,7 +6,7 @@
 # https://github.com/ACCESS-NRI/model-deployment-template/blob/main/spack.yaml
 spack:
   specs:
-    - access-om3
+    - access-om3@git.main
   packages:
     esmf:
       require:
@@ -46,6 +46,7 @@ spack:
     default:
       tcl:
         include:
+          - access-om3
           - esmf
           - parallelio
           - netcdf-c
@@ -53,6 +54,7 @@ spack:
           - fms
           - fortranxml
         projections:
+          access-om3: '{name}'
           esmf: '{name}/v8.7.0-{hash:7}'
           parallelio: '{name}/2.6.2-{hash:7}'
           netcdf-c: '{name}/4.9.2-{hash:7}'
