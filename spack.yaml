@@ -26,9 +26,10 @@ spack:
     access-mom6:
       require:
         - '@2025.02.001'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -ipo"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -ipo"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -ipo"'
+        - 'ldflags="-march=sapphirerapids -mtune-sapphirerapids -unroll -O2 -ipo"' # Currently stuck to using -O2
     access-ww3:
       require:
         - '@2025.03.0'
