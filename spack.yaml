@@ -26,7 +26,6 @@ spack:
     access-mom6:
       require:
         - '@2025.02.001'
-        - '+asymmetric_mem'
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
@@ -84,7 +83,7 @@ spack:
 
     all:
       require:
-        - '%oneapi@2025.0.4'
+        - '%intel@2021.10.0'
         - 'target=x86_64_v4'
   view: true
   concretizer:
