@@ -54,7 +54,7 @@ spack:
           - fms
           - fortranxml
         projections:
-          access-om3: '{name}'
+          access-om3: '{name}/main'
           esmf: '{name}/v8.7.0-{hash:7}'
           parallelio: '{name}/2.6.2-{hash:7}'
           netcdf-c: '{name}/4.9.2-{hash:7}'
