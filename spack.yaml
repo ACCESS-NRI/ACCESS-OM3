@@ -29,7 +29,7 @@ spack:
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -ipo"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -ipo"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -ipo"'
-        - 'ldflags="-march=sapphirerapids -mtune-sapphirerapids -unroll -ipo"'
+        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -ipo"'
     access-ww3:
       require:
         - '@2025.03.0'
