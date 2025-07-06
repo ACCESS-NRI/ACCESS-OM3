@@ -39,7 +39,6 @@ spack:
       require:
         - '@2025.03.0'
         - '%oneapi@2025.0.4'
-        - build_type=Debug
     access3-share:
       require:
         - '@2025.03.1'
@@ -55,7 +54,6 @@ spack:
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - '%oneapi@2025.1.1'
-        - build_type=Debug
     access-mocsy:
       require:
         - '@git.2017.12.0=gtracers'
@@ -65,7 +63,6 @@ spack:
 <<<<<<< HEAD
 =======
         - '%oneapi@2025.1.1'
-        - build_type=Debug
 
 >>>>>>> dbac0ee (Explicitly set compiler for each package)
     # Other Dependencies
