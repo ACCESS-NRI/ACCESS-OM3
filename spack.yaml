@@ -6,11 +6,8 @@
 # https://github.com/ACCESS-NRI/model-deployment-template/blob/main/spack.yaml
 spack:
   specs:
-    - access-om3@git.main
+    - esmf@git.v8.7.0
   packages:
-    esmf:
-      require:
-        - '@git.v8.7.0'
     parallelio:
       require:
         - '@2.6.2+pnetcdf'
