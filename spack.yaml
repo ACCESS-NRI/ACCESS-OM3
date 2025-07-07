@@ -17,7 +17,7 @@ spack:
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - '%oneapi@2025.0.4'
-        - build_type=Debug
+        - fflags="-O0 -g -check bounds -check pointers -fpe0 -check noarg_temp_created"
     access-cice:
       require:
         - '@CICE6.6.0-3'
@@ -26,7 +26,7 @@ spack:
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - '%oneapi@2025.0.4'
-        - build_type=Debug
+        - fflags="-O0 -g -check bounds -check pointers -fpe0 -check noarg_temp_created"
     access-mom6:
       require:
         - '@git.f6ab4fdaa8e2f94dfecbfd546355ec0fb98c2738=2025.02.001'
@@ -34,7 +34,7 @@ spack:
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - '%oneapi@2025.1.1'
-        - build_type=Debug
+        - fflags="-O0 -g -check bounds -check pointers -fpe0 -check noarg_temp_created"
     access-ww3:
       require:
         - '@2025.03.0'
@@ -46,7 +46,7 @@ spack:
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - '%oneapi@2025.0.4'
-        - build_type=Debug
+        - fflags="-O0 -g -check bounds -check pointers -fpe0 -check noarg_temp_created"
     access-generic-tracers:
       require:
         - '@git.dev-2025.05.001=development'
@@ -73,7 +73,6 @@ spack:
     parallelio:
       require:
         - '@2.6.2'
-        - build_type=RelWithDebInfo
         - '%oneapi@2025.0.4'
     netcdf-c:
       require:
