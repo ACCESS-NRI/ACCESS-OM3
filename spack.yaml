@@ -11,46 +11,18 @@ spack:
     # Main Dependencies
     access3:
       require:
-        - '@2025.03.1'
-        - configurations=MOM6-CICE6,MOM6-CICE6-WW3
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-    access-cice:
-      require:
-        - '@CICE6.6.0-3'
-        - io_type=PIO
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - '@git.09ba8176876cbc0cbb15c4b51c18316024c61b3c'
+        - configurations=MOM6
+        - build_type=Debug
     access-mom6:
       require:
-        - '@2025.02.001'
-        - '+asymmetric_mem'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-    access-ww3:
-      require:
-        - '@2025.03.0'
+        - '@git.c6128949a36c9962eed306169cae88e93319d7b9'
+        - '~asymmetric_mem'
+        - build_type=Debug
     access3-share:
       require:
-        - '@2025.03.1'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-    access-generic-tracers:
-      require:
-        - '@git.dev-2025.05.001=development'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-    access-mocsy:
-      require:
-        - '@git.2017.12.0=gtracers'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - '@git.09ba8176876cbc0cbb15c4b51c18316024c61b3c'
+        - build_type=Debug
 
     # Other Dependencies
     esmf:
@@ -62,6 +34,7 @@ spack:
     parallelio:
       require:
         - '@2.6.2'
+        - build_type=RelWithDebInfo
     netcdf-c:
       require:
         - '@4.9.2'
