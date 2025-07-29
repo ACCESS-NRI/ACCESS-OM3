@@ -6,7 +6,7 @@
 # https://github.com/ACCESS-NRI/model-deployment-template/blob/main/spack.yaml
 spack:
   specs:
-    - access-om3@git.2025.05.000
+    - access-om3@git.2025.05.001
   packages:
     # Main Dependencies
     access3:
@@ -27,7 +27,10 @@ spack:
     # Other Dependencies
     esmf:
       require:
-        - '@git.v8.7.0'
+        - '@git.v8.7.0=8.7.0'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     parallelio:
       require:
         - '@2.6.2'
@@ -41,7 +44,7 @@ spack:
         - '@4.6.1'
     fms:
       require:
-        - '@git.2024.03'
+        - '@git.2025.02=2025.02'
     openmpi:
       require:
         - '@4.1.7'
@@ -66,5 +69,5 @@ spack:
           - access-om3
           - access3
         projections:
-          access-om3: '{name}/2025.05.000'
-          access3: '{name}/2025.03.0-{hash:7}'
+          access-om3: '{name}/2025.05.001'
+          access3: '{name}/2025.03.1-{hash:7}'
