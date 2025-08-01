@@ -87,3 +87,14 @@ spack:
   view: true
   concretizer:
     unify: true
+  modules:
+    default:
+      tcl:
+        include:
+          - access-om3
+          - access3
+          - esmf
+        projections:
+          access-om3: '{name}/2025.08.001'
+          access3: '{name}/2025.08.000-{hash:7}'
+          esmf: '{name}/8.7.0-{hash:7}'
