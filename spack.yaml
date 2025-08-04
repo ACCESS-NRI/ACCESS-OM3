@@ -13,52 +13,52 @@ spack:
       require:
         - '@2025.03.1'
         - configurations=MOM6-CICE6,MOM6-CICE6-WW3
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
     access-cice:
       require:
         - '@CICE6.6.0-3'
         - io_type=PIO
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
     access-mom6:
       require:
         - '@2025.02.001'
         - '+asymmetric_mem'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
     access-ww3:
       require:
         - '@2025.03.0'
     access3-share:
       require:
         - '@2025.03.1'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
     access-generic-tracers:
       require:
         - '@git.dev-2025.05.001=development'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
     access-mocsy:
       require:
         - '@git.2017.12.0=gtracers'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
 
     # Other Dependencies
     esmf:
       require:
         - '@8.7.0'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
     parallelio:
       require:
         - '@2.6.2'
@@ -84,7 +84,7 @@ spack:
 
     all:
       require:
-        - '%oneapi@2025.2.0'
+        - '%oneapi@2025.0.4'
         - 'target=x86_64_v4'
   view: true
   concretizer:
