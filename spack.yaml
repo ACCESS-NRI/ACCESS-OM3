@@ -51,7 +51,6 @@ spack:
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-
     # Other Dependencies
     esmf:
       require:
@@ -81,7 +80,6 @@ spack:
     gcc-runtime:
       require:
         - '%gcc'
-
     all:
       require:
         - '%oneapi@2025.0.4'
@@ -89,12 +87,3 @@ spack:
   view: true
   concretizer:
     unify: true
-  modules:
-    default:
-      tcl:
-        include:
-          - access-om3
-          - access3
-        projections:
-          access-om3: '{name}/2025.05.001'
-          access3: '{name}/2025.03.1-{hash:7}'
