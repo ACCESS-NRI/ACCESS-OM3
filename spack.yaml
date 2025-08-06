@@ -11,7 +11,7 @@ spack:
     # Main Dependencies
     access3:
       require:
-        - '@2025.03.1'
+        - '@ab9461ff3344c76dfe1dfe3c88315fadbc1673e8'
         - configurations=MOM6-CICE6,MOM6-CICE6-WW3
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
@@ -35,7 +35,7 @@ spack:
         - '@2025.03.0'
     access3-share:
       require:
-        - '@2025.03.1'
+        - '@ab9461ff3344c76dfe1dfe3c88315fadbc1673e8'
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
