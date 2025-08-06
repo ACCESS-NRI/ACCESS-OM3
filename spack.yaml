@@ -25,14 +25,14 @@ spack:
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
     access-mom6:
       require:
-        - '@2025.02.001'
+        - '@git.2025.08.000=2025.02.001'
         - '+asymmetric_mem'
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
     access-ww3:
       require:
-        - '@2025.03.0'
+        - '@git.d093162a478a5606dfeb06d3e8d56e2e42294ebb=2025.03.0'
     access3-share:
       require:
         - '@ab9461ff3344c76dfe1dfe3c88315fadbc1673e8'
