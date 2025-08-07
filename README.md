@@ -2,9 +2,9 @@
 
 ## About the model
 
-ACCESS-OM3 is an ocean-seaice(-wave) model under development. ACCESS-OM3 is built and deployed automatically to `gadi` on NCI (see below for details). In general, most users should start from one of the tested [configurations](https://github.com/accESS-NRI/access-om3-configs). 
+ACCESS-OM3 is an ocean - sea ice (- wave) model under development. ACCESS-OM3 is built and deployed automatically to `gadi` on NCI (see below for details). In general, most users should start from one of the tested [configurations](https://github.com/accESS-NRI/access-om3-configs). 
 
-<!-- To-fix: For more information see the [ACCESS-Hive Docs model description](https://access-hive.org.au/models/configurations/access-ram/) and [how to run the model](https://access-hive.org.au/models/run-a-model/run-access-ram/).-->
+For more information see the [ACCESS-Hive Docs model description](https://docs.access-hive.org.au/models/configurations/access-om/#access-om3) and [how to run the model](https://docs.access-hive.org.au/models/run-a-model/run-access-om3).
 
 ## About this repository
 
@@ -12,7 +12,7 @@ This is the Model Deployment Repository for the ACCESS-OM3 model. This repositor
 
 ## Releases
 
-Current releases are considered _alpha_. They should be considered unsupported, unproven and not-ready for science uses. Release information will be available on the [ACCESS Hive Forum](https://forum.access-hive.org.au/) when supported releases are made.
+The software in this repositry contributes to [model configurations](https://github.com/accESS-NRI/access-om3-configs). Release information will be available on the [ACCESS Hive Forum](https://forum.access-hive.org.au/t/access-om3-release-information/4494) when supported releases are made.
 
 ## Support
 
