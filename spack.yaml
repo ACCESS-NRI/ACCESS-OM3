@@ -25,7 +25,7 @@ spack:
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-mom6:
       require:
-        - '@git.115ca880d100aa28128d22737a2916e9723e7e56'
+        - '@git.66b758cde14f8c714fa3aca53f5d0f1adf0358a9'
         - '+asymmetric_mem'
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
