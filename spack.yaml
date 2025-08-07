@@ -11,14 +11,14 @@ spack:
     # Main Dependencies
     access3:
       require:
-        - '@ab9461ff3344c76dfe1dfe3c88315fadbc1673e8'
+        - '@git.ab9461ff3344c76dfe1dfe3c88315fadbc1673e8'
         - configurations=MOM6-CICE6,MOM6-CICE6-WW3
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
     access-cice:
       require:
-        - '@6bceb915e232f46a8c84992a3176b98ee0acd8b5'
+        - '@git.CICE6.6.1-0=CICE6.6.1-0'
         - io_type=PIO
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
@@ -35,7 +35,7 @@ spack:
         - '@git.2025.08.000=2025.08.000'
     access3-share:
       require:
-        - '@ab9461ff3344c76dfe1dfe3c88315fadbc1673e8'
+        - '@git.ab9461ff3344c76dfe1dfe3c88315fadbc1673e8'
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0"'
