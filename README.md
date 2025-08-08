@@ -12,7 +12,7 @@ This is the Model Deployment Repository for the ACCESS-OM3 model. This repositor
 
 ## Releases
 
-The software in this repositry contributes to [model configurations](https://github.com/accESS-NRI/access-om3-configs). Release information will be available on the [ACCESS Hive Forum](https://forum.access-hive.org.au/t/access-om3-release-information/4494) when supported releases are made.
+The software in this repository contributes to [access-om3 model configurations](https://github.com/accESS-NRI/access-om3-configs). Release information will be available on the [ACCESS Hive Forum](https://forum.access-hive.org.au/t/access-om3-release-information/4494) when supported releases are made.
 
 ## Support
 
