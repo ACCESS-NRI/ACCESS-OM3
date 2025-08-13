@@ -13,21 +13,20 @@ spack:
       require:
         - '@2025.03.1'
         - configurations=MOM6-CICE6,MOM6-CICE6-WW3
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0 -g -check bounds -check pointers -fpe0 -check noarg_temp_created"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-cice:
       require:
-        - '@CICE6.6.0-3'
+        - '@git.83d1f71749889a4394aecbf204ebd2b9bdbf1440'
         - io_type=PIO
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0 -g -check bounds -check pointers -fpe0 -check noarg_temp_created"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-mom6:
       require:
-        - '@2025.02.001'
-        - '+asymmetric_mem'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - '@git.f6ab4fdaa8e2f94dfecbfd546355ec0fb98c2738=2025.02.001'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0 -g -check bounds -check pointers -fpe0 -check noarg_temp_created"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-ww3:
@@ -36,25 +35,25 @@ spack:
     access3-share:
       require:
         - '@2025.03.1'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0 -g -check bounds -check pointers -fpe0 -check noarg_temp_created"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-generic-tracers:
       require:
-        - '@git.dev-2025.05.001=development'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - '@git.dev-2025.06.002=development'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0 -g -check bounds -check pointers -fpe0 -check noarg_temp_created"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-mocsy:
       require:
-        - '@git.2017.12.0=gtracers'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - '@git.2025.07.000=gtracers'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O0 -g -check bounds -check pointers -fpe0 -check noarg_temp_created"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     # Other Dependencies
     esmf:
       require:
-        - '@git.v8.7.0=8.7.0'
+        - '@git.v8.7.0=8.7.0 /cj6ae3p'
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
@@ -82,7 +81,7 @@ spack:
         - '%gcc'
     all:
       require:
-        - '%oneapi@2025.0.4'
+        - '%oneapi@2025.2.0'
         - 'target=x86_64_v4'
   view: true
   concretizer:
