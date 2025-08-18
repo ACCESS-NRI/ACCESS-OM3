@@ -26,7 +26,6 @@ spack:
     access-mom6:
       require:
         - '@2025.08.000'
-        - '+asymmetric_mem'
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
@@ -71,6 +70,7 @@ spack:
     fms:
       require:
         - '@2025.03'
+        - 'cppflags="-DMAXFIELDMETHODS_=600"'
     openmpi:
       require:
         - '@4.1.7'
