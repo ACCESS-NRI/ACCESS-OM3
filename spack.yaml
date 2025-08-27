@@ -80,7 +80,6 @@ spack:
     gcc-runtime:
       require:
         - '%gcc'
-        - '%oneapi@2025.0.4'
     all:
       require:
         - '%oneapi@2025.2.0'
