@@ -12,7 +12,7 @@ spack:
     access3:
       require:
         - '@2025.08.000'
-        - configurations=MOM6-CICE6,MOM6-CICE6-WW3
+        - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
