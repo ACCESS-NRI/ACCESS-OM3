@@ -53,7 +53,7 @@ spack:
     # Other Dependencies
     esmf:
       require:
-        - '@8.7.0 /f6hz7wz'
+        - '@8.7.0 ^/f6hz7wz'
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
