@@ -53,10 +53,11 @@ spack:
     # Other Dependencies
     esmf:
       require:
-        - ''/f6hz7wz''  # Same as '@8.7.0' but reduces number of rebuilds 
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - '@8.7.0'
+        - '/f6hz7wz' # Same as '@8.7.0' but reduces number of rebuilds 
+        # - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        # - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        # - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     parallelio:
       require:
         - '@2.6.2'
