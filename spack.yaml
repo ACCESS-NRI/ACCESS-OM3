@@ -40,7 +40,7 @@ spack:
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-generic-tracers:
       require:
-        - '@2025.07.002'
+        - '@2025.08.000'
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
