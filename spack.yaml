@@ -13,51 +13,58 @@ spack:
       require:
         - '@2025.03.1'
         - configurations=MOM6-CICE6,MOM6-CICE6-WW3
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch -flto"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch -flto"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch -flto"'
+        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch -flto -fuse-ld=lld"'
     access-cice:
       require:
         - '@git.83d1f71749889a4394aecbf204ebd2b9bdbf1440'
         - io_type=PIO
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch"'
+        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch"'
     access-mom6:
       require:
         - '@git.667aded12584a68c303cbec8441c0599f705fd09=2025.02.001'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch -flto"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch -flto"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch -flto"'
+        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch -flto -fuse-ld=lld"'
     access-ww3:
       require:
         - '@2025.03.0'
     access3-share:
       require:
         - '@2025.03.1'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch -flto"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch -flto"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch -flto"'
+        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch -flto -fuse-ld=lld"'
     access-generic-tracers:
       require:
         - '@git.dev-2025.06.002=development'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch -flto"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch -flto"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch -flto"'
+        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch -flto -fuse-ld=lld"'
     access-mocsy:
       require:
         - '@git.2025.07.000=gtracers'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch -flto"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch -flto"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch -flto"'
+        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch -flto -fuse-ld=lld"'
         - '%oneapi@2025.1.1'
     # Other Dependencies
     esmf:
       require:
         - '@git.v8.7.0=8.7.0 /cj6ae3p'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch -flto"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch -flto"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch -flto"'
+        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch -flto -fuse-ld=lld"'
     parallelio:
       require:
         - '@2.6.2'
