@@ -6,8 +6,5 @@
     "access-ww3",
     "access3",
     "access3-share"
-  ],
-  "injection": [
-    "openmpi"
   ]
 }
