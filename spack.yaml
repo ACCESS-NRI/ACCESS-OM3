@@ -27,7 +27,7 @@ spack:
         - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch"'
     access-mom6:
       require:
-        - '@git.455ef1cea7cf3f03f24c508b27c69f19d769930f=2025.02.001'
+        - '@git.e4010d06d13e4d9066db31ba9f37c3c72a735b24=2025.02.001'
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch -flto"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch -flto"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch -flto"'
