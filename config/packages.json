@@ -5,9 +5,10 @@
     "access-mom6",
     "access-ww3",
     "access3",
-    "access3-share"
+    "access3-share",
+    "access-generic-tracers",
+    "access-mocsy"
   ],
   "injection": [
-    "openmpi"
   ]
 }
