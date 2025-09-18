@@ -7,12 +7,13 @@
 spack:
   specs:
     - access-om3@git.2025.08.001
+    - gcom@8.0
   packages:
     # Main Dependencies
     access3:
       require:
         - '@git.870d7a45d5f0fbad6241de1748b9533e603f9bd2'
-        - configurations=MOM6-CICE6-UM13
+        - configurations=MOM6-CICE6
         # - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         # - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         # - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
@@ -66,9 +67,6 @@ spack:
     gcc-runtime:
       require:
         - '%gcc'
-    gcom:
-      require:
-       - '@8.0'
     all:
       require:
         - '%intel@2021.10.0'
