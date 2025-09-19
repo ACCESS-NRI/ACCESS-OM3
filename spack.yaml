@@ -6,7 +6,7 @@
 # https://github.com/ACCESS-NRI/model-deployment-template/blob/main/spack.yaml
 spack:
   specs:
-    - access-om3@git.2025.08.001 ^gcom@8.0
+    - access-om3@git.2025.08.001
   packages:
     # Main Dependencies
     access3:
@@ -66,6 +66,9 @@ spack:
     gcc-runtime:
       require:
         - '%gcc'
+    gcom:
+      require:
+        - '@8.0'
     all:
       require:
         - '%intel@2021.10.0'
