@@ -29,6 +29,7 @@ spack:
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - '~access3'
     access-ww3:
       require:
         - '@2025.08.000'
