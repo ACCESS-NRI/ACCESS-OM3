@@ -14,17 +14,17 @@ spack:
         - '@2025.08.000'
         - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch -flto"'
-        - 'cflags="-march=sapphirarapids -mtune=sapphirarapids -unroll -O3 -qopt-prefetch -flto"'
-        - 'cxxflags="-march=sapphirarapids -mtune=sapphirarapids -unroll -O3 -qopt-prefetch -flto"'
-        - 'ldflags="-march=sapphirarapids -mtune=sapphirarapids -unroll -O3 -qopt-prefetch -flto -fuse-ld=lld"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch -flto"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch -flto"'
+        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch -flto -fuse-ld=lld"'
     access-cice:
       require:
         - '@CICE6.6.1-0'
         - io_type=PIO
-        - 'fflags="-march=sapphirarapids -mtune=sapphirarapids -unroll -O3 -qopt-prefetch -flto"'
-        - 'cflags="-march=sapphirarapids -mtune=sapphirarapids -unroll -O3 -qopt-prefetch -flto"'
-        - 'cxxflags="-march=sapphirarapids -mtune=sapphirarapids -unroll -O3 -qopt-prefetch -flto"'
-        - 'ldflags="-march=sapphirarapids -mtune=sapphirarapids -unroll -O3 -qopt-prefetch -flto -fuse-ld=lld"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch -flto"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch -flto"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch -flto"'
+        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -qopt-prefetch -flto -fuse-ld=lld"'
     access-mom6:
       require:
         - '@2025.07.000'
