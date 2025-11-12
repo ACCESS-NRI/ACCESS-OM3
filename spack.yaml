@@ -6,38 +6,9 @@
 # https://github.com/ACCESS-NRI/model-deployment-template/blob/main/spack.yaml
 spack:
   specs:
-    - access-om3@git.2025.08.001
+    - 'access-mom6@2025.07.000 ~access3'
+    - 'access-mom6@2025.07.000 ++debug ~access3'
   packages:
-    # Main Dependencies
-    access3:
-      require:
-        - '@2025.08.000'
-        - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-    access-cice:
-      require:
-        - '@CICE6.6.1-0'
-        - io_type=PIO
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-    access-mom6:
-      require:
-        - '@2025.07.000'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-    access-ww3:
-      require:
-        - '@2025.08.000'
-    access3-share:
-      require:
-        - '@2025.08.000'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-generic-tracers:
       require:
         - '@2025.08.000'
@@ -51,15 +22,6 @@ spack:
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     # Other Dependencies
-    esmf:
-      require:
-        - '@8.7.0'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-    parallelio:
-      require:
-        - '@2.6.2'
     netcdf-c:
       require:
         - '@4.9.2'
@@ -86,4 +48,4 @@ spack:
         - 'target=x86_64_v4'
   view: true
   concretizer:
-    unify: true
+    unify: false
