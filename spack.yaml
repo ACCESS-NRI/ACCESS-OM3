@@ -7,7 +7,7 @@
 spack:
   specs:
     - 'access-mom6@2025.07.000 ~access3'
-    - 'access-mom6@2025.07.000 ++debug ~access3'
+    - 'access-mom6@2025.07.000 build_type=Debug ~access3'
   packages:
     access-generic-tracers:
       require:
