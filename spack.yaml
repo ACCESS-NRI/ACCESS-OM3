@@ -7,6 +7,7 @@
 spack:
   specs:
     - access-om3@git.2025.08.002
+    - esmf/exowhcj
   packages:
     # Main Dependencies
     access3:
