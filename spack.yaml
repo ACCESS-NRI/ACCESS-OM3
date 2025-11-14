@@ -12,7 +12,7 @@ spack:
     # see https://github.com/ACCESS-NRI/spack-packages/blob/fd44ae03141eab221ce0e5b587dbb9c81d411fcb/packages/access-mom6/package.py#L27
     # link regarding the Debug flag https://spack-tutorial.readthedocs.io/en/latest/tutorial_buildsystems.html#cmake
     - access-mom6@git.6e705048aa6b400ee7630ef8e2be94d415fff86f=2025.07.000 fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll" cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll" cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll" ~access3
-    - access-mom6@git.6e705048aa6b400ee7630ef8e2be94d415fff86f=2025.07.000 fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll" cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll" cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll" ~access3 build_type=Debug
+    # - access-mom6@git.6e705048aa6b400ee7630ef8e2be94d415fff86f=2025.07.000 fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll" cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll" cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll" ~access3 build_type=Debug
   packages:
     # Main Dependencies
     access3:
