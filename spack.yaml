@@ -35,6 +35,9 @@ spack:
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+
+            package_attributes:
+              git: https://github.com/jbisits/MOM6.git
     access-ww3:
       require:
         - '@2025.08.000'
