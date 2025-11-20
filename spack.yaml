@@ -13,26 +13,32 @@ spack:
       require:
         - '@2025.08.000'
         - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
+        - build_type=Debug
     access-cice:
       require:
         - '@CICE6.6.1-0'
         - io_type=PIO
+        - build_type=Debug
     access-mom6:
       require:
         - '@2025.07.000'
+        - build_type=Debug
     access-ww3:
       require:
         - '@2025.08.000'
     access3-share:
       require:
         - '@2025.08.000'
+        - build_type=Debug
     access-generic-tracers:
       require:
         - '@2025.08.000'
+        - build_type=Debug
     access-mocsy:
       require:
         - '@2025.07.002'
     # Other Dependencies
+        - build_type=Debug
     esmf:
       require:
         - '@8.7.0'
