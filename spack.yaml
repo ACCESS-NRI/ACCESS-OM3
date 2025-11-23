@@ -12,7 +12,7 @@ spack:
     access3:
       require:
         - '@2025.08.000'
-        - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
+        - configurations=MOM6,MOM6-CICE6
         - build_type=Debug
     access-cice:
       require:
