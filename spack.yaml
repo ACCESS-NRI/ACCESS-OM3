@@ -13,6 +13,7 @@ spack:
       require:
         - '@2025.08.000'
         - configurations=MOM6,MOM6-CICE6
+        - build_type=Debug
     access-cice:
       require:
         - '@CICE6.6.1-0'
@@ -21,12 +22,15 @@ spack:
     access-mom6:
       require:
         - '@2025.07.000'
+        - build_type=Debug
     access-ww3:
       require:
         - '@2025.08.000'
+        - build_type=Debug
     access3-share:
       require:
         - '@2025.08.000'
+        - build_type=Debug
     access-generic-tracers:
       require:
         - '@2025.08.000'
@@ -40,6 +44,8 @@ spack:
     parallelio:
       require:
         - '@2.6.2'
+        - 'fflags="-g -traceback"'
+        - 'cflags="-g -traceback"'
     netcdf-c:
       require:
         - '@4.9.2'
