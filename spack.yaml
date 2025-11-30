@@ -7,6 +7,7 @@
 spack:
   specs:
     - access-om3@git.2025.08.001
+    - access-mom6 ~access3
   packages:
     # Main Dependencies
     access3:
@@ -86,4 +87,4 @@ spack:
         - 'target=x86_64_v4'
   view: true
   concretizer:
-    unify: true
+    unify: when_possible
