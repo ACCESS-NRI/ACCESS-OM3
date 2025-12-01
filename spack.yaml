@@ -85,6 +85,11 @@ spack:
       require:
         - '%oneapi@2025.2.0'
         - 'target=x86_64_v4'
-  view: true
+  view: false
+  modules:
+      default:
+          tcl:
+              projections:
+                  access-mom6: '{name}/{version}-{variants.access3.value}'
   concretizer:
     unify: when_possible
