@@ -69,7 +69,7 @@ spack:
         - '%gcc'
     all:
       require:
-        - '%gcc@14.2.0'
+        - '%gcc@14'
   view: true
   concretizer:
     unify: true
