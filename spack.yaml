@@ -7,7 +7,6 @@
 spack:
   specs:
     - access-om3@git.2025.08.001
-    - access-mom6 ~access3
   packages:
     # Main Dependencies
     access3:
@@ -26,7 +25,8 @@ spack:
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-mom6:
       require:
-        - '@2025.07.000'
+        - '@git.078fc7d944c0d2b2b4e4ddf1ce7cacc617f20d0f' #  On cmake-allow-exe
+        - +mom6_solo
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
@@ -85,11 +85,6 @@ spack:
       require:
         - '%oneapi@2025.2.0'
         - 'target=x86_64_v4'
-  view: false
-  modules:
-      default:
-          tcl:
-              projections:
-                  access-mom6: '{name}/{version}-{variants.access3.value}'
+  view: true
   concretizer:
-    unify: when_possible
+    unify: true
