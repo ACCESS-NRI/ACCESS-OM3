@@ -12,10 +12,11 @@ spack:
     access3:
       require:
         - '@2025.08.000'
-        - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - configurations=MOM6-CICE6
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fsanitize=address"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fsanitize=address"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fsanitize=address"'
+        - 'ldflags="-fsanitize=adrdess"'
     access-cice:
       require:
         - '@CICE6.6.1-0'
@@ -25,13 +26,10 @@ spack:
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-mom6:
       require:
-        - '@2025.07.000'
+        - '@git.b5de607e36baa1b5b8e4df0cd57a4aaa22a3b3ae=2025.02.001'
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-    access-ww3:
-      require:
-        - '@2025.08.000'
     access3-share:
       require:
         - '@2025.08.000'
@@ -53,10 +51,10 @@ spack:
     # Other Dependencies
     esmf:
       require:
-        - '@8.7.0'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - '@8.7.0+debug'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fsanitize=address"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fsanitize=address"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fsanitize=address"'
     parallelio:
       require:
         - '@2.6.2'
