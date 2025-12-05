@@ -16,7 +16,7 @@ spack:
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fsanitize=address"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fsanitize=address"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fsanitize=address"'
-        - 'ldflags="-fsanitize=adrdess"'
+        - 'ldflags="-fsanitize=address"'
     access-cice:
       require:
         - '@CICE6.6.1-0'
