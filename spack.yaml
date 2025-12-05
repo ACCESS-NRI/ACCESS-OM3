@@ -52,7 +52,7 @@ spack:
     # Other Dependencies
     esmf:
       require:
-        - '@8.7.0+debug'
+        - '@8.8.0+debug'
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fstack-protector-strong"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fstack-protector-strong"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fstack-protector-strong"'
