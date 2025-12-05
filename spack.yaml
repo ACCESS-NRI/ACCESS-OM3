@@ -13,10 +13,10 @@ spack:
       require:
         - '@2025.08.000'
         - configurations=MOM6-CICE6
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fsanitize=address"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fsanitize=address"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fsanitize=address"'
-        - 'ldflags="-fsanitize=address"'
+        - build_type=RelWithDebInfo
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fstack-protector-strong"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fstack-protector-strong"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fstack-protector-strong"'
     access-cice:
       require:
         - '@CICE6.6.1-0'
@@ -33,6 +33,7 @@ spack:
     access3-share:
       require:
         - '@2025.08.000'
+        - build_type=RelWithDebInfo
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
@@ -52,9 +53,9 @@ spack:
     esmf:
       require:
         - '@8.7.0+debug'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fsanitize=address"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fsanitize=address"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fsanitize=address"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fstack-protector-strong"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fstack-protector-strong"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fstack-protector-strong"'
     parallelio:
       require:
         - '@2.6.2'
