@@ -64,6 +64,12 @@ spack:
         # - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
         # - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
         # - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
+    esmf:
+      require:
+        - '@git.v8.8.0=8.8.0'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     parallelio:
       require:
         - '@2.6.2'
