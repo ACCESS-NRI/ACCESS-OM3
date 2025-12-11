@@ -7,7 +7,7 @@
 spack:
   specs:
     - access-om3@git.2025.08.001
-    - esmf \hplgdqk
+    - esmf /hplgdqk
   packages:
     # Main Dependencies
     access3:
@@ -35,7 +35,7 @@ spack:
         - '@2025.08.000'
     access3-share:
       require:
-        - '@git.3a0802d77af38194dbb18b76d98cf427b0091ce4=2025.08.001'
+        - '@git.0680b9abfcb7768cfa4508dd5cc6e7c22a95f2a0=2025.08.001'
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
