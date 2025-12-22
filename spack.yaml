@@ -11,14 +11,15 @@ spack:
     # Main Dependencies
     access3:
       require:
-        - '@2025.08.000'
-        - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
+        - '@f73d8775d6c9358a8c0d57a3ec5e7ddd204e0db6'
+        - configurations=MOM6-CICE6
+        - '+cm3'
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-cice:
       require:
-        - '@CICE6.6.1-0'
+        - '@ee85cdebac820226180b20b0376fab6bfcb9d72a'
         - io_type=PIO
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
@@ -29,9 +30,6 @@ spack:
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-    access-ww3:
-      require:
-        - '@2025.08.000'
     access3-share:
       require:
         - '@2025.08.000'
@@ -57,6 +55,9 @@ spack:
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+    gcom:
+      require:
+        - '@8.0'
     parallelio:
       require:
         - '@2.6.2'
@@ -87,3 +88,45 @@ spack:
   view: true
   concretizer:
     unify: true
+  modules:
+      prefix_inspections:
+        bin:
+         - PATH
+        lib:
+         - LIBRARY_PATH
+         - LD_LIBRARY_PATH
+        lib64:
+         - LIBRARY_PATH
+         - LD_LIBRARY_PATH
+        include:
+         - FPATH
+
+      default:
+        tcl:
+          include:
+            - access-om3
+            - access-mom6
+            - access-cice
+            - access3-share
+            - access3
+            - esmf
+            - fms
+            - parallelio
+            - fortranxml
+            - gcom
+            - openmpi
+            - netcdf-c
+            - netcdf-fortran
+
+          projections:
+            access-om3: '{name}/2025.x.0'
+            access-cice: '{name}/access-cm3-CICE6.6.1-0-{hash:7}'
+            access-mom6: '{name}/cmake_build-{hash:7}'
+            access3-share: '{name}/access-cm3-2025.12.0-{hash:7}'
+            parallelio: '{name}/2.6.2-{hash:7}'
+            fortranxml: '{name}/4.1.2-{hash:7}'
+            fms: '{name}/2024.03-{hash:7}'
+            esmf: '{name}/v8.7.0-{hash:7}'
+            netcdf-c: '{name}/4.9.2-{hash:7}'
+            netcdf-fortran: '{name}/4.6.1-{hash:7}'
+            gcom: '{name}/8.0-{hash:7}'
