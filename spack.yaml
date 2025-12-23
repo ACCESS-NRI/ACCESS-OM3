@@ -7,6 +7,7 @@
 spack:
   specs:
     - access-om3@git.2025.08.001
+    - gcom@8.0
   packages:
     # Main Dependencies
     access3:
@@ -54,9 +55,6 @@ spack:
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-    gcom:
-      require:
-        - '@8.0'
     parallelio:
       require:
         - '@2.6.2'
