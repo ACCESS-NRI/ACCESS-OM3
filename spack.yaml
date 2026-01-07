@@ -8,7 +8,7 @@ spack:
   specs:
     - access-om3@git.2025.08.001
   packages:
-    # Main Dependencies
+    # Main components
     access3:
       require:
         - '@2025.08.000'
@@ -80,6 +80,7 @@ spack:
     gcc-runtime:
       require:
         - '%gcc'
+    # Compiler
     all:
       require:
         - '%oneapi@2025.2.0'
