@@ -80,10 +80,10 @@ spack:
     gcc-runtime:
       require:
         - '%gcc'
-    # Compiler
+
     all:
       require:
-        - '%oneapi@2025.2.0'
+        - '%oneapi@2025.2.0'     # compiler
         - 'target=x86_64_v4'
   view: true
   concretizer:
