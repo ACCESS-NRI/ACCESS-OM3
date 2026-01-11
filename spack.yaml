@@ -7,6 +7,7 @@
 spack:
   specs:
     - access-om3@git.2025.08.001
+    - 'esmf /covllzb' #for speeding up pre-release builds only, remove this line before release
   packages:
     # Main components
     access3:
