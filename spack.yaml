@@ -4,7 +4,7 @@
 # configuration settings.
 # Instructions for editing this file are found in 
 # https://github.com/ACCESS-NRI/model-deployment-template/blob/main/spack.yaml
-spack:
+spack: 
   specs:
     - access-om3@git.2025.08.001
     - 'esmf /covllzb' #for speeding up pre-release builds only, remove this line before release
