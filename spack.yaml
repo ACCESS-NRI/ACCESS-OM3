@@ -7,12 +7,14 @@
 spack:
   specs:
     - access-om3@git.2025.08.001
-    - esmf
+    - esmf /cvlvv73
     - parallelio
     - netcdf-c
     - netcdf-fortran
     - fms
     - fortranxml
+    - access-generic-tracers /otklosz
+    - access-mocsy /c2fyf6f
   packages:
     # Main Dependencies
     access3:
