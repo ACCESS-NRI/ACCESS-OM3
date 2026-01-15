@@ -11,7 +11,7 @@
     "esmf",
     "parallelio",
     "netcdf-c",
-    "netcdf-f",
+    "netcdf-fortran",
     "fms",
     "fortranxml"
   ],
