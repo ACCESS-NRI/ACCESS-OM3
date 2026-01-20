@@ -11,7 +11,7 @@ spack:
     # Main Dependencies
     access3:
       require:
-        - '@2025.08.000'
+        - '@git.4b4f2d7c031280a11c4f30a399655996fa1fd3f7=2025.08.000'  # On branch 23-CESM_share-genf90
         - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
@@ -34,7 +34,7 @@ spack:
         - '@2025.08.000'
     access3-share:
       require:
-        - '@2025.08.000'
+        - '@git.4b4f2d7c031280a11c4f30a399655996fa1fd3f7=2025.08.000'  # On branch 23-CESM_share-genf90
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
