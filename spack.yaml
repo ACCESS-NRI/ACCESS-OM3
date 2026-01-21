@@ -53,7 +53,7 @@ spack:
     # Other Dependencies
     esmf:
       require:
-        - '@git.v8.9.1=8.7.0'
+        - '@git.v8.9.0=8.7.0'
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
