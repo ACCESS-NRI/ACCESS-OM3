@@ -40,7 +40,7 @@ spack:
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-generic-tracers:
       require:
-        - '@2025.08.000'
+        - '@git.9822bb3aeb2dec6c0e4699bd56ae4617b54d7ace=2025.08.000'  # On branch WOMBATupdate-2026-01-19
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
