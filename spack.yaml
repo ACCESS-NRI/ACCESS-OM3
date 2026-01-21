@@ -13,7 +13,7 @@ spack:
     # Main components
     access3:
       require:
-        - '@342685c55f86dc9f6092b648372f7695010c87b2'
+        - '@3b442486686369e924a3d766a572b85c8416e915'
         - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
@@ -36,7 +36,7 @@ spack:
         - '@2025.08.000'
     access3-share:
       require:
-        - '@342685c55f86dc9f6092b648372f7695010c87b2'
+        - '@3b442486686369e924a3d766a572b85c8416e915'
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
