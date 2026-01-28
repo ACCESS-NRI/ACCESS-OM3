@@ -48,13 +48,17 @@ spack:
     parallelio:
       require:
         - '@2.6.2'
+        - build_type=Debug
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -check nouninit"'
     netcdf-c:
       require:
         - '@4.9.2'
-        - build_system=cmake build_type=RelWithDebInfo
+        - build_system=cmake build_type=Debug
     netcdf-fortran:
       require:
         - '@4.6.1'
+        - build_system=cmake build_type=Debug
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -check nouninit"'
     fms:
       require:
         - '@2025.03'
