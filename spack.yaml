@@ -41,7 +41,7 @@ spack:
     # Other Dependencies
     esmf:
       require:
-        - '@8.7.0'
+        - '@8.7.0 +debug'
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -check nouninit"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
