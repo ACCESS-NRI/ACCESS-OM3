@@ -13,24 +13,15 @@ spack:
       require:
         - '@2025.08.000'
         - configurations=MOM6,MOM6-CICE6
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -check nouninit"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -check nouninit"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -check nouninit"'
         - build_type=Debug
     access-cice:
       require:
         - '@CICE6.6.1-0'
         - io_type=PIO
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -check nouninit"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -check nouninit"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -check nouninit"'
         - build_type=Debug
     access-mom6:
       require:
         - '@2025.07.000'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -check nouninit"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -check nouninit"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -check nouninit"'
         - build_type=Debug
     access-ww3:
       require:
@@ -38,31 +29,22 @@ spack:
     access3-share:
       require:
         - '@2025.08.000'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -check nouninit"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -check nouninit"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -check nouninit"'
         - build_type=Debug
     access-generic-tracers:
       require:
         - '@2025.08.000'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -check nouninit"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -check nouninit"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -check nouninit"'
         - build_type=Debug
     access-mocsy:
       require:
         - '@2025.07.002'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -check nouninit"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -check nouninit"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -check nouninit"'
         - build_type=Debug
     # Other Dependencies
     esmf:
       require:
         - '@8.7.0'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -check nouninit"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -check nouninit"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -check nouninit"'
     parallelio:
       require:
         - '@2.6.2'
