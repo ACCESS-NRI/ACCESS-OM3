@@ -43,7 +43,7 @@ spack:
       require:
         - '@8.7.0 +debug'
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -check nouninit"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fsanitize=memory"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     parallelio:
       require:
@@ -54,6 +54,7 @@ spack:
       require:
         - '@4.9.2'
         - build_system=cmake build_type=Debug
+        - 'cflags= "-fsanitize=memory"'
     netcdf-fortran:
       require:
         - '@4.6.1'
@@ -65,6 +66,8 @@ spack:
     openmpi:
       require:
         - '@4.1.7'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -check nouninit"'
+        - 'cflags= "-fsanitize=memory"'
     fortranxml:
       require:
         - '@4.1.2'
