@@ -54,7 +54,7 @@ spack:
       require:
         - '@4.9.2'
         - build_system=cmake build_type=Debug
-        - 'cflags= "-fsanitize=memory"'
+        - 'cflags="-fsanitize=memory"'
     netcdf-fortran:
       require:
         - '@4.6.1'
@@ -67,7 +67,7 @@ spack:
       require:
         - '@4.1.7'
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -check nouninit"'
-        - 'cflags= "-fsanitize=memory"'
+        - 'cflags="-fsanitize=memory"'
     fortranxml:
       require:
         - '@4.1.2'
