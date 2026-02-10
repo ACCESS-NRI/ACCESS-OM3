@@ -6,7 +6,7 @@
 # https://github.com/ACCESS-NRI/model-deployment-template/blob/main/spack.yaml
 spack:
   specs:
-    - access-om3@git.2025.08.001
+    - access-om3@git.2025.08.001 ^/nd7nwyh
   packages:
     # Main Dependencies
     access3:
@@ -25,7 +25,7 @@ spack:
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-mom6:
       require:
-        - '@git.db2b80c915cfd81c05c70711136feae59b0da201=2025.07.000'  # On branch PR-test/DEV-EMC-candidate-20260128
+        - '@git.57a32da1467c7f444c6634847768d9e60ebc8b74=2025.07.000'  # On branch PR-test/DEV-EMC-candidate-20260128
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
