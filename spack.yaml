@@ -2,7 +2,7 @@
 #
 # It describes a set of packages to be installed, along with
 # configuration settings.
-# Instructions for editing this file are found in 
+# Instructions for editing this file are found in
 # https://github.com/ACCESS-NRI/model-deployment-template/blob/main/spack.yaml
 spack:
   # _name and _version are reserved definitions that inform deployments
@@ -81,17 +81,20 @@ spack:
     fortranxml:
       require:
       - '@4.1.2'
-    gcc-runtime:
-      require:
-      - '%access_gcc'
 
     # Compilers
-    intel-oneapi-compilers:
+    c:
       require:
-      - '@2025.2.0'
+      - 'intel-oneapi-compilers@2025.2.0'
+    cxx:
+      require:
+      - 'intel-oneapi-compilers@2025.2.0'
+    fortran:
+      require:
+      - 'intel-oneapi-compilers@2025.2.0'
+
     all:
-      require:
-      - '%access_oneapi'
+      prefer:
       - 'target=x86_64_v4'
   view: true
   concretizer:
