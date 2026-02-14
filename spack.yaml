@@ -11,52 +11,38 @@ spack:
     # Main Dependencies
     access3:
       require:
-        - '@2025.08.000'
-        - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - '@git.ff61afbb87ff84e948e60bf732262658bef46c96'
+        - configurations=MOM6-CICE6
+        # - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        # - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        # - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-cice:
       require:
-        - '@CICE6.6.1-0'
+        - '@git.bd38883b7bb8f1c48a525c1172085acd82402227'
         - io_type=PIO
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - driver=access/cmeps
+        # - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        # - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        # - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-mom6:
       require:
-        - '@2025.07.000'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-    access-ww3:
-      require:
-        - '@2025.08.000'
+        - '@2025.02.000'
+        # - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        # - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        # - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access3-share:
       require:
-        - '@2025.08.000'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-    access-generic-tracers:
-      require:
-        - '@2025.08.000'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-    access-mocsy:
-      require:
-        - '@2025.07.002'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - '@git.ff61afbb87ff84e948e60bf732262658bef46c96'
+        # - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        # - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        # - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     # Other Dependencies
     esmf:
       require:
         - '@8.7.0'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        # - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        # - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        # - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     parallelio:
       require:
         - '@2.6.2'
@@ -69,8 +55,8 @@ spack:
         - '@4.6.1'
     fms:
       require:
-        - '@2025.03'
-        - 'cppflags="-DMAXFIELDMETHODS_=600"'
+        - '@git.2024.03'
+        # - 'cppflags="-DMAXFIELDMETHODS_=600"'
     openmpi:
       require:
         - '@4.1.7'
@@ -80,10 +66,42 @@ spack:
     gcc-runtime:
       require:
         - '%gcc'
+    gcom:
+      require:
+        - '@8.0'
     all:
       require:
-        - '%oneapi@2025.2.0'
-        - 'target=x86_64_v4'
-  view: true
+        - '%intel@2021.10.0'
+        - 'target=x86_64'
   concretizer:
     unify: true
+
+
+  modules:
+    prefix_inspections:
+      bin:
+       - PATH
+      lib:
+       - LIBRARY_PATH
+       - LD_LIBRARY_PATH
+      lib64:
+       - LIBRARY_PATH
+       - LD_LIBRARY_PATH
+      include:
+       - FPATH
+
+    default:
+      tcl:
+        include:
+          - access-om3
+          - access-mom6
+          - access-cice
+          - access3-share
+          - esmf
+          - fms
+          - parallelio
+          - fortranxml
+          - gcom
+          - openmpi
+          - netcdf-c
+          - netcdf-fortran
