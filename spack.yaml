@@ -69,6 +69,8 @@ spack:
       require:
         - '@2.6.2'
         - 'fflags="-g -traceback"'
+        - 'cflags="-g -traceback"'
+        - 'cxxflags="-g -traceback"'
     netcdf-c:
       require:
         - '@4.9.2'
