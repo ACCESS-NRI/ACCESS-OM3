@@ -12,13 +12,15 @@ spack:
     access3:
       require:
         - '@2025.08.000'
-        - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
+        - build_type=RelWithDebInfo
+        - configurations=MOM6-CICE6
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-cice:
       require:
         - '@CICE6.6.1-0'
+        - build_type=RelWithDebInfo
         - io_type=PIO
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
@@ -26,40 +28,42 @@ spack:
     access-mom6:
       require:
         - '@2025.07.000'
+        - build_type=RelWithDebInfo
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-    access-ww3:
-      require:
-        - '@2025.08.000'
     access3-share:
       require:
         - '@2025.08.000'
+        - build_type=RelWithDebInfo
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-generic-tracers:
       require:
         - '@2025.08.000'
+        - build_type=RelWithDebInfo
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-mocsy:
       require:
         - '@2025.07.002'
+        - build_type=RelWithDebInfo
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     # Other Dependencies
     esmf:
       require:
-        - '@8.7.0'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - '@8.8.1'
+        - 'fflags="-g -march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cflags="-g -march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'cxxflags="-g -march=sapphirerapids -mtune=sapphirerapids -unroll"'
     parallelio:
       require:
         - '@2.6.2'
+        - build_type=RelWithDebInfo
     netcdf-c:
       require:
         - '@4.9.2'
@@ -67,16 +71,20 @@ spack:
     netcdf-fortran:
       require:
         - '@4.6.1'
+        - 'fflags="-g"'
+        - 'cflags="-g"'
     fms:
       require:
         - '@2025.03'
+        - build_type=RelWithDebInfo
         - 'cppflags="-DMAXFIELDMETHODS_=600"'
     openmpi:
       require:
-        - '@4.1.7'
+        - '@5.0.8'
     fortranxml:
       require:
         - '@4.1.2'
+        - 'fflags="-g"'
     gcc-runtime:
       require:
         - '%gcc'
