@@ -87,6 +87,8 @@ spack:
       require:
         - '%oneapi@2025.2.0'
         - 'target=x86_64_v4'
+  config:
+    build_jobs: 1
   view: true
   concretizer:
     unify: true
