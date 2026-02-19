@@ -98,7 +98,7 @@ spack:
       - '@1.0.6'
     gcc-runtime:
       require:
-      - '@14.1.0 ^gcc@14.1.0'
+      - '@14.2.0'
       
     # Compilers
     c:
