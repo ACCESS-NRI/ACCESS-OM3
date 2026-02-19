@@ -6,13 +6,12 @@
 # https://github.com/ACCESS-NRI/model-deployment-template/blob/main/spack.yaml
 spack:
   specs:
-    - access-om3@git.2025.08.002/x4lh6v3ng
+    - access-om3@git.2025.08.002
   packages:
     # Main Dependencies
     access3:
       require:
-        # - '@2025.08.000'
-        - '@2e022329024cb5cc746d7260dfd91222890b6bdc'
+        - '@2025.08.000'
         - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
@@ -38,8 +37,7 @@ spack:
         - '@2025.08.000'
     access3-share:
       require:
-        # - '@2025.08.000'
-        - '@2e022329024cb5cc746d7260dfd91222890b6bdc'
+        - '@2025.08.000'
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
@@ -59,13 +57,13 @@ spack:
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
         - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
     # Other Dependencies
-    # esmf:
-    #   require:
-    #     - '@8.7.0'
-    #     - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
-    #     - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
-    #     - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
-    #     - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
+    esmf:
+      require:
+        - '@8.7.0'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
     parallelio:
       require:
         - '@2.6.2'
