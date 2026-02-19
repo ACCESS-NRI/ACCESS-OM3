@@ -81,7 +81,16 @@ spack:
     fortranxml:
       require:
       - '@4.1.2'
-
+    snappy:
+      require:
+       - '@1.1.10'
+    hdf5:
+      require:
+      - '@1.14.3'
+    m4:
+      require:
+      - '@1.4.19'
+      
     # Compilers
     c:
       require:
