@@ -96,16 +96,19 @@ spack:
     libaec:
       require:
       - '@1.0.6'
+    gcc-runtime:
+      require:
+      - '@14.1.0 ^gcc@14.1.0'
       
     # Compilers
     c:
-      require:
+      prefer:
       - 'intel-oneapi-compilers@2025.2.0'
     cxx:
-      require:
+      prefer:
       - 'intel-oneapi-compilers@2025.2.0'
     fortran:
-      require:
+      prefer:
       - 'intel-oneapi-compilers@2025.2.0'
 
     all:
