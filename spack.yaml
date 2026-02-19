@@ -13,50 +13,57 @@ spack:
       require:
         - '@2025.08.000'
         - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
     access-cice:
       require:
         - '@CICE6.6.1-0'
         - io_type=PIO
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
     access-mom6:
       require:
         - '@2025.07.000'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
     access-ww3:
       require:
         - '@2025.08.000'
     access3-share:
       require:
         - '@2025.08.000'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
     access-generic-tracers:
       require:
         - '@2025.08.000'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
     access-mocsy:
       require:
         - '@2025.07.002'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
     # Other Dependencies
     esmf:
       require:
         - '@8.7.0'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
     parallelio:
       require:
         - '@2.6.2'
@@ -71,6 +78,10 @@ spack:
       require:
         - '@2025.03'
         - 'cppflags="-DMAXFIELDMETHODS_=600"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
     openmpi:
       require:
         - '@4.1.7'
