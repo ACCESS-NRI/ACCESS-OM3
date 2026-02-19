@@ -6,7 +6,7 @@
 # https://github.com/ACCESS-NRI/model-deployment-template/blob/main/spack.yaml
 spack:
   specs:
-    - access-om3@git.2025.08.001
+    - access-om3@git.2025.08.001 ^/3nq5qch
   packages:
     # Main Dependencies
     access3:
@@ -20,9 +20,9 @@ spack:
       require:
         - '@CICE6.6.1-0'
         - io_type=PIO
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3"'
-        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
     access-mom6:
       require:
         - '@git.9b5014887a95cfbe9462079d8f938a4d5d73ab11=2026.01.000'  # On branch dev/gfdl+access+isf
