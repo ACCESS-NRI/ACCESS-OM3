@@ -13,8 +13,7 @@ spack:
       require:
         # - '@2025.08.000'
         # - '@2e022329024cb5cc746d7260dfd91222890b6bdc'
-        # - '@a9ffd0feb043a3ef639e721fa8e4007b08086aa2'
-        - '@2a67b63784a1d164543852f30fc9f8925c83ad1f'
+        - '@a9ffd0feb043a3ef639e721fa8e4007b08086aa2'
         - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
@@ -42,8 +41,7 @@ spack:
       require:
         # - '@2025.08.000'
         # - '@2e022329024cb5cc746d7260dfd91222890b6bdc'
-        # - '@a9ffd0feb043a3ef639e721fa8e4007b08086aa2'
-        - '@2a67b63784a1d164543852f30fc9f8925c83ad1f'
+        - '@a9ffd0feb043a3ef639e721fa8e4007b08086aa2'
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
