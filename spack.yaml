@@ -90,6 +90,9 @@ spack:
     m4:
       require:
       - '@1.4.19'
+    cmake:
+      require:
+      - '@3.24.2'
       
     # Compilers
     c:
