@@ -13,9 +13,9 @@ spack:
       require:
         - '@2025.08.000'
         - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto=thin"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto=thin"'
-        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto=thin -fuse-ld=lld"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
     access-cice:
       require:
         - '@CICE6.6.1-0'
@@ -26,44 +26,43 @@ spack:
     access-mom6:
       require:
         - '@git.9b5014887a95cfbe9462079d8f938a4d5d73ab11=2026.01.000'  # On branch dev/gfdl+access+isf
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto=thin"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto=thin"'
-        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto=thin -fuse-ld=lld"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
     access-ww3:
       require:
         - '@2025.08.000'
     access3-share:
       require:
         - '@2025.08.000'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto=thin"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto=thin"'
-        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto=thin -fuse-ld=lld"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
     access-generic-tracers:
       require:
         - '@2025.08.000'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto=thin"'
-        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto=thin -fuse-ld=lld"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
     access-mocsy:
       require:
         - '@2025.07.002'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto=thin"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto=thin"'
-        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto=thin -fuse-ld=lld"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
     fms:
       require:
         - '@2025.03'
         - 'cppflags="-DMAXFIELDMETHODS_=600"'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto=thin"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto=thin"'
-        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto=thin -fuse-ld=lld"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
     # Other Dependencies
     esmf:
       require:
         - '@8.8.1'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto=thin"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto=thin"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto=thin"'
-        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto=thin -fuse-ld=lld"'
+        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3"'
+        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3"'
+        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3"'
     parallelio:
       require:
         - '@2.6.2'
