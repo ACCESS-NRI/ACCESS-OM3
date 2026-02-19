@@ -93,6 +93,9 @@ spack:
     cmake:
       require:
       - '@3.24.2'
+    libaec:
+      require:
+      - '@1.0.6'
       
     # Compilers
     c:
