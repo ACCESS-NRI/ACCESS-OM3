@@ -30,9 +30,9 @@ spack:
     access-mom6:
       require:
       - '@2025.07.000'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -grecord-gcc-switches"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags="-march=x86-64-v4 -mtune=generic -unroll -grecord-gcc-switches"'
+      - 'cflags="-march=x86-64-v4 -mtune=generic -unroll"'
+      - 'cxxflags="-march=x86-64-v4 -mtune=generic -unroll"'
     access-ww3:
       require:
       - '@2025.08.000'
