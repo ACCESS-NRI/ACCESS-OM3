@@ -12,11 +12,11 @@ on:
       - main
       - dev
       - backport/*.*
-      - infra-update-*
+      - infra-update-**
     paths:
       - config/**
       - spack.yaml
-      - .github
+      - .github/**
 jobs:
   pr-ci:
     name: CI
