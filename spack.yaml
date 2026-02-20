@@ -45,15 +45,15 @@ spack:
     access-generic-tracers:
       require:
       - '@2025.08.000'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags="-xCORE-AVX2 -march=sapphirerapids -mtune=sapphirerapids -unroll -xCORE-AVX2"'
+      - 'cflags="-xCORE-AVX2 -march=sapphirerapids -mtune=sapphirerapids -unroll -xCORE-AVX2"'
+      - 'cxxflags="-xCORE-AVX2 -march=sapphirerapids -mtune=sapphirerapids -unroll -xCORE-AVX2"'
     access-mocsy:
       require:
       - '@2025.07.002'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags="-xCORE-AVX2 -march=sapphirerapids -mtune=sapphirerapids -unroll -xCORE-AVX2"'
+      - 'cflags="-xCORE-AVX2 -march=sapphirerapids -mtune=sapphirerapids -unroll -xCORE-AVX2"'
+      - 'cxxflags="-xCORE-AVX2 -march=sapphirerapids -mtune=sapphirerapids -unroll -xCORE-AVX2"'
     # Other Dependencies
     esmf:
       require:
