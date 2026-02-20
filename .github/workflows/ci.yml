@@ -16,6 +16,7 @@ on:
     paths:
       - config/**
       - spack.yaml
+      - .github
 jobs:
   pr-ci:
     name: CI
