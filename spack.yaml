@@ -58,9 +58,9 @@ spack:
     esmf:
       require:
       - '@8.7.0'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -grecord-gcc-switches"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      # - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      # - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      # - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     parallelio:
       require:
       - '@2.6.8'
@@ -113,7 +113,7 @@ spack:
 
     all:
       prefer:
-      - 'target=x86_64_v4'
+      - 'target=x86_64'
   view: true
   concretizer:
     unify: true
