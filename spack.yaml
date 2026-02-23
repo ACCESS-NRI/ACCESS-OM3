@@ -17,37 +17,37 @@ spack:
       require:
       - '@2025.08.000'
       - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -debug all -g3 -grecord-gcc-switches"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -debug all -g3 -grecord-gcc-switches"'
+      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -debug all -g3 -grecord-gcc-switches"'
     access-cice:
       require:
       - '@CICE6.6.1-0'
       - io_type=PIO
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -debug all -g3 -grecord-gcc-switches"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -debug all -g3 -grecord-gcc-switches"'
+      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -debug all -g3 -grecord-gcc-switches"'
     access-mom6:
       require:
       - '@2025.07.000'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -debug all -g3 -grecord-gcc-switches"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -debug all -g3 -grecord-gcc-switches"'
+      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -debug all -g3 -grecord-gcc-switches"'
     access-ww3:
       require:
       - '@2025.08.000'
     access3-share:
       require:
       - '@2025.08.000'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -debug all -g3 -grecord-gcc-switches"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -debug all -g3 -grecord-gcc-switches"'
+      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -debug all -g3 -grecord-gcc-switches"'
     access-generic-tracers:
       require:
       - '@2025.08.000'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -debug all -g3 -grecord-gcc-switches"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -debug all -g3 -grecord-gcc-switches"'
+      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -debug all -g3 -grecord-gcc-switches"'
     access-mocsy:
       require:
       - '@2025.07.002'
@@ -58,23 +58,35 @@ spack:
     esmf:
       require:
       - '@8.7.0'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll  -debug all -g3 -grecord-gcc-switches"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll  -debug all -g3 -grecord-gcc-switches"'
+      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -debug all -g3 -grecord-gcc-switches"'
     parallelio:
       require:
       - '@2.6.2'
+      - 'fflags="-debug all -g3 -grecord-gcc-switches"'
+      - 'cflags="-debug all -g3 -grecord-gcc-switches"'
+      - 'cxxflags="-debug all -g3 -grecord-gcc-switches"'
     netcdf-c:
       require:
       - '@4.9.2'
       - build_system=cmake build_type=RelWithDebInfo
+      - 'fflags="-debug all -g3 -grecord-gcc-switches"'
+      - 'cflags="-debug all -g3 -grecord-gcc-switches"'
+      - 'cxxflags="-debug all -g3 -grecord-gcc-switches"'
     netcdf-fortran:
       require:
       - '@4.6.1'
+      - 'fflags="-debug all -g3 -grecord-gcc-switches"'
+      - 'cflags="-debug all -g3 -grecord-gcc-switches"'
+      - 'cxxflags="-debug all -g3 -grecord-gcc-switches"'
     fms:
       require:
       - '@2025.03'
       - 'cppflags="-DMAXFIELDMETHODS_=600"'
+      - 'fflags="-debug all -g3 -grecord-gcc-switches"'
+      - 'cflags="-debug all -g3 -grecord-gcc-switches"'
+      - 'cxxflags="-debug all -g3 -grecord-gcc-switches"'
     openmpi:
       require:
       - '@4.1.7'
