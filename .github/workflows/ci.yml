@@ -8,10 +8,6 @@ on:
       - closed
       - converted_to_draft
       - ready_for_review
-    branches:
-      - main
-      - dev
-      - backport/*.*
     paths:
       - config/**
       - spack.yaml
