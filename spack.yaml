@@ -6,12 +6,12 @@
 # https://github.com/ACCESS-NRI/model-deployment-template/blob/main/spack.yaml
 spack:
   specs:
-    - access-om3@git.2025.08.001
+    - access-om3@git.2025.08.001 ^esmf/c43ifwo 
   packages:
     # Main Dependencies
     access3:
       require:
-        - '@git.f457392a0d6086513750dd7c4b75b98bad6919a9=2026.01.000'
+        - '@git.b68b6122dc97a6e5f5dae7bda7b596a5d5a1b11b=2026.01.000'
         - configurations=MOM6-CICE6
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
@@ -34,7 +34,7 @@ spack:
         - '@2025.08.000'
     access3-share:
       require:
-        - '@git.f457392a0d6086513750dd7c4b75b98bad6919a9=2026.01.000'
+        - '@git.b68b6122dc97a6e5f5dae7bda7b596a5d5a1b11b=2026.01.000'
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
