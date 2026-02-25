@@ -11,7 +11,7 @@ spack:
     # Main Dependencies
     access3:
       require:
-        - '@git.50ff2cfd8d808a6630d487a77e50c3acacdf010a=2026.01.000'
+        - '@git.d89beb0832e691057b258ac206c2f14714676661=2026.01.000'
         - configurations=MOM6-CICE6
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
@@ -34,7 +34,7 @@ spack:
         - '@2025.08.000'
     access3-share:
       require:
-        - '@git.50ff2cfd8d808a6630d487a77e50c3acacdf010a=2026.01.000'
+        - '@git.d89beb0832e691057b258ac206c2f14714676661=2026.01.000'
         - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
