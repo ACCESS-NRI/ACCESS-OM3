@@ -9,10 +9,8 @@
           "checks": {
             "repro": true
           }
-        },
         }
       }
     }
-
   }
 }
