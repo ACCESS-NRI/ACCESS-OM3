@@ -10,15 +10,6 @@
             "repro": true
           }
         },
-        "dev-MC_100km_jra_ryf+wombatlite": {
-          "checks": {
-            "repro": true
-          }
-        },
-        "dev-MC_25km_jra_ryf": {
-          "checks": {
-            "repro": true
-          }
         }
       }
     }
