@@ -58,9 +58,8 @@ spack:
     esmf:
       require:
       - '@8.7.0'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback"'
+      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback"'
     parallelio:
       require:
       - '@2.6.8'
