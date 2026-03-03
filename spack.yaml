@@ -68,6 +68,7 @@ spack:
     parallelio:
       require:
         - '@2.6.2'
+        - '+debug'
         - 'fflags="-g -traceback"'
         - 'cflags="-g -traceback"'
         - 'cxxflags="-g -traceback"'
