@@ -4,17 +4,21 @@
 
 ## About the model
 
-ACCESS-OM3 is an ocean - sea ice (- wave) model under development. ACCESS-OM3 is built and deployed automatically to `gadi` on NCI (see below for details). In general, most users should start from one of the tested [configurations](https://github.com/access-nri/access-om3-configs). 
+ACCESS-OM3 is an ocean - sea ice (- wave - BGC) model under development, consisting of forks of the [MOM6](https://github.com/ACCESS-NRI/MOM6) ocean model (with optional [WOMBAT BGC](https://github.com/ACCESS-NRI/GFDL-generic-tracers)), [CICE6](https://github.com/ACCESS-NRI/CICE) sea ice model and optional [WW3](https://github.com/ACCESS-NRI/WW3) surface wave model, driven by prescribed surface forcings and coupled via [CDEPS and CMEPS](https://github.com/ACCESS-NRI/access3-share), respectively. 
 
-For more information see the [ACCESS-Hive Docs model description](https://docs.access-hive.org.au/models/configurations/access-om/#access-om3) and [how to run the model](https://docs.access-hive.org.au/models/run-a-model/run-access-om3).
+ACCESS-OM3 is built and deployed automatically to `gadi` on NCI (see below for details). **In general, most users should start from one of the tested [ACCESS-OM3 configurations](https://github.com/access-nri/access-om3-configs)**, rather than building from these sources. 
+
+For more information see the [ACCESS-Hive Docs](https://access-om3-configs.access-hive.org.au/).
 
 ## About this repository
 
-This is the Model Deployment Repository for the ACCESS-OM3 model. This repository contains a [spack environment](https://spack.readthedocs.io/en/latest/environments.html) manifest file ([`spack.yaml`](./spack.yaml)) that defines all the essential components of the model, including exact versions of the source code used.
+This is the Model Deployment Repository for the ACCESS-OM3 model executable. This repository contains a [spack environment](https://spack.readthedocs.io/en/latest/environments.html) manifest file ([`spack.yaml`](./spack.yaml)) that defines all the essential components of the model, including exact versions of the source code used.
 
 ## Releases
 
-The software in this repository contributes to [access-om3 model configurations](https://github.com/accESS-NRI/access-om3-configs). Release information will be available on the [ACCESS Hive Forum](https://forum.access-hive.org.au/t/access-om3-release-information/4494) when supported releases are made.
+Releases are listed [here](https://github.com/ACCESS-NRI/ACCESS-OM3/releases) and further details on model component versions can be found in the [ACCESS-NRI Model Release Database](https://reporting.access-nri-store.cloud.edu.au/release-provenance/releases). 
+
+The software in this repository contributes to the [ACCESS-OM3 model configurations](https://github.com/ACCESS-NRI/access-om3-configs). Configuration release information will be available on the [ACCESS Hive Forum](https://forum.access-hive.org.au/t/access-om3-release-information/4494) when supported releases are made.
 
 ## Support
 
