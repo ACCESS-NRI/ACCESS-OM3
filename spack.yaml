@@ -81,10 +81,18 @@ spack:
     gcc-runtime:
       require:
         - '%gcc'
-    all:
+    c:
       require:
-        - '%intel@2021.10.0'
-        - 'target=x86_64_v4'
+        - 'intel-oneapi-compilers-classic@2021.10.0'
+    cxx:
+      require:
+        - 'intel-oneapi-compilers-classic@2021.10.0'
+    fortran:
+      require:
+         - 'intel-oneapi-compilers-classic@2021.10.0'
+    all:
+      prefer:
+        - 'target=x86_64'
   view: true
   concretizer:
     unify: true
