@@ -44,7 +44,7 @@ spack:
       - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-generic-tracers:
       require:
-      - '@2025.08.000'
+      - '@2026.02.000'
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
@@ -95,7 +95,7 @@ spack:
 
     all:
       prefer:
-      - 'target=x86_64'
+      - 'target=x86_64_v4'
   view: true
   concretizer:
     unify: true
