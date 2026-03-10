@@ -38,11 +38,7 @@ spack:
       - '@git.bb5dfccf1d64d10f17db9760c0c83073e07fa339'
     access3-share:
       require:
-<<<<<<< HEAD
-      - '@git.23dbc4afa5971968968da813ad89d8d8622f333c'
-=======
       - '@git.cb2eeb4d67adb6f2d909f86c12a64c3b1210d02e'
->>>>>>> 58dee5c (Add Sa_dens from streams)
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
