@@ -1,6 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/ACCESS-NRI/schema/main/au.org.access-nri/model/deployment/config/packages/1-0-0.json",
   "provenance": [
+    "access-cice",
     "access-mom6",
     "access3",
     "access3-share",
