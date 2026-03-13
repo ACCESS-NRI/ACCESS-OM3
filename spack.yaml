@@ -16,17 +16,17 @@ spack:
     access3:
       require:
         - '@git.33c3e2791df4e048aff49359b61718084dc14cdf'
-        - configurations=MOM6-CICE6
+        - configurations=MOM6
         - 'fflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
         - 'cflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
         - 'cxxflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
-    access-cice:
-      require:
-        - '@git.ccf9fef7003ea44e30a76164d06dbce729b88b9f'
-        - io_type=PIO
-        - 'fflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
-        - 'cflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
-        - 'cxxflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
+    # access-cice:
+    #   require:
+    #     - '@git.ccf9fef7003ea44e30a76164d06dbce729b88b9f'
+    #     - io_type=PIO
+    #     - 'fflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
+    #     - 'cflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
+    #     - 'cxxflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
     access-mom6:
       require:
         - '@2025.07.000'
@@ -35,7 +35,7 @@ spack:
         - 'cxxflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
     access3-share:
       require:
-        - '@git.33c3e2791df4e048aff49359b61718084dc14cdf'
+        - '@git.d5f3f8adc26d0b120f6004c7b9d1c255a98492cf'
         - 'fflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
         - 'cflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
         - 'cxxflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
