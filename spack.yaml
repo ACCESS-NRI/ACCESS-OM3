@@ -57,7 +57,7 @@ spack:
     # Other Dependencies
     esmf:
       require:
-      - '@8.7.0'
+      - '@8.9.1'
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback"'
       - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback"'
@@ -73,7 +73,7 @@ spack:
       - build_system=cmake build_type=RelWithDebInfo
     netcdf-fortran:
       require:
-      - '@4.6.1'
+      - '@4.6.2'
     fms:
       require:
       - '@2025.03'
