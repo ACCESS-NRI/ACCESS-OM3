@@ -33,12 +33,14 @@ spack:
         - 'fflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
         - 'cflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
         - 'cxxflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
+        - build_type=Debug
     access3-share:
       require:
         - '@git.370a2282be382faf68f3b6e96d77aa788b11c676'
         - 'fflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
         - 'cflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
         - 'cxxflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
+        - build_type=Debug
     access-generic-tracers:
       require:
         - '@2025.08.000'
