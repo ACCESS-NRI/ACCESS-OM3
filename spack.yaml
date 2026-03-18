@@ -17,50 +17,50 @@ spack:
       require:
       - '@2026.03.000'
       - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags=" -g3 -grecord-gcc-switches -fno-omit-frame-pointer -O2 -unroll -xcascadelake"'
+      - 'fflags=" -g3 -grecord-gcc-switches -fno-omit-frame-pointer -O2 -unroll -xcascadelake"'
+      - 'fflags=" -g3 -grecord-gcc-switches -fno-omit-frame-pointer -O2 -unroll -xcascadelake"'
     access-cice:
       require:
       - '@CICE6.6.3-0'
       - io_type=PIO
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags=" -g3 -grecord-gcc-switches -fno-omit-frame-pointer -O2 -unroll -xcascadelake"'
+      - 'fflags=" -g3 -grecord-gcc-switches -fno-omit-frame-pointer -O2 -unroll -xcascadelake"'
+      - 'fflags=" -g3 -grecord-gcc-switches -fno-omit-frame-pointer -O2 -unroll -xcascadelake"'
     access-mom6:
       require:
       - '@2026.01.001'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags=" -g3 -grecord-gcc-switches -fno-omit-frame-pointer -O2 -unroll -xcascadelake"'
+      - 'fflags=" -g3 -grecord-gcc-switches -fno-omit-frame-pointer -O2 -unroll -xcascadelake"'
+      - 'fflags=" -g3 -grecord-gcc-switches -fno-omit-frame-pointer -O2 -unroll -xcascadelake"'
     access-ww3:
       require:
       - '@2026.03.000'
     access3-share:
       require:
       - '@2026.03.000'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags=" -g3 -grecord-gcc-switches -fno-omit-frame-pointer -O2 -unroll -xcascadelake"'
+      - 'fflags=" -g3 -grecord-gcc-switches -fno-omit-frame-pointer -O2 -unroll -xcascadelake"'
+      - 'fflags=" -g3 -grecord-gcc-switches -fno-omit-frame-pointer -O2 -unroll -xcascadelake"'
     access-generic-tracers:
       require:
       - '@2026.02.001'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags=" -g3 -grecord-gcc-switches -fno-omit-frame-pointer -O2 -unroll -xcascadelake"'
+      - 'fflags=" -g3 -grecord-gcc-switches -fno-omit-frame-pointer -O2 -unroll -xcascadelake"'
+      - 'fflags=" -g3 -grecord-gcc-switches -fno-omit-frame-pointer -O2 -unroll -xcascadelake"'
     access-mocsy:
       require:
       - '@2025.07.002'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags=" -g3 -grecord-gcc-switches -fno-omit-frame-pointer -O2 -unroll -xcascadelake"'
+      - 'fflags=" -g3 -grecord-gcc-switches -fno-omit-frame-pointer -O2 -unroll -xcascadelake"'
+      - 'fflags=" -g3 -grecord-gcc-switches -fno-omit-frame-pointer -O2 -unroll -xcascadelake"'
     # Other Dependencies
     esmf:
       require:
       - '@8.9.1'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback"'
+      - 'fflags=" -g3 -grecord-gcc-switches -fno-omit-frame-pointer -O2 -unroll -xcascadelake"'
+      - 'fflags=" -g3 -grecord-gcc-switches -fno-omit-frame-pointer -O2 -unroll -xcascadelake"'
+      - 'fflags=" -g3 -grecord-gcc-switches -fno-omit-frame-pointer -O2 -unroll -xcascadelake"'
     parallelio:
       require:
       - '@2.6.8'
