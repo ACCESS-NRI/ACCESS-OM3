@@ -17,47 +17,47 @@ spack:
       require:
         - '@git.74d7aa725f8f142dbe07ec375173cd727fecdc79'
         - configurations=MOM6-CICE6
-        - 'fflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
-        - 'cflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
-        - 'cxxflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
+        - 'fflags="-g -00 -traceback"'
+        - 'cflags="-g -00 -traceback"'
+        - 'cxxflags="-g -00 -traceback"'
     access-cice:
       require:
         - '@git.e16ef83961f89d82212d9b69692b4ff022584777'
         - io_type=PIO
-        - 'fflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
-        - 'cflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
-        - 'cxxflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
+        - 'fflags="-g -00 -traceback"'
+        - 'cflags="-g -00 -traceback"'
+        - 'cxxflags="-g -00 -traceback"'
     access-mom6:
       require:
         - '@2025.07.000'
-        - 'fflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
-        - 'cflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
-        - 'cxxflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
+        - 'fflags="-g -00 -traceback"'
+        - 'cflags="-g -00 -traceback"'
+        - 'cxxflags="-g -00 -traceback"'
     access3-share:
       require:
         - '@git.74d7aa725f8f142dbe07ec375173cd727fecdc79'
-        - 'fflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
-        - 'cflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
-        - 'cxxflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
+        - 'fflags="-g -00 -traceback"'
+        - 'cflags="-g -00 -traceback"'
+        - 'cxxflags="-g -00 -traceback"'
     access-generic-tracers:
       require:
         - '@2025.08.000'
-        - 'fflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
-        - 'cflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
-        - 'cxxflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
+        - 'fflags="-g -00 -traceback"'
+        - 'cflags="-g -00 -traceback"'
+        - 'cxxflags="-g -00 -traceback"'
     access-mocsy:
       require:
         - '@2025.07.002'
-        - 'fflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
-        - 'cflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
-        - 'cxxflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
+        - 'fflags="-g -00 -traceback"'
+        - 'cflags="-g -00 -traceback"'
+        - 'cxxflags="-g -00 -traceback"'
     # Other Dependencies
     esmf:
       require:
         - '@8.7.0'
-        - 'fflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
-        - 'cflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
-        - 'cxxflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
+        - 'fflags="-g -00 -traceback"'
+        - 'cflags="-g -00 -traceback"'
+        - 'cxxflags="-g -00 -traceback"'
     parallelio:
       require:
         - '@2.6.2'
