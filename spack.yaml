@@ -21,6 +21,7 @@ spack:
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-cice:
+      git: https://github.com/NoahDay-2/CICE.git
       require:
       - '@git.6f79ef23a520e0fa8c2b395598d7f2a475f92689'
       - io_type=PIO
