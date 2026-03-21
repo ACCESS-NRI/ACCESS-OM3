@@ -8,7 +8,7 @@ spack:
   # _name and _version are reserved definitions that inform deployments
   definitions:
   - _name: [access-om3]
-  - _version: [2026.03.000]
+  - _version: [2026.03.001]
   specs:
   - access-om3
   packages:
@@ -22,7 +22,7 @@ spack:
       - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-cice:
       require:
-      - '@CICE6.6.3-0'
+      - '@git.683282a7502cc2ebdd06b8b5ea7b52ce944d2a5e'
       - io_type=PIO
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
