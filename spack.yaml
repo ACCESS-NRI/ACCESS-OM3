@@ -80,7 +80,7 @@ spack:
       - 'cppflags="-DMAXFIELDMETHODS_=600"'
     openmpi:
       require:
-      - '@4.1.7'
+      - '@5.0.8'
     fortranxml:
       require:
       - '@4.1.2'
