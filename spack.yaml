@@ -35,7 +35,7 @@ spack:
       - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-ww3:
       require:
-      - '@2025.08.000'
+      - '@git.bb5dfccf1d64d10f17db9760c0c83073e07fa339'
     access3-share:
       require:
       - '@2025.08.000'
