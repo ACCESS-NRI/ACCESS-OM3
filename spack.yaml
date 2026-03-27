@@ -35,7 +35,7 @@ spack:
       - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-ww3:
       require:
-      - '@2025.08.000'
+      - '@2026.03.000'
     access3-share:
       require:
       - '@2025.08.000'
