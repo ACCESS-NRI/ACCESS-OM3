@@ -10,15 +10,15 @@ spack:
   - _name: [access-om3]
   - _version: [2026.03.000]
   specs:
-    - access-om3@git.2025.08.001
-    - esmf #/cvlvv73
+    - access-om3
+    - esmf 
     - parallelio
     - netcdf-c
     - netcdf-fortran
     - fms
     - fortranxml
-    - access-generic-tracers /otklosz
-    - access-mocsy /c2fyf6f
+    - access-generic-tracers 
+    - access-mocsy 
   packages:
     # Main Dependencies
     access3:
