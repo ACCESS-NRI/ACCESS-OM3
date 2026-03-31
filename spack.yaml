@@ -24,6 +24,7 @@ spack:
     access-cice:
       require:
       - '@CICE6.6.3-0'
+      - 'build_type=Debug'
       - io_type=PIO
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
