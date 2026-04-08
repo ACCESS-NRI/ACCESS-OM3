@@ -30,6 +30,7 @@ spack:
     access-mom6:
       require:
       - '@2026.01.001'
+      - +mom6_solo
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
