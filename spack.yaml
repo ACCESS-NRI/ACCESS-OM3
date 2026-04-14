@@ -22,7 +22,7 @@ spack:
       - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-cice:
       require:
-      - '@git.5916e7fac327be0585b2c818fce12a71d6d07b9d'
+      - '@git.904abd876c7875d56c5f51fb316f1d4c2c305b14'
       - io_type=PIO
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
@@ -35,7 +35,7 @@ spack:
       - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-ww3:
       require:
-      - '@2026.03.000'
+      - '@git.bb5dfccf1d64d10f17db9760c0c83073e07fa339'
     access3-share:
       require:
       - '@2025.08.000'
