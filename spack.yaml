@@ -60,7 +60,7 @@ spack:
     # Other Dependencies
     esmf:
       require:
-      - '@8.9.1'
+      - '@8.7.0'
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback"'
       - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback"'
