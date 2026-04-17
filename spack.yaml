@@ -31,7 +31,7 @@ spack:
       - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-mom6:
       require:
-      - '@2026.01.001'
+      - '@2025.07.001'
       # - 'build_type=Debug'
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
@@ -60,7 +60,7 @@ spack:
     # Other Dependencies
     esmf:
       require:
-      - '@8.7.0'
+      - '@8.9.1'
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback"'
       - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback"'
