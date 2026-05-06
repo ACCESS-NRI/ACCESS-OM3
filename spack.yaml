@@ -2,91 +2,106 @@
 #
 # It describes a set of packages to be installed, along with
 # configuration settings.
-# Instructions for editing this file are found in 
+# Instructions for editing this file are found in
 # https://github.com/ACCESS-NRI/model-deployment-template/blob/main/spack.yaml
 spack:
+  # _name and _version are reserved definitions that inform deployments
+  definitions:
+  - _name: [access-om3]
+  - _version: [2026.03.000]
   specs:
-    - access-om3@git.2025.08.001
+  - access-om3
   packages:
     # Main Dependencies
     access3:
       require:
-        - '@2025.08.000'
-        - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
-        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
+      - '@2026.03.000'
+      - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+      - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
     access-cice:
       require:
-        - '@CICE6.6.1-0'
-        - io_type=PIO
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3"'
+      - '@CICE6.6.3-0'
+      - io_type=PIO
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+      - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
     access-mom6:
       require:
-        - '@git.9b5014887a95cfbe9462079d8f938a4d5d73ab11=2026.01.000'  # On branch dev/gfdl+access+isf
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
-        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
+      - '@git.87cd5978c25ae2ebd761119d3dffd6665d729f08=2026.01.001'  # On branch dev/gfdl+access+isf
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+      - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
     access-ww3:
       require:
-        - '@2025.08.000'
+      - '@2026.03.000'
     access3-share:
       require:
-        - '@2025.08.000'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
-        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
+      - '@2026.03.000'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+      - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
     access-generic-tracers:
       require:
-        - '@2025.08.000'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
-        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
+      - '@2026.02.001'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+      - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
     access-mocsy:
       require:
-        - '@2025.07.002'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
-        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
-    fms:
-      require:
-        - '@2025.03'
-        - 'cppflags="-DMAXFIELDMETHODS_=600"'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
-        - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
+      - '@2025.07.002'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+      - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
     # Other Dependencies
     esmf:
       require:
-        - '@8.7.0'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3"'
+      - '@8.9.1'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback -O3 -flto"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback -O3 -flto"'
+      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback -O3 -flto"'
+      - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback -O3 -flto -fuse-ld=lld"'
     parallelio:
       require:
-        - '@2.6.2'
+      - '@2.6.8'
+      - 'fflags="-g -traceback"'
+      - 'cflags="-g -traceback"'
+      - 'cxxflags="-g -traceback"'
     netcdf-c:
       require:
-        - '@4.9.2'
-        - build_system=cmake build_type=RelWithDebInfo
+      - '@4.9.3'
+      - build_system=cmake build_type=RelWithDebInfo
     netcdf-fortran:
       require:
-        - '@4.6.1'
+      - '@4.6.2'
+    fms:
+      require:
+      - '@2025.03'
+      - 'cppflags="-DMAXFIELDMETHODS_=600"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
+      - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
     openmpi:
       require:
-        - '@4.1.7'
+      - '@4.1.7'
     fortranxml:
       require:
-        - '@4.1.2'
-    gcc-runtime:
+      - '@4.1.2'
+
+    # Compilers
+    c:
       require:
-        - '%gcc'
+      - 'intel-oneapi-compilers@2025.2.0'
+    cxx:
+      require:
+      - 'intel-oneapi-compilers@2025.2.0'
+    fortran:
+      require:
+      - 'intel-oneapi-compilers@2025.2.0'
+
     all:
-      require:
-        - '%oneapi@2025.2.0'
-        - 'target=x86_64_v4'
-  config:
-    build_jobs: 1
+      prefer:
+      - 'target=x86_64_v4'
   view: true
   concretizer:
     unify: true
