@@ -12,7 +12,7 @@ spack:
   specs:
   - access-om3
   packages:
-    # Main Dependencies 
+    # Main Dependencies
     access3:
       require:
       - '@git.a9cb5e89220fa627fe0597a3f39034b7f78797fe=2026.03.000'
