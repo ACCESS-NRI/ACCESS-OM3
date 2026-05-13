@@ -1,0 +1,27 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ACCESS-NRI/schema/main/au.org.access-nri/model/deployment/config/auto-configs-pr/1-0-0.json",
+  "profiles": {
+
+    "default": {
+      "configs_repo": "ACCESS-NRI/access-om3-configs",
+      "configs": {
+        "dev-MC_100km_jra_ryf": {
+          "checks": {
+            "repro": true
+          }
+        },
+        "dev-MC_100km_jra_ryf+wombatlite": {
+          "checks": {
+            "repro": true
+          }
+        },
+        "dev-MC_25km_jra_ryf": {
+          "checks": {
+            "repro": true
+          }
+        }
+      }
+    }
+
+  }
+}

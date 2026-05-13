@@ -2,88 +2,104 @@
 #
 # It describes a set of packages to be installed, along with
 # configuration settings.
-# Instructions for editing this file are found in 
+# Instructions for editing this file are found in
 # https://github.com/ACCESS-NRI/model-deployment-template/blob/main/spack.yaml
 spack:
+  # _name and _version are reserved definitions that inform deployments
+  definitions:
+  - _name: [access-om3]
+  - _version: [2026.03.000]
   specs:
-    - access-om3@git.2025.05.001
+  - access-om3
   packages:
     # Main Dependencies
     access3:
       require:
-        - '@2025.03.1'
-        - configurations=MOM6-CICE6,MOM6-CICE6-WW3
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - '@2026.03.000'
+      - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-cice:
       require:
-        - '@CICE6.6.0-3'
-        - io_type=PIO
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - '@CICE6.6.3-0'
+      - io_type=PIO
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-mom6:
       require:
-        - '@git.eac1adfc582a771b2359d829bda343487bb5b298=2025.02.001'
-        - '+asymmetric_mem'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - '@git.4040064032f357e7af28873b1342fa16154dd48d=2026.01.001'
+      - +mom6_solo
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-ww3:
       require:
-        - '@2025.03.0'
+      - '@2026.03.000'
     access3-share:
       require:
-        - '@2025.03.1'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - '@2026.03.000'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-generic-tracers:
       require:
-        - '@git.dev-2025.05.001=development'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - '@2026.02.001'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-mocsy:
       require:
-        - '@git.2017.12.0=gtracers'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - '@2025.07.002'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     # Other Dependencies
     esmf:
       require:
-        - '@git.v8.7.0=8.7.0'
-        - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-        - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - '@8.9.1'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback"'
+      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback"'
     parallelio:
       require:
-        - '@2.6.2'
+      - '@2.6.8'
+      - 'fflags="-g -traceback"'
+      - 'cflags="-g -traceback"'
+      - 'cxxflags="-g -traceback"'
     netcdf-c:
       require:
-        - '@4.9.2'
-        - build_system=cmake build_type=RelWithDebInfo
+      - '@4.9.3'
+      - build_system=cmake build_type=RelWithDebInfo
     netcdf-fortran:
       require:
-        - '@4.6.1'
+      - '@4.6.2'
     fms:
       require:
-        - '@git.2025.02=2025.02'
+      - '@2025.03'
+      - 'cppflags="-DMAXFIELDMETHODS_=600"'
     openmpi:
       require:
-        - '@4.1.7'
+      - '@4.1.7'
     fortranxml:
       require:
-        - '@4.1.2'
-    gcc-runtime:
+      - '@4.1.2'
+
+    # Compilers
+    c:
       require:
-        - '%gcc'
+      - 'intel-oneapi-compilers@2025.2.0'
+    cxx:
+      require:
+      - 'intel-oneapi-compilers@2025.2.0'
+    fortran:
+      require:
+      - 'intel-oneapi-compilers@2025.2.0'
+
     all:
-      require:
-        - '%oneapi@2025.0.4'
-        - 'target=x86_64_v4'
+      prefer:
+      - 'target=x86_64_v4'
   view: true
   concretizer:
     unify: true
