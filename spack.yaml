@@ -44,7 +44,7 @@ spack:
       - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-generic-tracers:
       require:
-      - '@2026.02.001'
+      - '@git.ec5c9b640beb12fe289445fae81202e98d12917b=2026.02.001'  # branch wombatlite-defaultParams
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
