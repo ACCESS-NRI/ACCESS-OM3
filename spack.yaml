@@ -59,14 +59,14 @@ spack:
       require:
       - '@8.9.1'
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fno-omit-frame-pointer"'
+      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fno-omit-frame-pointer"'
     parallelio:
       require:
       - '@2.6.8'
       - 'fflags="-g -traceback"'
-      - 'cflags="-g -traceback"'
-      - 'cxxflags="-g -traceback"'
+      - 'cflags="-g -fno-omit-frame-pointer"'
+      - 'cxxflags="-g -fno-omit-frame-pointer"'
     netcdf-c:
       require:
       - '@4.9.3'
