@@ -29,7 +29,7 @@ spack:
       - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-mom6:
       require:
-      - '@2026.01.001'
+      - '@git.9a5305d219a33201f20ea8105cee978a9c030247=2026.01.001'  # On branch 54-obc-wind-stress
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
