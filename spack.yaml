@@ -19,20 +19,17 @@ spack:
       - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-cice:
       require:
       - '@CICE6.6.3-1'
       - io_type=PIO
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-mom6:
       require:
       - '@2026.05.000'
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-ww3:
       require:
       - '@2026.03.000'
@@ -41,19 +38,15 @@ spack:
       - '@2026.03.001'
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-generic-tracers:
       require:
       - '@2026.05.000'
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-mocsy:
       require:
       - '@2025.07.002'
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     # Other Dependencies
     esmf:
       require:
@@ -77,6 +70,8 @@ spack:
     fms:
       require:
       - '@2025.03'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cppflags="-DMAXFIELDMETHODS_=600"'
     openmpi:
       require:
