@@ -22,7 +22,7 @@ spack:
       - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-cice:
       require:
-      - '@git.6509ae445abddb8107a941e44d13c584eecdef6c'
+      - '@git.99445d1d939f043e7b2f2be4a5f4212c933c27f8'
       - io_type=PIO
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
@@ -57,16 +57,13 @@ spack:
     # Other Dependencies
     esmf:
       require:
-      - '@8.9.1'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback"'
+      - '@8.7.0'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     parallelio:
       require:
       - '@2.6.8'
-      - 'fflags="-g -traceback"'
-      - 'cflags="-g -fno-omit-frame-pointer"'
-      - 'cxxflags="-g -fno-omit-frame-pointer"'
     netcdf-c:
       require:
       - '@4.9.3'
@@ -98,7 +95,7 @@ spack:
 
     all:
       prefer:
-      - 'target=x86_64_v4'
+      - 'target=x86_64'
   view: true
   concretizer:
     unify: true
