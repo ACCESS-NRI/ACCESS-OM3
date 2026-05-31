@@ -15,14 +15,14 @@ spack:
     # Main Dependencies
     access3:
       require:
-      - '@git.dbd9d86c4c63bf86d53bc3271235a915f8726e5e=2026.03.000'
-      - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3,WW3,MOM6-WW3,CICE6
+      - '@git.b6591c4df9cbbbde4e3c339d7934a979095732be=2026.03.000'
+      - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3,WW3,MOM6-WW3
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-cice:
       require:
-      - '@git.6509ae445abddb8107a941e44d13c584eecdef6c'
+      - '@CICE6.6.3-0'
       - io_type=PIO
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
@@ -35,7 +35,7 @@ spack:
       - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-ww3:
       require:
-      - '@git.c39b828709bc553bc7ea28b33189e2cd3be4f798'
+      - '@git.bb5dfccf1d64d10f17db9760c0c83073e07fa339'
     access3-share:
       require:
       - '@git.dbd9d86c4c63bf86d53bc3271235a915f8726e5e=2026.03.000'
