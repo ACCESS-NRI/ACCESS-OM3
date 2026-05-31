@@ -8,15 +8,15 @@ spack:
   # _name and _version are reserved definitions that inform deployments
   definitions:
   - _name: [access-om3]
-  - _version: [2025.08.002]
+  - _version: [2026.03.000]
   specs:
   - access-om3
   packages:
     # Main Dependencies
     access3:
       require:
-      - '@2025.08.000'
-      - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
+      - '@git.c84afe16ad90688574f310ae723ba1f3337dbaa9=2026.03.000'
+      - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3,WW3,MOM6-WW3,CICE6
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
@@ -29,7 +29,7 @@ spack:
       - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-mom6:
       require:
-      - '@2025.07.000'
+      - '@2026.01.001'
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
@@ -38,13 +38,13 @@ spack:
       - '@git.c39b828709bc553bc7ea28b33189e2cd3be4f798'
     access3-share:
       require:
-      - '@2025.08.000'
+      - '@git.c84afe16ad90688574f310ae723ba1f3337dbaa9=2026.03.000'
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-generic-tracers:
       require:
-      - '@2025.08.000'
+      - '@2026.02.001'
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
@@ -57,13 +57,16 @@ spack:
     # Other Dependencies
     esmf:
       require:
-      - '@8.7.0'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - '@8.9.1'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback"'
+      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback"'
     parallelio:
       require:
       - '@2.6.8'
+      - 'fflags="-g -traceback"'
+      - 'cflags="-g -fno-omit-frame-pointer"'
+      - 'cxxflags="-g -fno-omit-frame-pointer"'
     netcdf-c:
       require:
       - '@4.9.3'
@@ -95,7 +98,7 @@ spack:
 
     all:
       prefer:
-      - 'target=x86_64'
+      - 'target=x86_64_v4'
   view: true
   concretizer:
     unify: true
