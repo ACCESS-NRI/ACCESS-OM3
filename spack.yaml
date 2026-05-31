@@ -109,32 +109,32 @@ spack:
         include:
          - FPATH
 
-#      default:
-#        tcl:
-#          include:
-#            - access-om3
-#            - access-mom6
-#            - access-cice
-#            - access3-share
-#            - access3
-#            - esmf
-#            - fms
-#            - parallelio
-#            - fortranxml
-#            - gcom
-#            - openmpi
-#            - netcdf-c
-#            - netcdf-fortran
-#
-#          projections:
-#            access-om3: '{name}/2025.x.0'
-#            access-cice: '{name}/access-cm3-CICE6.6.1-0-{hash:7}'
-#            access-mom6: '{name}/cmake_build-{hash:7}'
-#            access3-share: '{name}/access-cm3-2025.12.0-{hash:7}'
-#            parallelio: '{name}/2.6.2-{hash:7}'
-#            fortranxml: '{name}/4.1.2-{hash:7}'
-#            fms: '{name}/2024.03-{hash:7}'
-#            esmf: '{name}/v8.7.0-{hash:7}'
-#            netcdf-c: '{name}/4.9.2-{hash:7}'
-#            netcdf-fortran: '{name}/4.6.1-{hash:7}'
-#            gcom: '{name}/8.0-{hash:7}'
+      default:
+        tcl:
+          include:
+            - access-om3
+            - access-mom6
+            - access-cice
+            - access3-share
+            - access3
+            - esmf
+            - fms
+            - parallelio
+            - fortranxml
+            - gcom
+            - openmpi
+            - netcdf-c
+            - netcdf-fortran
+
+          projections:
+            access-om3: '{name}/2025.x.0'
+            access-cice: '{name}/access-cm3-CICE6.6.1-0-{hash:7}'
+            access-mom6: '{name}/cmake_build-{hash:7}'
+            access3-share: '{name}/access-cm3-2025.12.0-{hash:7}'
+            parallelio: '{name}/2.6.2-{hash:7}'
+            fortranxml: '{name}/4.1.2-{hash:7}'
+            fms: '{name}/2024.03-{hash:7}'
+            esmf: '{name}/v8.7.0-{hash:7}'
+            netcdf-c: '{name}/4.9.2-{hash:7}'
+            netcdf-fortran: '{name}/4.6.1-{hash:7}'
+            gcom: '{name}/8.0-{hash:7}'
