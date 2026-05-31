@@ -8,43 +8,43 @@ spack:
   # _name and _version are reserved definitions that inform deployments
   definitions:
   - _name: [access-om3]
-  - _version: [2026.03.000]
+  - _version: [2025.08.002]
   specs:
   - access-om3
   packages:
     # Main Dependencies
     access3:
       require:
-      - '@git.b6591c4df9cbbbde4e3c339d7934a979095732be=2026.03.000'
+      - '@2025.08.000'
       - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-cice:
       require:
-      - '@CICE6.6.3-0'
+      - '@git.6509ae445abddb8107a941e44d13c584eecdef6c'
       - io_type=PIO
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-mom6:
       require:
-      - '@2026.01.001'
+      - '@2025.07.000'
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-ww3:
       require:
-      - '@git.bb5dfccf1d64d10f17db9760c0c83073e07fa339'
+      - '@git.c39b828709bc553bc7ea28b33189e2cd3be4f798'
     access3-share:
       require:
-      - '@git.b6591c4df9cbbbde4e3c339d7934a979095732be=2026.03.000'
+      - '@2025.08.000'
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-generic-tracers:
       require:
-      - '@2026.02.001'
+      - '@2025.08.000'
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
@@ -73,7 +73,7 @@ spack:
       - build_system=cmake build_type=RelWithDebInfo
     netcdf-fortran:
       require:
-      - '@4.6.2'
+      - '@4.6.1'
     fms:
       require:
       - '@2025.03'
