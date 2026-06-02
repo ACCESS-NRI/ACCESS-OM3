@@ -2,100 +2,139 @@
 #
 # It describes a set of packages to be installed, along with
 # configuration settings.
-# Instructions for editing this file are found in
+# Instructions for editing this file are found in 
 # https://github.com/ACCESS-NRI/model-deployment-template/blob/main/spack.yaml
 spack:
-  # _name and _version are reserved definitions that inform deployments
   definitions:
-  - _name: [access-om3]
-  - _version: [2026.05.000]
+    - _name: [ access-om3 ]
+    - _version: [ 2025.08.999 ]
   specs:
-  - access-om3
+    - access-om3
+    - gcom@8.0
   packages:
     # Main Dependencies
     access3:
       require:
-      - '@2026.03.001'
-      - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - '@git.40de406d33442862c5d9ed6b4dff053f5260c070'
+        - configurations=MOM6-CICE6
+        - 'fflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
+        - 'cflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
+        - 'cxxflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
     access-cice:
       require:
-      - '@CICE6.6.3-1'
-      - io_type=PIO
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - '@git.a98ca97971d1eb699bcdd18ebe7c6660361606c4'
+        - io_type=PIO
+        - 'fflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
+        - 'cflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
+        - 'cxxflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
     access-mom6:
       require:
-      - '@2026.05.000'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-    access-ww3:
-      require:
-      - '@2026.03.000'
+        - '@2025.07.000'
+        - 'fflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
+        - 'cflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
+        - 'cxxflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
     access3-share:
       require:
-      - '@2026.03.001'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - '@git.40de406d33442862c5d9ed6b4dff053f5260c070'
+        - 'fflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
+        - 'cflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
+        - 'cxxflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
     access-generic-tracers:
       require:
-      - '@2026.05.000'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - '@2025.08.000'
+        - 'fflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
+        - 'cflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
+        - 'cxxflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
     access-mocsy:
       require:
-      - '@2025.07.002'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+        - '@2025.07.002'
+        - 'fflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
+        - 'cflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
+        - 'cxxflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
     # Other Dependencies
     esmf:
       require:
-      - '@8.9.1'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fno-omit-frame-pointer"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fno-omit-frame-pointer"'
+        - '@8.7.0'
+        - 'fflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
+        - 'cflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
+        - 'cxxflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
     parallelio:
       require:
-      - '@2.6.8'
-      - 'fflags="-g -traceback"'
-      - 'cflags="-g -fno-omit-frame-pointer"'
-      - 'cxxflags="-g -fno-omit-frame-pointer"'
+        - '@2.6.2'
     netcdf-c:
       require:
-      - '@4.9.3'
-      - build_system=cmake build_type=RelWithDebInfo
+        - '@4.9.2'
+        - build_system=cmake build_type=RelWithDebInfo
     netcdf-fortran:
       require:
-      - '@4.6.2'
+        - '@4.6.1'
     fms:
       require:
-      - '@2025.03'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cppflags="-DMAXFIELDMETHODS_=600"'
+        - '@2025.03'
+        - 'cppflags="-DMAXFIELDMETHODS_=600"'
     openmpi:
       require:
-      - '@4.1.7'
+        - '@4.1.7'
     fortranxml:
       require:
-      - '@4.1.2'
-    python:
+        - '@4.1.2'
+    gcc-runtime:
       require:
-      - '@3.11.7'   # force spack to use the system python install
-    # Compilers
+        - '%gcc'
     c:
       require:
-      - 'intel-oneapi-compilers@2025.2.0'
+        - 'intel-oneapi-compilers-classic@2021.10.0'
     cxx:
       require:
-      - 'intel-oneapi-compilers@2025.2.0'
+        - 'intel-oneapi-compilers-classic@2021.10.0'
     fortran:
       require:
-      - 'intel-oneapi-compilers@2025.2.0'
-
+         - 'intel-oneapi-compilers-classic@2021.10.0'
     all:
       prefer:
-      - 'target=x86_64_v4'
+        - 'target=x86_64'
   view: true
   concretizer:
     unify: true
+  modules:
+      prefix_inspections:
+        bin:
+         - PATH
+        lib:
+         - LIBRARY_PATH
+         - LD_LIBRARY_PATH
+        lib64:
+         - LIBRARY_PATH
+         - LD_LIBRARY_PATH
+        include:
+         - FPATH
+
+      default:
+        tcl:
+          include:
+            - access-om3
+            - access-mom6
+            - access-cice
+            - access3-share
+            - access3
+            - esmf
+            - fms
+            - parallelio
+            - fortranxml
+            - gcom
+            - openmpi
+            - netcdf-c
+            - netcdf-fortran
+
+          projections:
+            access-om3: '{name}/2025.x.0'
+            access-cice: '{name}/access-cm3-CICE6.6.1-0-{hash:7}'
+            access-mom6: '{name}/cmake_build-{hash:7}'
+            access3-share: '{name}/access-cm3-2025.12.0-{hash:7}'
+            parallelio: '{name}/2.6.2-{hash:7}'
+            fortranxml: '{name}/4.1.2-{hash:7}'
+            fms: '{name}/2024.03-{hash:7}'
+            esmf: '{name}/v8.7.0-{hash:7}'
+            netcdf-c: '{name}/4.9.2-{hash:7}'
+            netcdf-fortran: '{name}/4.6.1-{hash:7}'
+            gcom: '{name}/8.0-{hash:7}'
