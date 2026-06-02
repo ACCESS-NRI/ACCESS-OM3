@@ -27,7 +27,8 @@ spack:
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-mom6:
       require:
-      - '@2026.05.000'
+      - '@git.9b1dd0431d1eeb77af730251fbf847a80d89817c=2026.05.000'  # On jib/numerical-mixing
+      - +mom6_solo
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-ww3:
