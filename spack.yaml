@@ -93,6 +93,10 @@ spack:
       require:
       - 'intel-oneapi-compilers@2025.2.0'
 
+    env:
+        ESMF_RUNTIME_PROFILE: "on"
+        ESMF_RUNTIME_PROFILE_OUTPUT: "SUMMARY"
+
     all:
       prefer:
       - 'target=x86_64_v4'
