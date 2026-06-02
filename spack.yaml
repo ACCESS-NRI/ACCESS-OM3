@@ -8,7 +8,7 @@ spack:
   # _name and _version are reserved definitions that inform deployments
   definitions:
   - _name: [access-om3]
-  - _version: [2026.05.000]
+  - _version: [2026.05.001]
   specs:
   - access-om3
   packages:
@@ -28,6 +28,7 @@ spack:
     access-mom6:
       require:
       - '@2026.05.000'
+      - +mom6_solo
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-ww3:
