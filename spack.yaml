@@ -8,25 +8,23 @@ spack:
   # _name and _version are reserved definitions that inform deployments
   definitions:
   - _name: [access-om3]
-  - _version: [2026.03.000]
+  - _version: [2026.05.001]
   specs:
   - access-om3
   packages:
     # Main Dependencies
     access3:
       require:
-      - '@git.c84afe16ad90688574f310ae723ba1f3337dbaa9=2026.03.000'
+      - '@2026.03.001'
       - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3,WW3,MOM6-WW3
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-cice:
       require:
-      - '@CICE6.6.3-0'
+      - '@CICE6.6.3-1'
       - io_type=PIO
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-mom6:
       require:
       - '@2026.05.000'
@@ -38,29 +36,25 @@ spack:
       - '@git.b53c06c30e50e6401a329f21d6f7f189259647f2=2026.03.000'
     access3-share:
       require:
-      - '@git.c84afe16ad90688574f310ae723ba1f3337dbaa9=2026.03.000'
+      - '@2026.03.001'
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-generic-tracers:
       require:
-      - '@2026.02.001'
+      - '@2026.05.000'
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-mocsy:
       require:
       - '@2025.07.002'
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     # Other Dependencies
     esmf:
       require:
       - '@8.9.1'
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fno-omit-frame-pointer"'
+      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fno-omit-frame-pointer"'
     parallelio:
       require:
       - '@2.6.8'
@@ -77,6 +71,8 @@ spack:
     fms:
       require:
       - '@2025.03'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cppflags="-DMAXFIELDMETHODS_=600"'
     openmpi:
       require:
@@ -84,7 +80,9 @@ spack:
     fortranxml:
       require:
       - '@4.1.2'
-
+    python:
+      require:
+      - '@3.11.7'   # force spack to use the system python install
     # Compilers
     c:
       require:
