@@ -29,8 +29,8 @@ spack:
       require:
       - '@git.51a04581700ab5d02e81dc3e85406a9a118061e5'
       - +mom6_solo
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags="-xsapphirerapids -qopt-zmm-usage=high -vec-threshold0"'
+      - 'cflags="-xsapphirerapids -qopt-zmm-usage=high -vec-threshold0"'
     access-ww3:
       require:
       - '@2026.03.000'
