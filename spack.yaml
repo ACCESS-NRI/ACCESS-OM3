@@ -16,7 +16,7 @@ spack:
     access3:
       require:
       - '@2026.03.001'
-      - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
+      - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3,WW3,MOM6-WW3
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-cice:
@@ -33,7 +33,7 @@ spack:
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-ww3:
       require:
-      - '@2026.03.000'
+      - '@git.239ed6b524aa213af4cd3e19ac19351eedf72459=2026.03.000'
     access3-share:
       require:
       - '@2026.03.001'
