@@ -19,6 +19,11 @@
           "checks": {
             "repro": true
           }
+        },
+        "dev-MC_25km_jra_iaf": {
+          "checks": {
+            "repro": true
+          }
         }
       }
     }
