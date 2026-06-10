@@ -16,7 +16,7 @@ spack:
     access3:
       require:
       - '@2026.03.001'
-      - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
+      - configurations=MOM6-CICE6
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-cice:
@@ -36,7 +36,7 @@ spack:
       - '@2026.03.000'
     access3-share:
       require:
-      - '@2026.03.001'
+      - '@eb123eed440c9991b5e2cd72ee5b0f4d258519a9=2026.03.001'
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-generic-tracers:
