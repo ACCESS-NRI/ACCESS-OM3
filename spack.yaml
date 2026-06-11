@@ -8,14 +8,14 @@ spack:
   # _name and _version are reserved definitions that inform deployments
   definitions:
   - _name: [access-om3]
-  - _version: [2026.05.001]
+  - _version: [2026.05.002]
   specs:
   - access-om3
   packages:
     # Main Dependencies
     access3:
       require:
-      - '@2026.03.001'
+      - '@2026.03.002'
       - configurations=MOM6-CICE6
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
@@ -27,7 +27,7 @@ spack:
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-mom6:
       require:
-      - '@2026.05.000'
+      - '@2026.05.001'
       - +mom6_solo
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
@@ -36,7 +36,7 @@ spack:
       - '@2026.03.000'
     access3-share:
       require:
-      - '@eb123eed440c9991b5e2cd72ee5b0f4d258519a9=2026.03.001'
+      - '@2026.03.002'
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-generic-tracers:
