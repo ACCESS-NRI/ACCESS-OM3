@@ -4,7 +4,7 @@
 # configuration settings.
 # Instructions for editing this file are found in
 # https://github.com/ACCESS-NRI/model-deployment-template/blob/main/spack.yaml
-spack:
+spack: 
   # _name and _version are reserved definitions that inform deployments
   definitions:
   - _name: [access-om3]
