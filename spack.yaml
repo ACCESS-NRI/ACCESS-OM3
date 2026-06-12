@@ -6,7 +6,7 @@
 # https://github.com/ACCESS-NRI/model-deployment-template/blob/main/spack.yaml
 spack: 
   # _name and _version are reserved definitions that inform deployments
-  definitions:
+  definitions: 
   - _name: [access-om3]
   - _version: [2026.05.001]
   specs:
