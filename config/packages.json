@@ -7,7 +7,13 @@
     "access3",
     "access3-share",
     "access-generic-tracers",
-    "access-mocsy"
+    "access-mocsy",
+    "esmf",
+    "parallelio",
+    "netcdf-c",
+    "netcdf-fortran",
+    "fms",
+    "fortranxml"
   ],
   "injection": [
   ]
