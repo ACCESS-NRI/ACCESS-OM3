@@ -29,7 +29,7 @@ spack:
       - 'cxxflags="-xsapphirerapids -unroll"'
     access-mom6:
       require:
-      - '@git.c15466befdb6a45e2d7304af019cafa14542234a'
+      - '@git.1e19889e68ff05d3c7d1ca1e26cd9c4bfbb2bb08'
       - +mom6_solo
       - 'fflags="-xsapphirerapids -qopt-zmm-usage=high -vec-threshold0 -unroll"'
       - 'cflags="-xsapphirerapids -qopt-zmm-usage=high -vec-threshold0 -unroll"'
