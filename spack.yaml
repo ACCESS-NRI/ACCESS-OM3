@@ -8,40 +8,39 @@ spack:
   # _name and _version are reserved definitions that inform deployments
   definitions:
   - _name: [access-om3]
-  - _version: [2026.05.002]
+  - _version: [2025.08.002]
   specs:
   - access-om3
   packages:
     # Main Dependencies
     access3:
       require:
-      - '@2026.03.002'
+      - '@2025.08.000'
       - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-cice:
       require:
-      - '@CICE6.6.3-1'
+      - '@git.5c219ba07749267d0e3eee16df441441527f2eed'
       - io_type=PIO
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-mom6:
       require:
-      - '@2026.05.001'
-      - +mom6_solo
+      - '@2025.07.000'
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-ww3:
       require:
-      - '@2026.03.000'
+      - '@git.c39b828709bc553bc7ea28b33189e2cd3be4f798'
     access3-share:
       require:
-      - '@2026.03.002'
+      - '@2025.08.000'
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-generic-tracers:
       require:
-      - '@2026.05.000'
+      - '@2025.08.000'
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-mocsy:
       require:
@@ -51,23 +50,20 @@ spack:
     # Other Dependencies
     esmf:
       require:
-      - '@8.9.1'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fno-omit-frame-pointer"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fno-omit-frame-pointer"'
+      - '@8.7.0'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     parallelio:
       require:
       - '@2.6.8'
-      - 'fflags="-g -traceback"'
-      - 'cflags="-g -fno-omit-frame-pointer"'
-      - 'cxxflags="-g -fno-omit-frame-pointer"'
     netcdf-c:
       require:
       - '@4.9.3'
       - build_system=cmake build_type=RelWithDebInfo
     netcdf-fortran:
       require:
-      - '@4.6.2'
+      - '@4.6.1'
     fms:
       require:
       - '@2025.03'
@@ -96,7 +92,7 @@ spack:
 
     all:
       prefer:
-      - 'target=x86_64_v4'
+      - 'target=x86_64'
   view: true
   concretizer:
     unify: true
