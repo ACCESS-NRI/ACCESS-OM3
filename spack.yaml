@@ -7,7 +7,7 @@
 spack:
   definitions:
     - _name: [ access-om3 ]
-    - _version: [ 2025.08.999 ]
+    - _version: [ 2025.08.999.no_debug ]
   specs:
     - access-om3
     # - gcom@8.0
@@ -17,53 +17,53 @@ spack:
       require:
         - '@git.74d7aa725f8f142dbe07ec375173cd727fecdc79=stable'
         - configurations=MOM6-CICE6
-        - 'fflags="-g -00 -traceback"'
-        - 'cflags="-g -00 -traceback"'
-        - 'cxxflags="-g -00 -traceback"'
+        - 'fflags="-g -O2 -traceback"'
+        - 'cflags="-g -O2 -traceback"'
+        - 'cxxflags="-g -O2 -traceback"'
     access-cice:
       require:
         - '@git.e16ef83961f89d82212d9b69692b4ff022584777=stable'
         - io_type=PIO
-        - 'fflags="-g -00 -traceback"'
-        - 'cflags="-g -00 -traceback"'
-        - 'cxxflags="-g -00 -traceback"'
+        - 'fflags="-g -O2 -traceback"'
+        - 'cflags="-g -O2 -traceback"'
+        - 'cxxflags="-g -O2 -traceback"'
     access-mom6:
       require:
         - '@2025.07.000'
-        - 'fflags="-g -00 -traceback"'
-        - 'cflags="-g -00 -traceback"'
-        - 'cxxflags="-g -00 -traceback"'
+        - 'fflags="-g -O2 -traceback"'
+        - 'cflags="-g -O2 -traceback"'
+        - 'cxxflags="-g -O2 -traceback"'
     access3-share:
       require:
-        - '@git.74d7aa725f8f142dbe07ec375173cd727fecdc79=stable'
-        - 'fflags="-g -00 -traceback"'
-        - 'cflags="-g -00 -traceback"'
-        - 'cxxflags="-g -00 -traceback"'
+        - '@git.68b11be086fceb97124aa3b1dba799c01f8d3413=stable'
+        - 'fflags="-g -O2 -traceback"'
+        - 'cflags="-g -O2 -traceback"'
+        - 'cxxflags="-g -O2 -traceback"'
     access-generic-tracers:
       require:
         - '@2025.08.000'
-        - 'fflags="-g -00 -traceback"'
-        - 'cflags="-g -00 -traceback"'
-        - 'cxxflags="-g -00 -traceback"'
+        - 'fflags="-g -O2 -traceback"'
+        - 'cflags="-g -O2 -traceback"'
+        - 'cxxflags="-g -O2 -traceback"'
     access-mocsy:
       require:
         - '@2025.07.002'
-        - 'fflags="-g -00 -traceback"'
-        - 'cflags="-g -00 -traceback"'
-        - 'cxxflags="-g -00 -traceback"'
+        - 'fflags="-g -O2 -traceback"'
+        - 'cflags="-g -O2 -traceback"'
+        - 'cxxflags="-g -O2 -traceback"'
     # Other Dependencies
     esmf:
       require:
         - '@8.7.0'
-        - 'fflags="-g -00 -traceback"'
-        - 'cflags="-g -00 -traceback"'
-        - 'cxxflags="-g -00 -traceback"'
+        - 'fflags="-g -O2 -traceback"'
+        - 'cflags="-g -O2 -traceback"'
+        - 'cxxflags="-g -O2 -traceback"'
     parallelio:
       require:
         - '@2.6.2'
-        - 'fflags="-g -00 -traceback"'
-        - 'cflags="-g -00 -traceback"'
-        - 'cxxflags="-g -00 -traceback"'
+        - 'fflags="-g -O2 -traceback"'
+        - 'cflags="-g -O2 -traceback"'
+        - 'cxxflags="-g -O2 -traceback"'
     netcdf-c:
       require:
         - '@4.9.2'
