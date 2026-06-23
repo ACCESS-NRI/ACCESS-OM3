@@ -10,6 +10,16 @@
             "repro": true
           }
         },
+        "dev-MC_panan4km_jra_ryf": {
+          "checks": {
+            "repro": true
+          }
+        },
+        "dev-MCW_100km_jra_iaf": {
+          "checks": {
+            "repro": true
+          }
+        },
         "dev-MC_100km_jra_ryf+wombatlite": {
           "checks": {
             "repro": true
