@@ -29,7 +29,7 @@ spack:
       - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
     access-mom6:
       require:
-      - '@git.93aea27f73125e437623f466507ab634c2a2506e=2026.05.001'  # On branch dev/gfdl@3d479de+access+isf
+      - '@git.5cfd8cad6c1c794f2b303f58c02533394c8ca8ed=2026.05.001'  # On branch cy-dev/gfdl@3d479de+access+isf-nolatenticeberg
       - +mom6_solo
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
