@@ -29,7 +29,7 @@ spack:
       - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-mom6:
       require:
-      - '@2025.07.000'
+      - '@git.1d7368ca33eae1a5dde82c7c7ca9c8c2a37ad46c=2025.07.000'  # On 2025.07.000-restartfiles-buffer
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
