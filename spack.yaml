@@ -24,7 +24,7 @@ spack:
       require:
         - '@git.a98ca97971d1eb699bcdd18ebe7c6660361606c4'
         - io_type=PIO
-        - 'fflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll -init=snan,arrays -traceback"'
+        - 'fflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll  -traceback"'
         - 'cflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
         - 'cxxflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
     access-mom6:
