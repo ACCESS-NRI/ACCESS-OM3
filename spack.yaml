@@ -15,7 +15,7 @@ spack:
     # Main Dependencies
     access3:
       require:
-        - '@git.12427dfdefb26ec764dbfd2d34036d5ab4ec8bc5'
+        - '@git.1b1bb544a1250d2cf50e5fda96950e27797e598d'
         - configurations=MOM6-CICE6
         - 'fflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
         - 'cflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
@@ -35,7 +35,7 @@ spack:
         - 'cxxflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
     access3-share:
       require:
-        - '@git.12427dfdefb26ec764dbfd2d34036d5ab4ec8bc5'
+        - '@git.1b1bb544a1250d2cf50e5fda96950e27797e598d'
         - 'fflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
         - 'cflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
         - 'cxxflags="-march=skylake-avx512 -mtune=skylake-avx512 -unroll"'
