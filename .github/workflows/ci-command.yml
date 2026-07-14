@@ -14,6 +14,7 @@ jobs:
       spack-manifest-schema-version: 2-0-0
       config-versions-schema-version: 4-0-0
       config-packages-schema-version: 1-0-0
+      run-self-hosted: false
     permissions:
       pull-requests: write
       contents: write
@@ -25,6 +26,7 @@ jobs:
     uses: access-nri/build-cd/.github/workflows/ci-comment.yml@v8
     with:
       model: ${{ vars.NAME }}
+      run-self-hosted: false
     permissions:
       pull-requests: write
       contents: write
@@ -36,6 +38,7 @@ jobs:
     with:
       model: ${{ vars.NAME }}
       auto-configs-pr-schema-version: 1-0-0
+      run-self-hosted: false
     permissions:
       pull-requests: write
     secrets:
