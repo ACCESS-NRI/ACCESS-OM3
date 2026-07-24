@@ -2,11 +2,15 @@
 #
 # It describes a set of packages to be installed, along with
 # configuration settings.
-# Instructions for editing this file are found in 
+# Instructions for editing this file are found in
 # https://github.com/ACCESS-NRI/model-deployment-template/blob/main/spack.yaml
 spack:
+  # _name and _version are reserved definitions that inform deployments
+  definitions:
+  - _name: [access-om3]
+  - _version: [2026.05.002]
   specs:
-    - access-om3@git.2025.08.001
+  - access-om3
   packages:
     # Main Dependencies
     access3:
@@ -34,7 +38,7 @@ spack:
         - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
     access-ww3:
       require:
-        - '@2025.08.000'
+      - '@2026.03.000'
     access3-share:
       require:
         - '@2025.08.000'
@@ -72,14 +76,17 @@ spack:
         - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     parallelio:
       require:
-        - '@2.6.2'
+      - '@2.6.8'
+      - 'fflags="-g -traceback"'
+      - 'cflags="-g -fno-omit-frame-pointer"'
+      - 'cxxflags="-g -fno-omit-frame-pointer"'
     netcdf-c:
       require:
-        - '@4.9.2'
-        - build_system=cmake build_type=RelWithDebInfo
+      - '@4.9.3'
+      - build_system=cmake build_type=RelWithDebInfo
     netcdf-fortran:
       require:
-        - '@4.6.1'
+      - '@4.6.2'
     fms:
       require:
         - '@2025.03'
@@ -90,17 +97,27 @@ spack:
         - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
     openmpi:
       require:
-        - '@4.1.7'
+      - '@4.1.7'
     fortranxml:
       require:
-        - '@4.1.2'
-    gcc-runtime:
+      - '@4.1.2'
+    python:
       require:
-        - '%gcc'
+      - '@3.11.7'   # force spack to use the system python install
+    # Compilers
+    c:
+      require:
+      - 'intel-oneapi-compilers@2025.2.0'
+    cxx:
+      require:
+      - 'intel-oneapi-compilers@2025.2.0'
+    fortran:
+      require:
+      - 'intel-oneapi-compilers@2025.2.0'
+
     all:
-      require:
-        - '%oneapi@2025.2.0'
-        - 'target=x86_64_v4'
+      prefer:
+      - 'target=x86_64_v4'
   view: true
   concretizer:
     unify: true

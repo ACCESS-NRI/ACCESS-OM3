@@ -1,3 +1,5 @@
 # Tommy needs to review changes to infra
 /.github/ @CodeGat
 
+# Ocean team needs to approve releases
+* @access-nri/ocean
