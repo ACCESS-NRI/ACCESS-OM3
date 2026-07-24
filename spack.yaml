@@ -30,9 +30,9 @@ spack:
       require:
       - '@2026.05.001'
       - +mom6_solo
-      - 'fflags="-g -fbacktrace -fprofile-arcs -ftest-coverage"'
-      - 'cflags="-g -fprofile-arcs -ftest-coverage"'
-      - 'ldflags="-g -fprofile-arcs -ftest-coverage"'
+      - 'fflags="-g -fbacktrace -fprofile-arcs -ftest-coverage -ffinite-math-only"'
+      - 'cflags="-g -fprofile-arcs -ftest-coverage -ffinite-math-only"'
+      - 'ldflags="-g -fprofile-arcs -ftest-coverage -ffinite-math-only"'
     access-ww3:
       require:
       - '@2026.03.000'
