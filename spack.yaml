@@ -17,48 +17,50 @@ spack:
       require:
       - '@2026.03.002'
       - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags="-g -fbacktrace"'
+      - 'cflags="-g"'
+      - 'ldflags="-g -fbacktrace -fbacktrace -fprofile-arcs -ftest-coverage"'
     access-cice:
       require:
       - '@CICE6.6.3-1'
       - io_type=PIO
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags="-g -fbacktrace"'
+      - 'cflags="-g"'
     access-mom6:
       require:
       - '@2026.05.001'
       - +mom6_solo
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags="-g -fbacktrace -fprofile-arcs -ftest-coverage"'
+      - 'cflags="-g -fprofile-arcs -ftest-coverage"'
+      - 'ldflags="-g -fbacktrace -fprofile-arcs -ftest-coverage"'
     access-ww3:
       require:
       - '@2026.03.000'
     access3-share:
       require:
       - '@2026.03.002'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags="-g -fbacktrace"'
+      - 'cflags="-g"'
     access-generic-tracers:
       require:
       - '@2026.05.000'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags="-g -fbacktrace"'
     access-mocsy:
       require:
       - '@2025.07.002'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags="-g -fbacktrace"'
+      - 'cflags="-g"'
     # Other Dependencies
     esmf:
       require:
       - '@8.9.1'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fno-omit-frame-pointer"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fno-omit-frame-pointer"'
+      - 'fflags="-g -fbacktrace"'
+      - 'cflags="-g -fno-omit-frame-pointer"'
+      - 'cxxflags="-g -fno-omit-frame-pointer"'
     parallelio:
       require:
       - '@2.6.8'
-      - 'fflags="-g -traceback"'
+      - 'fflags="-g -fbacktrace"'
       - 'cflags="-g -fno-omit-frame-pointer"'
       - 'cxxflags="-g -fno-omit-frame-pointer"'
     netcdf-c:
@@ -71,8 +73,8 @@ spack:
     fms:
       require:
       - '@2025.03'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags="-g -fbacktrace "'
+      - 'cflags="-g "'
       - 'cppflags="-DMAXFIELDMETHODS_=600"'
     openmpi:
       require:
@@ -86,13 +88,13 @@ spack:
     # Compilers
     c:
       require:
-      - 'intel-oneapi-compilers@2025.2.0'
+      - 'gcc'
     cxx:
       require:
-      - 'intel-oneapi-compilers@2025.2.0'
+      - 'gcc'
     fortran:
       require:
-      - 'intel-oneapi-compilers@2025.2.0'
+      - 'gcc'
 
     all:
       prefer:
