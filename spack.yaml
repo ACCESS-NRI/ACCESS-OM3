@@ -79,6 +79,7 @@ spack:
     openmpi:
       require:
       - '@4.1.7'
+      - '%gcc'
     fortranxml:
       require:
       - '@4.1.2'
