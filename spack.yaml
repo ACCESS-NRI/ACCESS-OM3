@@ -72,9 +72,9 @@ spack:
       - '@4.6.2'
     fms:
       require:
-      - '@2025.03'
-      - 'fflags="-g -fbacktrace"'
-      - 'cflags="-g"'
+      - '@git.5896f4655b4ae949dfd31dab1dddb6dc7efa32ee'
+      - 'fflags="-g -fbacktrace -fsanitize=address"'
+      - 'cflags="-g -fsanitize=address"'
       - 'cppflags="-DMAXFIELDMETHODS_=600"'
     openmpi:
       require:
