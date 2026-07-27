@@ -74,7 +74,7 @@ spack:
       require:
       - '@git.5896f4655b4ae949dfd31dab1dddb6dc7efa32ee'
       - 'fflags="-g -fbacktrace -fcheck=all"'
-      - 'cflags="-g -fsanitize=address"'
+      - 'cflags="-g"'
       - 'cppflags="-DMAXFIELDMETHODS_=600"'
     openmpi:
       require:
