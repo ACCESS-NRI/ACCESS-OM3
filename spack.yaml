@@ -19,7 +19,7 @@ spack:
       - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
       - 'fflags="-g -fbacktrace"'
       - 'cflags="-g"'
-      - 'ldflags="-g -fprofile-arcs -ftest-coverage -fsanitize=address"'
+      - 'ldflags="-g -fprofile-arcs -ftest-coverage -fcheck=all"'
     access-cice:
       require:
       - '@CICE6.6.3-1'
@@ -30,9 +30,9 @@ spack:
       require:
       - '@2026.05.001'
       - +mom6_solo
-      - 'fflags="-g -fbacktrace -fprofile-arcs -ftest-coverage -ffinite-math-only -fsanitize=address"'
-      - 'cflags="-g -fprofile-arcs -ftest-coverage -ffinite-math-only -fsanitize=address"'
-      - 'ldflags="-g -fprofile-arcs -ftest-coverage -ffinite-math-only -fsanitize=address"'
+      - 'fflags="-g -fbacktrace -fprofile-arcs -ftest-coverage -ffinite-math-only -fcheck=all"'
+      - 'cflags="-g -fprofile-arcs -ftest-coverage -ffinite-math-only"'
+      - 'ldflags="-g -fprofile-arcs -ftest-coverage -ffinite-math-only -fcheck=all"'
     access-ww3:
       require:
       - '@2026.03.000'
@@ -73,7 +73,7 @@ spack:
     fms:
       require:
       - '@git.5896f4655b4ae949dfd31dab1dddb6dc7efa32ee'
-      - 'fflags="-g -fbacktrace -fsanitize=address"'
+      - 'fflags="-g -fbacktrace -fcheck=all"'
       - 'cflags="-g -fsanitize=address"'
       - 'cppflags="-DMAXFIELDMETHODS_=600"'
     openmpi:
