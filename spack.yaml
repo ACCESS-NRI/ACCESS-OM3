@@ -23,14 +23,14 @@ spack:
       require:
       - '@CICE6.6.3-1'
       - io_type=PIO
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-generate"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-generate"'
     access-mom6:
       require:
       - '@2026.05.001'
       - +mom6_solo
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/benchmark_ALE/MOM6_4e77c6658_prof_gen.pgo"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/benchmark_ALE/MOM6_4e77c6658_prof_gen.pgo"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-generate"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-generate"'
     access-ww3:
       require:
       - '@2026.03.000'
@@ -52,9 +52,9 @@ spack:
     esmf:
       require:
       - '@8.9.1'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fno-omit-frame-pointer"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fno-omit-frame-pointer"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback -fprofile-generate"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fno-omit-frame-pointer -fprofile-generate"'
+      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fno-omit-frame-pointer -fprofile-generate"'
     parallelio:
       require:
       - '@2.6.8'
