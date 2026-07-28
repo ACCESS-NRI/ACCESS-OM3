@@ -29,8 +29,8 @@ spack:
       require:
       - '@2026.05.001'
       - +mom6_solo
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/benchmark_ALE/MOM6_baseline_prof_gen.pgo"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/benchmark_ALE/MOM6_baseline_prof_gen.pgo"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/benchmark_ALE/MOM6_4e77c6658_prof_gen.pgo"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/benchmark_ALE/MOM6_4e77c6658_prof_gen.pgo"'
     access-ww3:
       require:
       - '@2026.03.000'
