@@ -29,8 +29,8 @@ spack:
       require:
       - '@git.4e77c6658a4182e5002a436b2bb538f06263bd33'
       - +mom6_solo
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/benchmark_ALE/MOM6_baseline_prof_gen.pgo"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/benchmark_ALE/MOM6_baseline_prof_gen.pgo"'
     access-ww3:
       require:
       - '@2026.03.000'
