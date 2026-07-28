@@ -19,7 +19,7 @@ spack:
       - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'ldflags="--coverage"'
+      - 'ldflags="--coverage -g"'
     access-cice:
       require:
       - '@CICE6.6.3-1'
@@ -30,9 +30,9 @@ spack:
       require:
       - '@2026.05.001'
       - +mom6_solo
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll --coverage"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll --coverage -g"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'ldflags="--coverage"'
+      - 'ldflags="--coverage -g"'
     access-ww3:
       require:
       - '@2026.03.000'
@@ -73,8 +73,8 @@ spack:
     fms:
       require:
       - '@2025.03'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll --coverage -g"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll --coverage -g"'
       - 'cppflags="-DMAXFIELDMETHODS_=600"'
     openmpi:
       require:
