@@ -17,8 +17,8 @@ spack:
       require:
       - '@2026.03.002'
       - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-generate"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-generate"'
     access-cice:
       require:
       - '@CICE6.6.3-1'
@@ -34,20 +34,22 @@ spack:
     access-ww3:
       require:
       - '@2026.03.000'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-generate"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-generate"'
     access3-share:
       require:
       - '@2026.03.002'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-generate"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-generate"'
     access-generic-tracers:
       require:
       - '@2026.05.000'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-generate"'
     access-mocsy:
       require:
       - '@2025.07.002'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-generate"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-generate"'
     # Other Dependencies
     esmf:
       require:
@@ -71,8 +73,8 @@ spack:
     fms:
       require:
       - '@2025.03'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-generate"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-generate"'
       - 'cppflags="-DMAXFIELDMETHODS_=600"'
     openmpi:
       require:
