@@ -17,46 +17,46 @@ spack:
       require:
       - '@2026.03.002'
       - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-generate"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-generate"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/25k-jra-iaf/1year-3da25e55/access-om3-25k-IAF-Jul28-1year-3da25e55.pgo"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/25k-jra-iaf/1year-3da25e55/access-om3-25k-IAF-Jul28-1year-3da25e55.pgo"'
     access-cice:
       require:
       - '@CICE6.6.3-1'
       - io_type=PIO
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-generate"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-generate"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/25k-jra-iaf/1year-3da25e55/access-om3-25k-IAF-Jul28-1year-3da25e55.pgo"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/25k-jra-iaf/1year-3da25e55/access-om3-25k-IAF-Jul28-1year-3da25e55.pgo"'
     access-mom6:
       require:
       - '@2026.05.001'
       - +mom6_solo
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-generate"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-generate"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/25k-jra-iaf/1year-3da25e55/access-om3-25k-IAF-Jul28-1year-3da25e55.pgo"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/25k-jra-iaf/1year-3da25e55/access-om3-25k-IAF-Jul28-1year-3da25e55.pgo"'
     access-ww3:
       require:
       - '@2026.03.000'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-generate"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-generate"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/25k-jra-iaf/1year-3da25e55/access-om3-25k-IAF-Jul28-1year-3da25e55.pgo"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/25k-jra-iaf/1year-3da25e55/access-om3-25k-IAF-Jul28-1year-3da25e55.pgo"'
     access3-share:
       require:
       - '@2026.03.002'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-generate"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-generate"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/25k-jra-iaf/1year-3da25e55/access-om3-25k-IAF-Jul28-1year-3da25e55.pgo"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/25k-jra-iaf/1year-3da25e55/access-om3-25k-IAF-Jul28-1year-3da25e55.pgo"'
     access-generic-tracers:
       require:
       - '@2026.05.000'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-generate"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/25k-jra-iaf/1year-3da25e55/access-om3-25k-IAF-Jul28-1year-3da25e55.pgo"'
     access-mocsy:
       require:
       - '@2025.07.002'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-generate"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-generate"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/25k-jra-iaf/1year-3da25e55/access-om3-25k-IAF-Jul28-1year-3da25e55.pgo"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/25k-jra-iaf/1year-3da25e55/access-om3-25k-IAF-Jul28-1year-3da25e55.pgo"'
     # Other Dependencies
     esmf:
       require:
       - '@8.9.1'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback -fprofile-generate"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fno-omit-frame-pointer -fprofile-generate"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fno-omit-frame-pointer -fprofile-generate"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback -fprofile-use=/g/data/tm70/profiling_data/om3/25k-jra-iaf/1year-3da25e55/access-om3-25k-IAF-Jul28-1year-3da25e55.pgo"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fno-omit-frame-pointer -fprofile-use=/g/data/tm70/profiling_data/om3/25k-jra-iaf/1year-3da25e55/access-om3-25k-IAF-Jul28-1year-3da25e55.pgo"'
+      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fno-omit-frame-pointer -fprofile-use=/g/data/tm70/profiling_data/om3/25k-jra-iaf/1year-3da25e55/access-om3-25k-IAF-Jul28-1year-3da25e55.pgo"'
     parallelio:
       require:
       - '@2.6.8'
@@ -73,8 +73,8 @@ spack:
     fms:
       require:
       - '@2025.03'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-generate"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-generate"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/25k-jra-iaf/1year-3da25e55/access-om3-25k-IAF-Jul28-1year-3da25e55.pgo"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/25k-jra-iaf/1year-3da25e55/access-om3-25k-IAF-Jul28-1year-3da25e55.pgo"'
       - 'cppflags="-DMAXFIELDMETHODS_=600"'
     openmpi:
       require:
