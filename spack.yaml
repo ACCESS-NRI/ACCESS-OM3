@@ -17,46 +17,46 @@ spack:
       require:
       - '@2026.03.002'
       - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -qopt-mem-layout-trans=4"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -qopt-mem-layout-trans=4"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -qopt-mem-layout-trans=3"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -qopt-mem-layout-trans=3"'
     access-cice:
       require:
       - '@CICE6.6.3-1'
       - io_type=PIO
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -qopt-mem-layout-trans=4"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -qopt-mem-layout-trans=4"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -qopt-mem-layout-trans=3"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -qopt-mem-layout-trans=3"'
     access-mom6:
       require:
       - '@git.4e77c6658a4182e5002a436b2bb538f06263bd33'
       - +mom6_solo
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -qopt-mem-layout-trans=4"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -qopt-mem-layout-trans=4"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -qopt-mem-layout-trans=3"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -qopt-mem-layout-trans=3"'
     access-ww3:
       require:
       - '@2026.03.000'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -qopt-mem-layout-trans=4"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -qopt-mem-layout-trans=4"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -qopt-mem-layout-trans=3"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -qopt-mem-layout-trans=3"'
     access3-share:
       require:
       - '@2026.03.002'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -qopt-mem-layout-trans=4"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -qopt-mem-layout-trans=4"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -qopt-mem-layout-trans=3"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -qopt-mem-layout-trans=3"'
     access-generic-tracers:
       require:
       - '@2026.05.000'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -qopt-mem-layout-trans=4"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -qopt-mem-layout-trans=3"'
     access-mocsy:
       require:
       - '@2025.07.002'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -qopt-mem-layout-trans=4"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -qopt-mem-layout-trans=4"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -qopt-mem-layout-trans=3"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -qopt-mem-layout-trans=3"'
     # Other Dependencies
     esmf:
       require:
       - '@8.9.1'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback -qopt-mem-layout-trans=4"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fno-omit-frame-pointer -qopt-mem-layout-trans=4"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fno-omit-frame-pointer -qopt-mem-layout-trans=4"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback -qopt-mem-layout-trans=3"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fno-omit-frame-pointer -qopt-mem-layout-trans=3"'
+      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fno-omit-frame-pointer -qopt-mem-layout-trans=3"'
     parallelio:
       require:
       - '@2.6.8'
@@ -73,8 +73,8 @@ spack:
     fms:
       require:
       - '@2025.03'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -qopt-mem-layout-trans=4"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -qopt-mem-layout-trans=4"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -qopt-mem-layout-trans=3"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -qopt-mem-layout-trans=3"'
       - 'cppflags="-DMAXFIELDMETHODS_=600"'
     openmpi:
       require:
