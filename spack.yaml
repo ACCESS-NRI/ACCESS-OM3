@@ -20,7 +20,7 @@ spack:
     # Main Dependencies
     access3:
       require:
-      - '@2026.03.002'
+      - '@git.4c967473b7e332a2a975e72560fd4098bde9b096=2026.03.002'  # On branch rofb
       - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
@@ -32,7 +32,7 @@ spack:
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-mom6:
       require:
-      - '@2026.05.002'
+      - '@git.6f6da23c280df016db559de4a642d357b746f730=2026.05.002'  # On branch rofb
       - +mom6_solo
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
@@ -41,7 +41,7 @@ spack:
       - '@2026.03.001'
     access3-share:
       require:
-      - '@2026.03.002'
+      - '@git.4c967473b7e332a2a975e72560fd4098bde9b096=2026.03.002'  # On branch rofb
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-generic-tracers:
