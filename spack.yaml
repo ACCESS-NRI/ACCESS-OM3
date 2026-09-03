@@ -39,6 +39,7 @@ spack:
     access-ww3:
       require:
       - '@git.50412f2b9c4b9eac1f7fd7fa567ade803820d856=2026.03.001'
+      - '+openmp'
     access3-share:
       require:
       - '@2026.03.002'
