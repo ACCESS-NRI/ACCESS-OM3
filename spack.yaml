@@ -63,6 +63,7 @@ spack:
     parallelio:
       require:
       - '@2.6.8'
+      - '+logging'
       - 'fflags="-g -traceback"'
       - 'cflags="-g -fno-omit-frame-pointer"'
       - 'cxxflags="-g -fno-omit-frame-pointer"'
@@ -108,5 +109,5 @@ spack:
   repos:
     access_spack_packages:
       git: https://github.com/ACCESS-NRI/access-spack-packages.git
-      tag: fc25b02d11312faa6037fd3984048d06946c2aef
+      tag: 9192b6f0ab9001ba57e093388fe6ac1812d03501
       destination: $env/package-repos/access-spack-packages
