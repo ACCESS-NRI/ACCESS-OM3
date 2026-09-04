@@ -108,5 +108,5 @@ spack:
   repos:
     access_spack_packages:
       git: https://github.com/ACCESS-NRI/access-spack-packages.git
-      tag: 2026.08.005
+      tag: fc25b02d11312faa6037fd3984048d06946c2aef
       destination: $env/package-repos/access-spack-packages
