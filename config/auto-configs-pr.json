@@ -20,7 +20,7 @@
             "repro": true
           }
         },
-        "dev-MCW_100km_jra_iaf": {
+        "dev-MCW_100km_era_iaf": {
           "checks": {
             "repro": true
           }

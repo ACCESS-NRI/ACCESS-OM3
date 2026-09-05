@@ -63,6 +63,7 @@ spack:
     parallelio:
       require:
       - '@2.6.8'
+      - '+logging'
       - 'fflags="-g -traceback"'
       - 'cflags="-g -fno-omit-frame-pointer"'
       - 'cxxflags="-g -fno-omit-frame-pointer"'
@@ -81,7 +82,7 @@ spack:
       - 'cppflags="-DMAXFIELDMETHODS_=600"'
     openmpi:
       require:
-      - '@4.1.7'
+      - '@5.0.8'
     fortranxml:
       require:
       - '@4.1.2'
@@ -108,5 +109,5 @@ spack:
   repos:
     access_spack_packages:
       git: https://github.com/ACCESS-NRI/access-spack-packages.git
-      tag: 2026.08.005
+      tag: cef99e19323cdc0e1e121f6d87b89cc2f9000cae
       destination: $env/package-repos/access-spack-packages
