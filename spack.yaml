@@ -22,44 +22,44 @@ spack:
       require:
       - '@2026.03.002'
       - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags="-march=haswell -mtune=haswell -unroll"'
+      - 'cflags="-march=haswell -mtune=haswell -unroll"'
     access-cice:
       require:
       - '@CICE6.6.3-2'
       - io_type=PIO
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags="-march=haswell -mtune=haswell -unroll"'
+      - 'cflags="-march=haswell -mtune=haswell -unroll"'
     access-mom6:
       require:
       - '@2026.05.002'
       - +mom6_solo
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags="-march=haswell -mtune=haswell -unroll"'
+      - 'cflags="-march=haswell -mtune=haswell -unroll"'
     access-ww3:
       require:
       - '@2026.03.001'
     access3-share:
       require:
       - '@2026.03.002'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags="-march=haswell -mtune=haswell -unroll"'
+      - 'cflags="-march=haswell -mtune=haswell -unroll"'
     access-generic-tracers:
       require:
       - '@2026.05.000'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags="-march=haswell -mtune=haswell -unroll"'
     access-mocsy:
       require:
       - '@2025.07.002'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags="-march=haswell -mtune=haswell -unroll"'
+      - 'cflags="-march=haswell -mtune=haswell -unroll"'
     # Other Dependencies
     esmf:
       require:
       - '@8.9.1'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fno-omit-frame-pointer"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fno-omit-frame-pointer"'
+      - 'fflags="-march=haswell -mtune=haswell -unroll -traceback"'
+      - 'cflags="-march=haswell -mtune=haswell -unroll -fno-omit-frame-pointer"'
+      - 'cxxflags="-march=haswell -mtune=haswell -unroll -fno-omit-frame-pointer"'
     parallelio:
       require:
       - '@2.6.8'
@@ -77,8 +77,8 @@ spack:
     fms:
       require:
       - '@2025.03'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'fflags="-march=haswell -mtune=haswell -unroll"'
+      - 'cflags="-march=haswell -mtune=haswell -unroll"'
       - 'cppflags="-DMAXFIELDMETHODS_=600"'
     openmpi:
       require:
@@ -102,7 +102,7 @@ spack:
 
     all:
       prefer:
-      - 'target=x86_64_v4'
+      - 'target=x86_64_v3'
   view: true
   concretizer:
     unify: true
