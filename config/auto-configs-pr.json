@@ -19,6 +19,11 @@
           "checks": {
             "repro": true
           }
+        },
+        "dev-MCW_100km_jra_iaf": {
+          "checks": {
+            "repro": true
+          }
         }
       }
     }
