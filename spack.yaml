@@ -28,6 +28,7 @@ spack:
       require:
       - '@CICE6.6.3-2'
       - io_type=PIO
+      - '+io_timers'
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/8k-jra-ryf/10days-6e5a4ee5/access-om3-8k-10day-cgrid-9Sep-6e5a4ee5.pgo"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/8k-jra-ryf/10days-6e5a4ee5/access-om3-8k-10day-cgrid-9Sep-6e5a4ee5.pgo"'
     access-mom6:
@@ -110,5 +111,5 @@ spack:
   repos:
     access_spack_packages:
       git: https://github.com/ACCESS-NRI/access-spack-packages.git
-      tag: 949224a66ee8ca32c52bd9696d1a7b3fc874e655
+      tag: 99fca3c64340984aac978bed8a93ae55eefd2d95
       destination: $env/package-repos/access-spack-packages
