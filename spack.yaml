@@ -87,7 +87,7 @@ spack:
       - '@4.1.2'
     python:
       require:
-      - '@3.11.7'   # force spack to use the system python install
+      - '@3.12.13'   # force spack to use the system python install
     # Compilers
     c:
       require:
@@ -110,3 +110,7 @@ spack:
       git: https://github.com/ACCESS-NRI/access-spack-packages.git
       tag: 2026.09.005
       destination: $env/package-repos/access-spack-packages
+    builtin::
+      git: https://github.com/ACCESS-NRI/upstream-spack-packages.git
+      branch: access/v1.1-pyyaml
+      destination: $env/package-repos/spack-packages
