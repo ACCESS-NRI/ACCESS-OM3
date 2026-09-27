@@ -32,9 +32,9 @@ ACCESS-NRI is using [spack](https://spack.io), a build from source package manag
 
 Spack automatically builds all the components and their dependencies, producing model component executables. Spack already contains support for compiling thousands of common software packages. Spack packages for the components are defined in the [spack packages repository](https://github.com/ACCESS-NRI/spack_packages/).
 
-ACCESS-OM3 is built and deployed automatically to `gadi` on NCI (see below). However it is possible to use spack to compile the model using the `spack.yaml` environment file in this repository. To do so follow the [instructions on for configuring spack on `gadi`](https://access-hive.org.au/getting_started/spack/).
+ACCESS-OM3 is built and deployed automatically to `gadi` on NCI (see below). To change model component versions or modify the model's source code, users use spack to compile the model using the `spack.yaml` environment file in this repository. There are two main ways to do this: i) use the pre-release github workflow ([instructions](https://docs.access-hive.org.au/models/build_a_model/create_a_prerelease/)) or ii) follow the [instructions on for configuring spack on `gadi`](https://access-hive.org.au/getting_started/spack/). The first option is simpler to understand, however requires "collaborator" access to this repository - (raise [an issue](https://github.com/ACCESS-NRI/ACCESS-OM3/issues/new) on this repository to gain access). 
 
-Then clone this repository and run the following commands on `gadi`:
+The second option requires access to gadi and is as follows. Clone this repository and run the following commands on `gadi`:
 
 ```bash
 spack env create access-om3 spack.yaml
@@ -43,6 +43,8 @@ spack install
 ```
 
 to create a spack environment called `access-om3` and build all the components, the locations of which can be found using `spack find --paths`.
+
+Further details of how to build and modify ACCESS-OM3 are found on the ACCESS-OM3 [configuration documentation](https://access-om3-configs.access-hive.org.au/infrastructure/Building/).
 
 ### Deployment
 
