@@ -87,7 +87,8 @@ spack:
       - '@4.1.2'
     python:
       require:
-      - '@3.11.7'   # force spack to use the system python install
+      - '@3.12.13'
+      - 'target=x86_64' # force spack to use the system python install
     # Compilers
     c:
       require:
