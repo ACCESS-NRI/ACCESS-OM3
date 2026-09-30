@@ -20,7 +20,7 @@ spack:
     # Main Dependencies
     access3:
       require:
-      - '@2026.03.002'
+      - '@git.ff5c4a3bf0ce3fc14a371f8501d6974170d8b6df=2026.03.002'  # On branch generalise-rofi-spreading-v2
       - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
@@ -41,7 +41,7 @@ spack:
       - '@2026.03.001'
     access3-share:
       require:
-      - '@2026.03.002'
+      - '@git.ff5c4a3bf0ce3fc14a371f8501d6974170d8b6df=2026.03.002'  # On branch generalise-rofi-spreading-v2
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-generic-tracers:
