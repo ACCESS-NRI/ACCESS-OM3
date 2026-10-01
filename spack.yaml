@@ -32,7 +32,7 @@ spack:
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-mom6:
       require:
-      - '@git.3f4efd608ae49a497e670aba9efd8d366bc123f4=2026.05.003'  # On branch PR-test/dycore-blocking
+      - '@git.d8fd97ef3acabfe8b8f3ad6ff8259b1d586a2341=2026.05.003'  # On branch PR-test/dycore-blocking
       - +mom6_solo
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
