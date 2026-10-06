@@ -32,7 +32,7 @@ spack:
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-mom6:
       require:
-      - '@git.a55c2f38b11388bcf0ad1921c38bc8ac3424f855=2026.05.003'  # On branch wombat-bc-restarts
+      - '@git.8cd502dbfc8d159a5243b04cbd26d09af64351f4=2026.05.003'  # On branch wombat-bc-restarts
       - +mom6_solo
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
