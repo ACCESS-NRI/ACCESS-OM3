@@ -103,6 +103,8 @@ spack:
     all:
       prefer:
       - 'target=x86_64_v4'
+      # Test: CMake interprocedural optimisation (LTO, -ipo for oneAPI) for all CMake-built packages
+      variants: +ipo
   view: true
   concretizer:
     unify: true
