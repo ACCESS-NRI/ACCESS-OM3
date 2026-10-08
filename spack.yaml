@@ -22,12 +22,14 @@ spack:
       require:
       - '@2026.03.002'
       - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
+      - +ipo  # LTO link so FORCEINLINE in access-cice takes effect (ACCESS-NRI/CICE#57)
       - fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"
       - cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"
     access-cice:
       require:
-      - '@CICE6.6.3-2'
+      - '@git.c303e33e2c76653ef203d8b5de75bbe7890342eb=CICE6.6.3-2'  # On branch 57
       - io_type=PIO
+      - +ipo  # ACCESS-NRI/CICE#57
       - fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"
       - cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"
     access-mom6:
