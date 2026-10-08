@@ -33,7 +33,7 @@ spack:
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/8k-jra-ryf/10days-6e5a4ee5/access-om3-8k-10day-cgrid-9Sep-6e5a4ee5.pgo"'
     access-mom6:
       require:
-      - '@git.ee2ec415bc46e8b8de4d663f58dc65f72678a7ce'
+      - '@2026.05.003'
       - +mom6_solo
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/8k-jra-ryf/10days-6e5a4ee5/access-om3-8k-10day-cgrid-9Sep-6e5a4ee5.pgo"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/8k-jra-ryf/10days-6e5a4ee5/access-om3-8k-10day-cgrid-9Sep-6e5a4ee5.pgo"'
@@ -47,7 +47,7 @@ spack:
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/8k-jra-ryf/10days-6e5a4ee5/access-om3-8k-10day-cgrid-9Sep-6e5a4ee5.pgo"'
     access-generic-tracers:
       require:
-      - '@2026.05.000'
+      - '@2026.09.000'
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/8k-jra-ryf/10days-6e5a4ee5/access-om3-8k-10day-cgrid-9Sep-6e5a4ee5.pgo"'
     access-mocsy:
       require:
