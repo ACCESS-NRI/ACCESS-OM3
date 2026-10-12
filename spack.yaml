@@ -32,13 +32,13 @@ spack:
       - cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"
     access-mom6:
       require:
-      - '@2026.05.003'
+      - '@git.315ba41e968c9b1faf20819c6deb14f4d5d1abe4=2026.05.003'  # On branch 1539-stop-alarm-endofrun
       - +mom6_solo
       - fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"
       - cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"
     access-ww3:
       require:
-      - '@2026.03.001'
+      - '@git.d920b14d939719e89a7c656b7a0db68449b3ed11=2026.03.001'  # On branch write-restart-at-endofrun
     access3-share:
       require:
       - '@2026.03.002'
