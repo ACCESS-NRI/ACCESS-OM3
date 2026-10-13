@@ -22,45 +22,45 @@ spack:
       require:
       - '@2026.03.002'
       - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/8k-jra-ryf/10days-6e5a4ee5/access-om3-8k-10day-cgrid-9Sep-6e5a4ee5.pgo"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/8k-jra-ryf/10days-6e5a4ee5/access-om3-8k-10day-cgrid-9Sep-6e5a4ee5.pgo"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-cice:
       require:
       - '@CICE6.6.3-2'
       - io_type=PIO
       - '+io_timers'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/8k-jra-ryf/10days-6e5a4ee5/access-om3-8k-10day-cgrid-9Sep-6e5a4ee5.pgo"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/8k-jra-ryf/10days-6e5a4ee5/access-om3-8k-10day-cgrid-9Sep-6e5a4ee5.pgo"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-mom6:
       require:
       - '@git.0b48afd2da5f10fdb34d079ce3c538cfc421b1de'
       - +mom6_solo
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/8k-jra-ryf/10days-6e5a4ee5/access-om3-8k-10day-cgrid-9Sep-6e5a4ee5.pgo"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/8k-jra-ryf/10days-6e5a4ee5/access-om3-8k-10day-cgrid-9Sep-6e5a4ee5.pgo"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-ww3:
       require:
       - '@2026.03.001'
     access3-share:
       require:
       - '@2026.03.002'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/8k-jra-ryf/10days-6e5a4ee5/access-om3-8k-10day-cgrid-9Sep-6e5a4ee5.pgo"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/8k-jra-ryf/10days-6e5a4ee5/access-om3-8k-10day-cgrid-9Sep-6e5a4ee5.pgo"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-generic-tracers:
       require:
       - '@git.115890145fc60799593aaae5a881f90cc9afa506'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/8k-jra-ryf/10days-6e5a4ee5/access-om3-8k-10day-cgrid-9Sep-6e5a4ee5.pgo"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     access-mocsy:
       require:
       - '@2025.07.002'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/8k-jra-ryf/10days-6e5a4ee5/access-om3-8k-10day-cgrid-9Sep-6e5a4ee5.pgo"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/8k-jra-ryf/10days-6e5a4ee5/access-om3-8k-10day-cgrid-9Sep-6e5a4ee5.pgo"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
     # Other Dependencies
     esmf:
       require:
       - '@8.9.1'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback -fprofile-use=/g/data/tm70/profiling_data/om3/8k-jra-ryf/10days-6e5a4ee5/access-om3-8k-10day-cgrid-9Sep-6e5a4ee5.pgo"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fno-omit-frame-pointer -fprofile-use=/g/data/tm70/profiling_data/om3/8k-jra-ryf/10days-6e5a4ee5/access-om3-8k-10day-cgrid-9Sep-6e5a4ee5.pgo"'
-      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fno-omit-frame-pointer -fprofile-use=/g/data/tm70/profiling_data/om3/8k-jra-ryf/10days-6e5a4ee5/access-om3-8k-10day-cgrid-9Sep-6e5a4ee5.pgo"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -traceback"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fno-omit-frame-pointer"'
+      - 'cxxflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fno-omit-frame-pointer"'
     parallelio:
       require:
       - '@2.6.8'
@@ -79,8 +79,8 @@ spack:
     fms:
       require:
       - '@2025.03'
-      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/8k-jra-ryf/10days-6e5a4ee5/access-om3-8k-10day-cgrid-9Sep-6e5a4ee5.pgo"'
-      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/8k-jra-ryf/10days-6e5a4ee5/access-om3-8k-10day-cgrid-9Sep-6e5a4ee5.pgo"'
+      - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
+      - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"'
       - 'cppflags="-DMAXFIELDMETHODS_=600"'
     openmpi:
       require:
