@@ -13,7 +13,7 @@ spack:
   - _spack-version: ["1.1"]
   # Release database provenance information - packages for inclusion into the database, and packages just for injection into the modules
   - _provenance: ["access-cice", "access-mom6", "access-ww3", "access3", "access3-share", "access-generic-tracers", "access-mocsy"]
-  - _injection: []
+  - _injection: [openmpi]
   specs:
   - access-om3
   packages:
