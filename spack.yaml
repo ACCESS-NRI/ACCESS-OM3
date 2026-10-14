@@ -13,7 +13,8 @@ spack:
   - _spack-version: ['1.1']
   # Release database provenance information - packages for inclusion into the database, and packages just for injection into the modules
   - _provenance: [access-cice, access-mom6, access-ww3, access3, access3-share, access-generic-tracers, access-mocsy]
-  - _injection: [openmpi]
+  # Don't explcitly include openmpi, unlike the current build
+  - _injection: []
   specs:
   - access-om3
   packages:
@@ -113,3 +114,8 @@ spack:
       git: https://github.com/ACCESS-NRI/access-spack-packages.git
       tag: ea43d3e333dad21b61b706694ea0a22620cfff1b
       destination: $env/package-repos/access-spack-packages
+  modules:
+    default:
+      tcl:
+        # Don't exclude openmpi, overriding spack-config 2026.10.002
+        exclude: []
