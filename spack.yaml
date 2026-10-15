@@ -32,7 +32,7 @@ spack:
       - cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"
     access-mom6:
       require:
-      - '@2026.05.003'
+      - '@git.a2a59eb66facad822a62e1499eb79b1aa21e3d17=2026.05.003'  # On branch PR-test/update_defaults_2026
       - +mom6_solo
       - fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"
       - cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"
