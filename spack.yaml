@@ -34,7 +34,7 @@ spack:
       - 'ldflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto -fuse-ld=lld"'
     access-mom6:
       require:
-      - '@git.07e2a71b77bf8d7233ea0c6bc47999ea73ea0db0=2026.05.001'  # On branch cy-dev/gfdl@3d479de+access+isf-nolatenticeberg
+      - '@git.cd34243cba1a2b6c858a8a1d59f7aa8d4a600669=2026.05.001'  # On branch cy-dev/gfdl@3d479de+access+isf-nolatenticeberg
       - +mom6_solo
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -O3 -flto"'
