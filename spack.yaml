@@ -26,7 +26,7 @@ spack:
       - cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"
     access-cice:
       require:
-      - '@CICE6.6.3-2'
+      - '@git.eb8e25d0830f0fc8b117071b6728e085e8a3c78e=CICE6.6.3-2'  # On branch cgrid-coupled-stress-faces (C-grid face ice-ocean stress for coupling)
       - io_type=PIO
       - fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"
       - cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"
