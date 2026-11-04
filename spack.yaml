@@ -32,7 +32,7 @@ spack:
       - cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"
     access-mom6:
       require:
-      - '@git.807fa9f5858460878ff183293b0a99fdb7ffce14=2026.05.003'  # On branch rofb
+      - '@git.ccc11f3271ea7209a6864efa3d3f8cba998a21ed=2026.05.003'  # On branch rofb
       - +mom6_solo
       - fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"
       - cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"
