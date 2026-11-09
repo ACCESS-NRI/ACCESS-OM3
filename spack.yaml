@@ -22,12 +22,14 @@ spack:
       require:
       - '@2026.03.003'
       - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
+      - +ipo
       - fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"
       - cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"
     access-cice:
       require:
       - '@git.5092fba8539a0f84d490113985ac104ea785fb3d=CICE6.6.3-2'  # On branch dev-CICE6.6.3-x
       - io_type=PIO
+      - +ipo
       - fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"
       - cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"
     access-mom6:
