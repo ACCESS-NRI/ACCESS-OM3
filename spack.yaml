@@ -20,14 +20,16 @@ spack:
     # Main Dependencies
     access3:
       require:
-      - '@2026.03.002'
+      - '@2026.03.003'
       - configurations=MOM6,MOM6-CICE6,MOM6-CICE6-WW3
+      - +ipo
       - fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"
       - cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"
     access-cice:
       require:
-      - '@CICE6.6.3-2'
+      - '@git.5092fba8539a0f84d490113985ac104ea785fb3d=CICE6.6.3-2'  # On branch dev-CICE6.6.3-x
       - io_type=PIO
+      - +ipo
       - fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"
       - cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"
     access-mom6:
@@ -41,7 +43,7 @@ spack:
       - '@2026.03.001'
     access3-share:
       require:
-      - '@2026.03.002'
+      - '@2026.03.003'
       - fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"
       - cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll"
     access-generic-tracers:
@@ -109,5 +111,5 @@ spack:
   repos:
     access_spack_packages:
       git: https://github.com/ACCESS-NRI/access-spack-packages.git
-      tag: 2026.09.005
+      tag: 2026.11.000
       destination: $env/package-repos/access-spack-packages
