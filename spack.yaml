@@ -26,9 +26,10 @@ spack:
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/8k-jra-ryf/10days-6e5a4ee5/access-om3-8k-10day-cgrid-9Sep-6e5a4ee5.pgo"'
     access-cice:
       require:
-      - '@git.4c77a9b9e48b237c78d948a6aa98bbd0ec02b418'
+      - '@git.5092fba8539a0f84d490113985ac104ea785fb3d'
       - io_type=PIO
       - '+io_timers'
+      - '+lto'
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/8k-jra-ryf/10days-6e5a4ee5/access-om3-8k-10day-cgrid-9Sep-6e5a4ee5.pgo"'
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/8k-jra-ryf/10days-6e5a4ee5/access-om3-8k-10day-cgrid-9Sep-6e5a4ee5.pgo"'
     access-mom6:
