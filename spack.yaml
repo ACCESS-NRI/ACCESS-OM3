@@ -109,5 +109,5 @@ spack:
   repos:
     access_spack_packages:
       git: https://github.com/ACCESS-NRI/access-spack-packages.git
-      tag: 2026.09.005
+      tag: 39933ad1d63d5af658fe609db6dfb7b9fb24a6b5  # branch om3-pio-2029-on-2026.09.005: 2026.09.005 + PIO patches for ParallelIO#2029
       destination: $env/package-repos/access-spack-packages
