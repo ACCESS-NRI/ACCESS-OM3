@@ -49,7 +49,7 @@ spack:
       - 'cflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/8k-jra-ryf/10days-6e5a4ee5/access-om3-8k-10day-cgrid-9Sep-6e5a4ee5.pgo"'
     access-generic-tracers:
       require:
-      - '@g2026.10.000'
+      - '@2026.10.000'
       - 'fflags="-march=sapphirerapids -mtune=sapphirerapids -unroll -fprofile-use=/g/data/tm70/profiling_data/om3/8k-jra-ryf/10days-6e5a4ee5/access-om3-8k-10day-cgrid-9Sep-6e5a4ee5.pgo"'
     access-mocsy:
       require:
